@@ -14,11 +14,13 @@ h4 {color: #808080; }
 }
 
 .nav > li.active > a {
-    background-color: #347DBE;
+    background-color: #1c2c4c;
+    color: #1aaea4;
 }
 
 .nav > li > a:hover {
-    background-color: #248ec2;
+    background-color: #1c2c4c;
+    color: #1aaea4;
 }
 
 div.navbar-collapse .dropdown-menu > li > a:hover {
@@ -96,7 +98,7 @@ li.sidebarTitle {
     margin-top:40px;
     font-weight:normal;
     font-size:130%;
-    color: #ED1951;
+    color: #1c2c4c;
     margin-bottom:10px;
     margin-left: 5px;
 

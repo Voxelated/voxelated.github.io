@@ -3901,11 +3901,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
   color: #333333;
 }
 .navbar-inverse {
-  background-color: #74ab50;
-  border-color: #5c8840;
+  background-color: #1c2c4c;
+  border-color: #1aaea4;
 }
 .navbar-inverse .navbar-brand {
-  color: #f9faf9;
+  color: #1aaea4;
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
