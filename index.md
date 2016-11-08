@@ -19,3 +19,10 @@ new implementation.
 
 There is some documentation to be read before getting started:
 
+* Engine Overview: This page gives an overview of the engine design. It's gives
+  a torough introduction to the engine and will provide a base for
+  understanding the codebase.
+* [Pixel Coding Conventions](pages/Guides/CodingConventions.md) : The 
+  conventions used for all Pixel code. These are important, as code which does
+  not conform to the coding conventions won't be accepted.
+
