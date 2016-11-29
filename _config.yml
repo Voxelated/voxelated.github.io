@@ -3,7 +3,7 @@ title:            Pixel Internal Documentation
 email:            robjclucas@gmail.com
 description:      Internal documentation for all Pixel code and guidelines.
 baseurl:          ""    # Site subdir  e.g. /blog
-url:              "https://pixeltechnologies.herokuapp.com" # Site maindir
+url:              "127.0.0.1" # Site maindir
 twitter_username:
 github_username:
 
