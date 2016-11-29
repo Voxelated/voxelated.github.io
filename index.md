@@ -1,28 +1,54 @@
 ---
-title: Welcome to Pixel's Software Doccumentation!
-keywords: homepage
-tags: [getting_started]
-sidebar: mydoc_sidebar
-permalink: index.html
-summary: Main page for everything related to Pixel's software documentation.
+layout: page
+title:  Pixel Developer Documentation
 ---
 
-## Overview 
+Welcome to the internal documentation and resources for all Pixel software. The
+documentation is very important, and allows the code base to be clean and
+easy to understand. 
 
-Pixel's software follows a library based design, where (hopefully) the
-libraries are as orthogonal to each other as possible. This is often
-difficult, but every attempt is made to achieve this. When designing software,
-first look for the functionality in another Pixel library before designing a
-new implementation.
+### Overview
+-------------------------------------------------------------------------------
 
-## Getting Started
+Pixel aims to eventually develop the most technologically advanced 3D software,
+in any field where 3D software can be of benefit. With VR being in its infancy,
+the potential for quality 3D software is immense. 
 
-There is some documentation to be read before getting started:
+Our initial aim is essentially to create what can be thought of as the
+intersection of Wikipedia, Pixar, and a StackOverflow like site. It allows
+people to create beautifully rendered 3D animations (educational videos), to
+visually explain concepts in all fields.
 
-* Engine Overview: This page gives an overview of the engine design. It's gives
-  a torough introduction to the engine and will provide a base for
-  understanding the codebase.
-* [Pixel Coding Conventions](CodingConventions) : The 
-  conventions used for all Pixel code. These are important, as code which does
-  not conform to the coding conventions won't be accepted.
+Consider the following simple example: A student is struggling to understand
+forces -- say they can't determine acceleration/velocity/position from time
+graphs of the other quantities. Someone wanting to explain this can use the
+software to easily communicate this with a 3D scene of an elevator moving, and
+attach graphs for the quantities to observe how they change with time. The
+person creates the animation in real-time, with the person on the other end of
+the network sharing the animation, and also being able to edit it.
 
+The above example is a simple case, and the overall goal is to provide software
+which allows the following for all levels, even complex physical simulations
+such of fluid flow and rigid body dynamics.
+
+### Getting Started
+-------------------------------------------------------------------------------
+
+The first thing to do is to get a development environment setup. See the
+[Getting Started](GettingStarted.html) page, or select the link at the top of
+the page.
+
+### Guides
+-------------------------------------------------------------------------------
+
+The next thing to do would be to read through the guides. This is very
+important for getting code successfully committed into the code base. See the
+[Guides](Guides.html) page, or select the link at the top of the page.
+
+### Libraries
+-------------------------------------------------------------------------------
+
+There are numerous libraries, some of which will be relevant, and other which
+will not be. Nevertheless, they are all well documented and the documentation
+can be found at [Libraries](Libraries.html), or by selecting the link at the
+top of the page.
