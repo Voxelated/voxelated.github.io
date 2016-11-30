@@ -498,3 +498,326 @@ for (const auto& element : elements) {
 Which reduces the nesting, and makes each of the checks significantly more
 clear. Additionally, there are no ```else``` statements for which the reader
 must remember what the corresponding ```if``` statement was.
+
+### Predicate Loops
+
+It is common to write a loop which does some computation to return a boolean
+value. It is preferred that such loops are refactored into a function, which
+can be ```static```, ```inline``` if small, or reside in a ```Detail::``` 
+or ```anonymous``` namespace near it's use -- if the function is not reusable.
+
+For example, this is not ideal:
+
+```cpp
+bool foundFoo = false;
+for (size_t i = 0; i < someArray.size(); ++i) {
+  if (someArray[i].isFoo()) {
+    foundFoo = true;
+    break;
+  } 
+
+  if (foundFoo) {
+    // ...
+  }
+  // ...
+} 
+```
+
+Which can rather be rewritten as a function to compute the predicate, something
+like:
+
+```cpp
+/// Returns true if a foo element is found in
+/// a some array, otherwise returns false.
+static bool containsFoo(const std::array<SomeType, SomeSize>& someArray) {
+  for (size_t i = 0; i < someArray.size(); ++i) {
+    if (someArray[i].isFoo()) {
+      return true;
+      break;
+    }
+  }
+}
+
+if (containsFoo(someArray)) {
+  // ... 
+}
+```
+
+There are numerous benefits for doing things this way:
+
+1. Indentation is reduced (in the resulting code which calls the predicate
+   function), which is always ideal as it requires less context to be 
+   remembered. 
+2. It requires the function to be named, making its purpose clearer, and the 
+   resulting code simpler to understand. Additionally, a comment must be 
+   written for the function. While this may not be beneficial in this simple 
+   example, if the computation is complex or unusual there is a huge benefit.
+3. The purpose of the code can be understood from just the name of the 
+   function, rather than having to discern the functionality from the inline
+   implementation.
+
+### Typedef vs Aliases
+
+C++11 provided the alias feature as an alternative to typedefs. It is preferred
+that alias's are used rather than typedefs as this encourages modern C++ and
+the syntax is more clear. Additionally, where an alias is created for a 
+specific template type which may have other similar alias's, then add a suffix
+to the name which indicates the type (for example ```i``` for an ```int```,
+```f```  for a ```float```, ```16f``` for a 16 element array of ```float's```
+etc). 
+
+Here is an example of the preferred use of alias's and typedefs:
+
+This is preferred:
+
+```cpp
+using Vec3f = std::array<float, 3>;
+using Vec3i = std::array<int, 3>;
+```
+
+Over this:
+
+```cpp
+typedef std::array<float, 3> Vec3f;
+typedef std::array<int, 3>   Vec3i;
+```
+
+Do not be afraid to abuse the use of aliases within classes, especially in the
+```private``` section. This is especially the case where implementation details
+may change. For example, some class may use an array as the container of
+elements, but later it may be reqired that the size be dynamic. Creating an
+alias for the container allows this change to be made easily. For example:
+
+```cpp
+class SomeClass {
+ private:
+  //==--- Aliases ---------------------------------------------------------==//
+
+  /// Defines the type of the contiguous container used to store elements.
+  using ContiguousContainer = std::vector<SomeType>;
+
+
+ public:
+  // Public interface ...
+  
+ private:
+  ContiguousContainer Elements; //!< Elements for x ...
+};
+```
+### Assertations
+
+Assert to check preconditions and assumptions. When the conditions can be
+checked at compile time use ```static_assert```. This can often lead to finding
+bugs that would otherwise not have been found, saving a lot of time when 
+debugging.
+
+The assert macro which should be used is the ```PixAssert``` macro in the
+**TODO: Add link** Pulley library. The macro requires an error message to be
+provided as the second parameter which will be printed when the assertation
+fails. For example:
+
+```cpp
+#include <Pixel/Pulley/Error/Assert.h>
+
+Element getElement(size_t i) {
+  PixAssert(i < Elements.size(), "getElement() : Out of range access");
+  return Elements[i];
+}
+```
+
+Note that ```PixAssert``` will add the file and line number. All assertations
+with ```PixAssert``` are removed when compiling in release mode ```-DNDEBUG```.
+
+### Using namespace::std
+
+Avoid ```using namespace std```, and prefer to use the prefix ```std::```.
+
+Also, in header files, avoid the use of ```using namespace X```, and rather
+use the prefix ```X::```, since the ```using``` directive pollutes the
+namespace of any source file which includes the header.
+
+In source files this is less of a concern, but should still be applied whenever
+it is not inconvenient to do so, as it makes functions easy to find, and easily
+identifiable. If multiple namespaces are chained, then define a shorter 
+namespace to represent it. For example:
+
+```cpp
+// This is a case which can be simplified.
+pixel::snap::math::sum(x, y);
+
+// To this.
+namespace math = pixel::snap::math;
+math::sum(x, y);
+```
+
+### Using std::endl
+
+The use of ```std::endl``` should be avoided, since it flushes the buffer,
+which is often not required. Rather use ```\n```, and in the case that the
+output stream must be flushed, then append ```std::flush```. For example:
+
+```cpp
+std::cout << std::endl;             // Avoid this.
+std::cout << "\n";                  // In favour of this.
+std::cout << "\n" << std::flush;    // Or this to flush the output stream.
+```
+
+### Container Iteration
+
+When iterating over containers and performing some action with the iterator, 
+it is preferred that ```std::for_each``` is used, and that the action to
+perform on the iterator is provided as either a lambda function or as a
+functor. For example:
+
+```cpp
+std::vector<int> elements{1, 2, 3, 4, 5};
+
+// for_each example with lambda.
+std::for_each(elements.begin(), elements.end(), [] (int& n) {
+  n++;
+});
+
+// for_each example with a functor
+struct Sum {
+  Sum() : sum_(0) {}
+  void operator()(int n) {
+    sum += n;
+  }
+  int sum;
+};
+
+Sum s = std::for_each(elements.begin(), elements.end(), Sum());
+```
+
+However, if the iteration over the container must be written explicitly, then
+pre-compute the end iterator so that a call to ```end()``` or ```size()``` is 
+not computed for each iteration.
+
+**NOTE:** This doesn't apply to the case where the container is modified by the
+loop, in which case the pre-computation of ```end()``` or ```size()``` will
+produce an incorrect result.
+
+In the case that the container is modified, add a comment which says so, and
+states why the container is modified. Here is an example:
+
+```cpp
+IterableArray* array = makeIterableArray();
+
+// This is the case when the container is not modified:
+for (auto it = array->begin(), end = array->end(); it != end; ++it) {
+  // Do something with it
+}
+
+// This is the case when the container is modified (note comment):
+// Modifies the array each time a bar element is found:
+for (auto it = array->begin(); it != array->end(); ++it) {
+  if (!it->isBar()) continue;
+
+  // Modify array ...
+}
+```
+
+This is done for the following reasons:
+
+1. For complex types the call to ```end()``` can potentially be costly. While 
+   this is not the case for a call to ```size()```, the same structure should 
+   still be used so that the code has a consistent style. 
+2. This makes it immediately clear whether or not the container is modified, 
+   without even having to look at the implementation of the loop. This is 
+   enforced by the requirement of writing a comment for loops which modify the
+   container. 
+
+### Inlining
+
+For small functions (approx < 10 lines), the ```inline``` keyword may be used 
+to hint to the compiler that it should inline the function. However, where a 
+function is inlined implicitly, then avoid the use of the ```inline```
+keyword. For example:
+
+The inline keyword here is not implicit, so it may be used:
+
+```cpp
+inline bool isGreater(int a, int b) {
+  return a > b;
+}
+```
+
+However, the inline keyword here is implicit (method implementation is defined
+inside the struct definition), so don't add it:
+
+```cpp
+struct Foo {
+  // Implicit inline, so don't use the inline keyword
+  void bar() {
+    // Some short implementation ...
+  }
+};
+```
+
+### Use of Const
+
+Make use of ```const``` **as often as possible**, since this allows the
+compiler to more aggressively optimise, and makes code easier to reason about.
+Mark  class methods ```const``` whenever they do not modify class variables.
+
+### Use of Noexcept
+
+Make use of ```noexcept``` wherever a function **will not** throw an exception. 
+As with ```const```, this allows for some optimisation. Specifically, the
+optimizer doesn't need to keep track of the runtime stack in an unwindable way,
+and they don't need to ensure that objects are destructe in the inverse order
+in which they were created. This makes life easier for the optimizer. 
+Additionally, since Pixel has its own error handling suite, and use of 
+exceptions are not allowed, many methods will be ```noexcept```.
+
+Besides having potential optimization gains, ```noexcept``` can also make it
+clear to anyone reading the code that the method does not throw an exception.
+
+## Formatting
+
+## Spaces for Parenthesis
+
+A space before an open parentheses is preferred for control-flow statements,
+but not in function calls or macros. No space is preferred after open
+parentheses and before closing parentheses, for all cases. For example:
+
+The following examples are good:
+
+```cpp
+// Control flow statements:
+if (A)                  // ...
+for (i = 0; i < e; ++i) // ...
+while (true)            //...
+
+// Functions:
+function(argument);
+PIXEL_MACRO(A);
+auto x = sum(4, 5) + divide(4, 2);
+```
+
+While the following examples are bad:
+
+```cpp
+// Control flow statements:
+if(A)                   // ...
+for(i = 0; i < e; ++i ) // ...
+while( true )           // ...
+
+// Functions:
+function( argument );
+function (argument);
+PIXEL_MACRO ( A );
+auto x = sum (4, 5) + divide( 4, 2 );
+```
+
+### Alignment of Variables
+
+When declaring variables, always align them in columns, for example:
+
+```cpp
+int       intOne   , intTwo;
+float     floatOne ;
+OtherType otherType;
+```
+Some may say that this is irrelevant and a waste of time, but it makes the code
+easier to read, and look nice, so follow the convention.
