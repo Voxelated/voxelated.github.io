@@ -498,3 +498,133 @@ for (const auto& element : elements) {
 Which reduces the nesting, and makes each of the checks significantly more
 clear. Additionally, there are no ```else``` statements for which the reader
 must remember what the corresponding ```if``` statement was.
+
+### Predicate Loops
+
+It is common to write a loop which does some computation to return a boolean
+value. It is preferred that such loops are refactored into a function, which
+can be ```static```, ```inline``` if small, or reside in a ```Detail::``` 
+or ```anonymous``` namespace near it's use -- if the function is not reusable.
+
+For example, this is not ideal:
+
+```cpp
+bool foundFoo = false;
+for (size_t i = 0; i < someArray.size(); ++i) {
+  if (someArray[i].isFoo()) {
+    foundFoo = true;
+    break;
+  } 
+
+  if (foundFoo) {
+    // ...
+  }
+  // ...
+} 
+```
+
+Which can rather be rewritten as a function to compute the predicate, something
+like:
+
+```cpp
+/// Returns true if a foo element is found in
+/// a some array, otherwise returns false.
+static bool containsFoo(const std::array<SomeType, SomeSize>& someArray) {
+  for (size_t i = 0; i < someArray.size(); ++i) {
+    if (someArray[i].isFoo()) {
+      return true;
+      break;
+    }
+  }
+}
+
+if (containsFoo(someArray)) {
+  // ... 
+}
+```
+
+There are numerous benefits for doing things this way:
+
+1. Indentation is reduced (in the resulting code which calls the predicate
+   function), which is always ideal as it requires less context to be 
+   remembered. 
+2. It requires the function to be named, making its purpose clearer, and the 
+   resulting code simpler to understand. Additionally, a comment must be 
+   written for the function. While this may not be beneficial in this simple 
+   example, if the computation is complex or unusual there is a huge benefit.
+3. The purpose of the code can be understood from just the name of the 
+   function, rather than having to discern the functionality from the inline
+   implementation.
+
+### Typedef vs Aliases
+
+C++11 provided the alias feature as an alternative to typedefs. It is preferred
+that alias's are used rather than typedefs as this encourages modern C++ and
+the syntax is more clear. Additionally, where an alias is created for a 
+specific template type which may have other similar alias's, then add a suffix
+to the name which indicates the type (for example ```i``` for an ```int```,
+```f```  for a ```float```, ```16f``` for a 16 element array of ```float's```
+etc). 
+
+Here is an example of the preferred use of alias's and typedefs:
+
+This is preferred:
+
+```cpp
+using Vec3f = std::array<float, 3>;
+using Vec3i = std::array<int, 3>;
+```
+
+Over this:
+
+```cpp
+typedef std::array<float, 3> Vec3f;
+typedef std::array<int, 3>   Vec3i;
+```
+
+Do not be afraid to abuse the use of aliases within classes, especially in the
+```private``` section. This is especially the case where implementation details
+may change. For example, some class may use an array as the container of
+elements, but later it may be reqired that the size be dynamic. Creating an
+alias for the container allows this change to be made easily. For example:
+
+```cpp
+class SomeClass {
+ private:
+  //==--- Aliases ---------------------------------------------------------==//
+
+  /// Defines the type of the contiguous container used to store elements.
+  using ContiguousContainer = std::vector<SomeType>;
+
+
+ public:
+  // Public interface ...
+  
+ private:
+  ContiguousContainer Elements; //!< Elements for x ...
+};
+```
+### Assertations
+
+Assert to check preconditions and assumptions. When the conditions can be
+checked at compile time use ```static_assert```. This can often lead to finding
+bugs that would otherwise not have been found, saving a lot of time when 
+debugging.
+
+The assert macro which should be used is the ```PixAssert``` macro in the
+**TODO: Add link** Pulley library. The macro requires an error message to be
+provided as the second parameter which will be printed when the assertation
+fails. For example:
+
+```cpp
+#include <Pixel/Pulley/Error/Assert.h>
+
+Element getElement(size_t i) {
+  PixAssert(i < Elements.size(), "getElement() : Out of range access");
+  return Elements[i];
+}
+```
+
+Note that ```PixAssert``` will add the file and line number. All assertations
+with ```PixAssert``` are removed when compiling in release mode ```-DNDEBUG```.
+
