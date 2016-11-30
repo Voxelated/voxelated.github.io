@@ -628,3 +628,196 @@ Element getElement(size_t i) {
 Note that ```PixAssert``` will add the file and line number. All assertations
 with ```PixAssert``` are removed when compiling in release mode ```-DNDEBUG```.
 
+### Using namespace::std
+
+Avoid ```using namespace std```, and prefer to use the prefix ```std::```.
+
+Also, in header files, avoid the use of ```using namespace X```, and rather
+use the prefix ```X::```, since the ```using``` directive pollutes the
+namespace of any source file which includes the header.
+
+In source files this is less of a concern, but should still be applied whenever
+it is not inconvenient to do so, as it makes functions easy to find, and easily
+identifiable. If multiple namespaces are chained, then define a shorter 
+namespace to represent it. For example:
+
+```cpp
+// This is a case which can be simplified.
+pixel::snap::math::sum(x, y);
+
+// To this.
+namespace math = pixel::snap::math;
+math::sum(x, y);
+```
+
+### Using std::endl
+
+The use of ```std::endl``` should be avoided, since it flushes the buffer,
+which is often not required. Rather use ```\n```, and in the case that the
+output stream must be flushed, then append ```std::flush```. For example:
+
+```cpp
+std::cout << std::endl;             // Avoid this.
+std::cout << "\n";                  // In favour of this.
+std::cout << "\n" << std::flush;    // Or this to flush the output stream.
+```
+
+### Container Iteration
+
+When iterating over containers and performing some action with the iterator, 
+it is preferred that ```std::for_each``` is used, and that the action to
+perform on the iterator is provided as either a lambda function or as a
+functor. For example:
+
+```cpp
+std::vector<int> elements{1, 2, 3, 4, 5};
+
+// for_each example with lambda.
+std::for_each(elements.begin(), elements.end(), [] (int& n) {
+  n++;
+});
+
+// for_each example with a functor
+struct Sum {
+  Sum() : sum_(0) {}
+  void operator()(int n) {
+    sum += n;
+  }
+  int sum;
+};
+
+Sum s = std::for_each(elements.begin(), elements.end(), Sum());
+```
+
+However, if the iteration over the container must be written explicitly, then
+pre-compute the end iterator so that a call to ```end()``` or ```size()``` is 
+not computed for each iteration.
+
+**NOTE:** This doesn't apply to the case where the container is modified by the
+loop, in which case the pre-computation of ```end()``` or ```size()``` will
+produce an incorrect result.
+
+In the case that the container is modified, add a comment which says so, and
+states why the container is modified. Here is an example:
+
+```cpp
+IterableArray* array = makeIterableArray();
+
+// This is the case when the container is not modified:
+for (auto it = array->begin(), end = array->end(); it != end; ++it) {
+  // Do something with it
+}
+
+// This is the case when the container is modified (note comment):
+// Modifies the array each time a bar element is found:
+for (auto it = array->begin(); it != array->end(); ++it) {
+  if (!it->isBar()) continue;
+
+  // Modify array ...
+}
+```
+
+This is done for the following reasons:
+
+1. For complex types the call to ```end()``` can potentially be costly. While 
+   this is not the case for a call to ```size()```, the same structure should 
+   still be used so that the code has a consistent style. 
+2. This makes it immediately clear whether or not the container is modified, 
+   without even having to look at the implementation of the loop. This is 
+   enforced by the requirement of writing a comment for loops which modify the
+   container. 
+
+### Inlining
+
+For small functions (approx < 10 lines), the ```inline``` keyword may be used 
+to hint to the compiler that it should inline the function. However, where a 
+function is inlined implicitly, then avoid the use of the ```inline```
+keyword. For example:
+
+The inline keyword here is not implicit, so it may be used:
+
+```cpp
+inline bool isGreater(int a, int b) {
+  return a > b;
+}
+```
+
+However, the inline keyword here is implicit (method implementation is defined
+inside the struct definition), so don't add it:
+
+```cpp
+struct Foo {
+  // Implicit inline, so don't use the inline keyword
+  void bar() {
+    // Some short implementation ...
+  }
+};
+```
+
+### Use of Const
+
+Make use of ```const``` **as often as possible**, since this allows the
+compiler to more aggressively optimise, and makes code easier to reason about.
+Mark  class methods ```const``` whenever they do not modify class variables.
+
+### Use of Noexcept
+
+Make use of ```noexcept``` wherever a function **will not** throw an exception. 
+As with ```const```, this allows for some optimisation. Specifically, the
+optimizer doesn't need to keep track of the runtime stack in an unwindable way,
+and they don't need to ensure that objects are destructe in the inverse order
+in which they were created. This makes life easier for the optimizer. 
+Additionally, since Pixel has its own error handling suite, and use of 
+exceptions are not allowed, many methods will be ```noexcept```.
+
+Besides having potential optimization gains, ```noexcept``` can also make it
+clear to anyone reading the code that the method does not throw an exception.
+
+## Formatting
+
+## Spaces for Parenthesis
+
+A space before an open parentheses is preferred for control-flow statements,
+but not in function calls or macros. No space is preferred after open
+parentheses and before closing parentheses, for all cases. For example:
+
+The following examples are good:
+
+```cpp
+// Control flow statements:
+if (A)                  // ...
+for (i = 0; i < e; ++i) // ...
+while (true)            //...
+
+// Functions:
+function(argument);
+PIXEL_MACRO(A);
+auto x = sum(4, 5) + divide(4, 2);
+```
+
+While the following examples are bad:
+
+```cpp
+// Control flow statements:
+if(A)                   // ...
+for(i = 0; i < e; ++i ) // ...
+while( true )           // ...
+
+// Functions:
+function( argument );
+function (argument);
+PIXEL_MACRO ( A );
+auto x = sum (4, 5) + divide( 4, 2 );
+```
+
+### Alignment of Variables
+
+When declaring variables, always align them in columns, for example:
+
+```cpp
+int       intOne   , intTwo;
+float     floatOne ;
+OtherType otherType;
+```
+Some may say that this is irrelevant and a waste of time, but it makes the code
+easier to read, and look nice, so follow the convention.
