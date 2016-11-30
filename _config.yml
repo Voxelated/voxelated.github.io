@@ -13,6 +13,7 @@ highlighter:      rouge
 include:          ['_pages']
 gems:
                   - jekyll-feed
+exclude:          ['vendor']
 exclude:
                   - Gemfile
                   - Gemfile.lock

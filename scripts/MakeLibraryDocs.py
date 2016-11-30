@@ -8,7 +8,8 @@ def git(*args):
 startDir = os.getcwd()
 
 libraries = {
-  'Meta'   : 'https://github.com/PixelTechnologies/Meta.git'
+  'Meta'   : 'https://github.com/PixelTechnologies/Meta.git',
+  'Pulley' : 'https://github.com/PixelTechnologies/Pulley.git'
 }
 
 # Fetch all the formatting files:

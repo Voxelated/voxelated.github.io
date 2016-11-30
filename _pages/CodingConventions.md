@@ -774,8 +774,9 @@ Besides having potential optimization gains, ```noexcept``` can also make it
 clear to anyone reading the code that the method does not throw an exception.
 
 ## Formatting
+-------------------------------------------------------------------------------
 
-## Spaces for Parenthesis
+### Spaces for Parenthesis
 
 A space before an open parentheses is preferred for control-flow statements,
 but not in function calls or macros. No space is preferred after open
