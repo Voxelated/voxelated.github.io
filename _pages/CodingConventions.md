@@ -958,8 +958,11 @@ class ExampleClass {
   ExampleClass(SomeComplexType s, SomeOtherComplexType sc, int a);
 
   // Initialization will not fit on a single new line for this:
-  ExampleClass(SomeComplexType s, SomeOtherComplextType sc, 
-    AnotherType at, YetAnotherType yat, int a);
+  ExampleClass(SomeComplexType      s  ,
+              SomeOtherComplextType sc , 
+              AnotherType           at ,
+              YetAnotherType        yat,
+              int                   a  );
 
  private:
   SomeComplextType      ComplexTypeA;
