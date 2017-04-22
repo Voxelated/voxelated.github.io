@@ -1,0 +1,20 @@
+.voxel-header-logo {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  font-size   : xx-large;
+  font-weight : bold;
+  color       : #546e7a;
+}
+
+.voxel-navbar-element a {
+  border-bottom : 1px solid rgba(0, 0, 0, 0.1);
+  color         : #546e7a;
+}
+
+.voxel-navbar-element a:hover {
+  border-bottom : 1px solid rgba(0, 0, 0, 0.5);
+  color         : #546e7a;
+}
+
+html {
+  color: rgba(0, 0, 0, 0.65);
+}

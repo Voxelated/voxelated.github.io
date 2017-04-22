@@ -18,10 +18,10 @@ main {
 }
 
 .logo {
-  width: $navbar-height-mobile - 4px;
-  height: $navbar-height-mobile - 4px;
-  border-radius: 4px;
-  vertical-align: middle;
+  width: $navbar-height-mobile / 1.5;
+  height: $navbar-height-mobile / 2.0;
+  border-radius : 4px;
+  margin-right  : 4px;
 }
 
 .site {

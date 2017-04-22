@@ -1,6 +1,6 @@
 .side-nav {
   position: fixed;
-  width: 12.5%;
+  //width: 12.5%;
   left: 0;
   top: $navbar-height;
   margin: 0;
@@ -47,7 +47,8 @@
     line-height: $sidenav-item-height;
     padding: 0 ($sidenav-padding * 2);
 
-    &:hover { background-color: rgba(0,0,0,.05);}
+    &:hover { background-color: rgba(0,0,0,.05);
+              border-bottom : 1px solid rgba(0, 0, 0, 0.1); }
 
     &.btn, &.btn-large, &.btn-flat, &.btn-floating {
       margin: 10px 15px;

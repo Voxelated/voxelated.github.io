@@ -21,15 +21,16 @@
     display: inline-block;
 
     &:hover {
-      color: $secondary-color;
-      padding-left: 19px;
-      border-left:3px solid $secondary-color;
-      height: inherit;
+      color         : $secondary-color;
+      padding-left  : 19px;
+      border-left   : 2px solid $secondary-color;
+      height        : inherit;
+      font-weight   : bold;
     }
     &.active {
-      font-weight: 500;
-      padding-left: 18px;
-      border-left: 3px solid $secondary-color;
+      font-weight   : bold;
+      padding-left  : 18px;
+      border-left   : 3px solid $secondary-color;
     }
   }
 }

@@ -33,11 +33,11 @@
 // 1. Colors
 // ==========================================================================
 
-$primary-color: color("teal", "accent-4") !default;
+$primary-color: color("light-blue", "lighten-2") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("blue", "darken-4") !default;
+$secondary-color: #546e7a !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
@@ -218,15 +218,15 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
 $navbar-height: 64px !default;
 $navbar-height-mobile: 56px !default;
 $navbar-font-size: 1rem !default;
-$navbar-font-color: #1c2f4f !default;
+$navbar-font-color: $secondary-color !default;
 $navbar-brand-font-size: 2.1rem !default;
 
 // 14. Side Navigation
 // ==========================================================================
 
 $sidenav-font-size: 14px !default;
-$sidenav-font-color: rgba(0,0,0,.87) !default;
-$sidenav-bg-color: #fff !default;
+$sidenav-font-color: $secondary-color !default;
+$sidenav-bg-color: color("blue-grey" ,"lighten-3") !default;
 $sidenav-padding: 16px !default;
 $sidenav-item-height: 48px !default;
 
@@ -284,7 +284,7 @@ $h6-fontsize: 1rem !default;
 // 21. Footer
 // ==========================================================================
 
-$footer-bg-color: $primary-color !default;
+$footer-bg-color: color("blue-grey", "lighten-4") !default;
 
 
 // 22. Flow Text

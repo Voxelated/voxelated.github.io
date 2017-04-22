@@ -2,17 +2,17 @@
 layout:     page
 title:      Coding Conventions
 permalink:  CodingConventions.html
+author:     Rob Clucas
 ---
 
-This page describes the coding conventions for Pixel's software. The conventions
-are particularly important for a large projects, which Pixel is. Some of the
-internal libraries are themselves large projects. The conventions are designed
-to increase the readability of the code base so that it's as simple as possible
-for new developers to understand the code. This also makes the code easier
-to maintain. We also want to produce high quality, bug free software, with 
-exceptional performance, and the only way to do so is to establish conventions
-and follow them. They will likely be imperfect, and should be considered a work
-in progress, so feel free to make suggestions.
+This page describes the coding conventions which are followed when implementing
+the Voxel libraries. he conventions are designed to increase the readability of
+the code base so that it's as realtively simple for anyone wanting to contribute
+to get up to speed. This also makes the code easier to maintain. Most of the
+conventions are a combination of those from other C++ code bases (LLVM,
+Google, etc.) as well as general things which have been discovered as the
+libraries were being developed. They will likely be imperfect, and should be
+considered a work in progress, so feel free to make suggestions.
 
 In general, the preference is to produce clean, modern, and efficient C++ code. 
 When the choice must be made between performance and clarity, the preference is 
@@ -36,16 +36,13 @@ Spaces must always be used over tabs. This is so that there is consistency
 across all development environments. If the preferred development environment
 allows it, configure it to replace all tabs with spaces.
 
-In general, all indentation is a **2 space** indent. This allows more to fit
-into the 80 column limit, and also only requires a single additional keyboard
-press compared to using a tab.
+In general, all indentation is a **2 space** indent, as it allows more to fit
+into the 80 column limit.
 
 There are, however, occasions where the 2 space indent is **not** the correct 
 indentation. These cases are documented throughout the remainder of these 
 conventions. When these cases appear, then follow what is stated in those more
 specific instances.
-
-**TODO:** Get clang format setup and specify how to use it.
 
 ## Files
 -------------------------------------------------------------------------------
@@ -58,14 +55,15 @@ with the functionality that they provide.
 
 For template files, if there is specific implementation details which are
 hidden in a ```Detail::``` namespace, then move the implementation to a file
-with the same name with an **Impl.hpp** suffix, in a **Detail/** folder within
-the directory.
+with the same name with an **Impl.hpp** suffix, and preferably in a
+**Detail/** subdirectory within the parent directory which defines the
+interface.
 
 The following are examples of some file names:
-```cpp
+~~~cpp
 FunctionTraits.hpp              // Name of a class file.
 Detail/FunctionTraitsImpl.hpp   // Name of a detail file.
-```
+~~~
 
 Files should have the following extensions:
 
@@ -79,37 +77,22 @@ Files should have the following extensions:
 | .vert          | GLSL vertex shader                      |
 | .frag          | GLSL fragment shader                    |
 
-### The Define Guard
+### Header Guards
 
-All header files (```.h``` and ```.hpp```) should use ```#define``` 
-guards. The guards should directly follow the file comment (see 
-[Header Files](#header-files). The guard should have the name  **PIXEL** , 
-followed by the library name, followed by the module name, and finally the 
-name of the file.
-
-The names should be **upper case** and separated by **underscores**. Each 
-terminating ```#endif``` should have a comment which matches the guard name. 
-For example, for a library named Meta, a module within Meta named Traits, and a
-file named FunctionTraits.hpp:
-
-```cpp
-#ifndef PIXEL_META_TRAITS_FUNCTION_TRAITS_HPP
-#define PIXEL_META_TRAITS_FUNCTION_TRAITS_HPP
-
-// Some code here ...
-
-#endif  // PIXEL_META_TRAITS_FUNCTION_TRAITS_HPP
-```
+Rather than using header guards, use ```#pragma once``` is this is far simpler,
+and results in cleaner looking header files. All header files (```.h``` and
+```.hpp```) should use ```#pragma once```, which should directly follow the file
+comment (see [Header Files](#header-files)).
 
 ### Including
 
 The ```#include``` keyword for including header files should directly follow 
-the define guards. Include header files minimally, and where possible, prefer
-to forward declare, unless the class is a class template, which should never be
-forward declared. Header files should be included in the following order:
+the ```#pragma once``` directive, separated by a space. Include header files
+minimally, and where possible, prefer to forward declare. Header files should be
+included in the following order:
 
   1. Headers local to the library/application
-  2. Headers for other Pixel libraries used in the library/application
+  2. Headers for other Voxel libraries used in the library/application
   3. Headers from the C++ standard library
   4. Any other headers
 
@@ -117,10 +100,7 @@ forward declared. Header files should be included in the following order:
 
 Comments are extremely important for making code simpler to understand, most
 especially in sections which introduce complexity in exchange for increased
-performance, and in templated code -- which will likely be extensive within 
-Pixel since many of the libraries use expression templates and aim for optimal
-performance (where possible, try to move general templated code to Pixel's Meta
-library).
+performance, and in complex template metaprogramming code.
 
 Comments should we written using correct English, which means that they should
 make correct use of punctuation, capitalization, spelling, and should end with
@@ -167,7 +147,7 @@ template <typename FooType>
 void doFooSomething(FooType foo);
 ```
 
-Prefer to descripe the return parameters in the description of the function as
+Prefer to describe the return parameters in the description of the function as
 this generally makes more sense. For example:
 
 ```cpp
@@ -185,20 +165,19 @@ which is defined locally.
 Each source file should have a comment at the top of the file which includes
 the path to the file, its name, and the language (C++). Files should also 
 include the license reference, the name of the library the file is part of, 
-Pixel Technology's name in the copyright section, and a location to where 
+Voxel's name in the copyright section, and a location to where 
 the full license can be found. Lastly, Doxygen comments for the file name 
-(using the ```\file```command) and a more detailed description (using 
-the ```\brief``` command) must be provided. Files without declaration comments
-should not be accepted when submitted for code review. The declatation comment
-for a FunctionTraits.hpp file in the root directory of the Meta Library looks 
-as follows:
+(using the ```\file``` command) and a more detailed description (using 
+the ```\brief``` command) must be provided. The declatation comment
+for a FunctionTraits.hpp file in the Functional directory of the Voxel main
+Library would look as follows:
 
 ```cpp
-//==--- Meta/Traits/FunctionTraits.hpp -------------------- -*- C++ -*- ---==//
+//==--- Voxel/Functional/FunctionTraits.hpp ----------------- -*- C++ -* ---==//
 //            
-//                                Pixel : Meta 
+//                                  Voxel
 //
-//                  Copyright (c) 2016 Pixel Technologies, Ltd.
+//                      Copyright (c) 2017 Author Name.
 //
 //  This file is distributed under the MIT License. See LICENSE for details.
 //
@@ -222,7 +201,7 @@ follows:
 
 ```cpp
 /// The example class is a general base class for all examples within the 
-/// Pixel libraries. 
+/// Voxel libraries.
 ///
 /// It is used to define the interface which all examples must follow, making
 /// the examples clear, consistent and easy to understand.
@@ -249,9 +228,43 @@ specify why such a decision was made.
 
 ### Warnings
 
-No Pixel code should have warnings (when using GCC, clang, or MSVC). If there
+No code should have warnings (when using GCC, clang, or MSVC). If there
 are warnings, then there are problems in the code which should be fixed. The
-code causing the warnings should be fixed immediately.
+code causing the warnings should be fixed immediately. There are some
+exceptions, however.
+
+Sometimes one might want to used taged dispatch to select between
+implementations at compile time. For example:
+
+```cpp
+struct Example {
+ private:
+  // Struct which can be used to select the appropriate implementation.
+  template <std::size_t Dimensions> struct DimDispatch {};
+ 
+ public:
+  // Interface:
+  auto someImplementation(const MultiDimObject& object) const {
+    constexpr auto dims = ObjectTraits<MultiDimObject>::Dimensions;
+    return multiDimImpl(object, DimDispatch<dims>{});
+  }
+
+ private:
+  // 1D implementation:
+  auto multiDimImpl(const MultiDimObject& object, DimDispatch<1> tag) const {
+    // ...
+  }
+  // 2D implementation:
+  auto multiDimImpl(const MultiDimObject& object, DimDispatch<2> tag) const {
+    // ...
+  }
+};
+```
+
+will result in unused parameter warnings for the implementation functions. This
+is acceptable. However, for this specific case, the unused parameter should be
+acknowledged by naming it appropriately, such as ```tag``` or ```selector``` in
+the above example.
 
 To enable compiler warnings, code should be compiled with the following flags:
 
