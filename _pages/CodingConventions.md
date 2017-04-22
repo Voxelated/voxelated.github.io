@@ -266,6 +266,15 @@ is acceptable. However, for this specific case, the unused parameter should be
 acknowledged by naming it appropriately, such as ```tag``` or ```selector``` in
 the above example.
 
+This can be avoided in c++17 by using ```if constexpr()```, however, when there
+are numerous dispatch options, the above pattern results in clearer code.
+Another alternative is to write a separate dispatch class template, templated on
+the paramter which selects the appropriate dispatch, and then to specialize the
+class tempalte. This is a good choice if the implementation functions do not
+require access to the internals of the class doing the dispatching, however, if
+they do then the dispatch class must be a friend of the class implementing the
+interface, and it is then preferable to have the warning.
+
 To enable compiler warnings, code should be compiled with the following flags:
 
 ```cpp
@@ -280,37 +289,8 @@ To enable compiler warnings, code should be compiled with the following flags:
 
 Exceptions and error handling can slow down code when such features are not a
 necessity, however, can be extremely useful for debugging and producing code 
-which does not break. Pixel code does not use any exception handling, but
-rather defines its own error handling class, ```TypedError```.The class
-ensures that all errors are checked and handled (in debug code, in release code
-the overheads are removed).
-
-On top of ```TypedError```, there is  the ```ErrorOr<T>``` class, which stores
-either  a ```T``` or a ```TypedError```. The ```ErrorOr<T>``` class should be
-used whenever a function can return an error which should be handled. The class
-ensures that all errors are checked and handled (in debug code, in release code
-the overheads are removed).
-
-The following provides some example code of where ```ErrorOr<T>``` and
-```TypedError``` might be used:
-
-```cpp
-class Socket {
- public:
-  Socket(Endpoint endpoint) : Descriptor(-1) {}
-
-  TypedError open() {
-    Descriptor = getDescriptor(); // Returns ErrorOr<int>
-
-    // If there is an error, we leave that to the caller to handle:
-    if (!Descriptor)
-      return Descriptor.takeError();
-    // Socket is open.
-  }
- private:
-  ErrorOr<int> Descriptor;
-};
-```
+which does not break. The Voxel library code uses exceptions where appropriate,
+since they are essentially zero cost in the non-exception case.
 
 ### Casting
 
@@ -353,6 +333,9 @@ struct ExampleFunctor {
 };
 ```
 
+Lambda functions are another option which are often a lot simpler, and result in
+very good performance, especially if they are stateless.
+
 ### Classes vs Structs
 
 The ```class``` and ```struct``` keywords should be used under the following
@@ -369,13 +352,6 @@ the code more readable, and nowhere else. This is especially true for the case
 that the type of the object is immediately obvious from the surrounding 
 context. You may also use it **within** library implementations to simplify 
 template code. 
-
-**Note:** *Do not use auto to simplify template code if the code is part of a 
-library's interface. It is okay to assume that other library developers 
-understand C++ sufficiently to infer the type of heavily templated code from 
-the surrounding context, and hence justifies the simplification ```auto``` 
-provides. However, if the interface is available for anyone to use, the code 
-should be explicit so that even beginner C++ developers can understand it.*
 
 When using the ```auto``` keyword, be aware of the efficiency in specific
 cases.
@@ -404,7 +380,7 @@ for (auto* val : container      ) { val->wantToModify();    }
 It should be possible to write portable code in almost all cases. In some
 special circumstances (for example where wrapping a system call which may not
 have a similar operation on another platform), then the code should be hidden
-behind an iterface which provides the similar functionality for the unsupported
+behind an interface which provides the similar functionality for the unsupported
 platform.
 
 If a compiler does not support some functionality, then there are two options:
@@ -419,7 +395,7 @@ compilers did not. We can then do something like:
 
 ```cpp
 namespace std {
-#if defined(PIXEL_GNUC) || defined(PIXEL_MSVC) 
+#if defined(VoxxGnuc) || defined(VoxxMsvc) 
   template <typename T, typename U>
   static constexpr bool is_same_v = is_same<T, U>::value;
 #endif
@@ -609,7 +585,6 @@ class SomeClass {
   /// Defines the type of the contiguous container used to store elements.
   using ContiguousContainer = std::vector<SomeType>;
 
-
  public:
   // Public interface ...
   
@@ -620,26 +595,27 @@ class SomeClass {
 ### Assertations
 
 Assert to check preconditions and assumptions. When the conditions can be
-checked at compile time use ```static_assert```. This can often lead to finding
-bugs that would otherwise not have been found, saving a lot of time when 
-debugging.
+checked at compile time use ```static_assert``` -- use this very liberally! This
+can often lead to finding bugs that would otherwise not have been found, saving 
+a lot of time when debugging.
 
-The assert macro which should be used is the ```PixAssert``` macro in the
-**TODO: Add link** Pulley library. The macro requires an error message to be
-provided as the second parameter which will be printed when the assertation
-fails. For example:
+The assert macro which should be used is the ```VoxxAssert(condition, message```
+macro in the [Voxel](https://github.com/Voxelated/Voxel) library. The macro
+requires an error message to be provided as the second parameter which will be
+printed when the assertation fails. For example:
 
 ```cpp
-#include <Pixel/Pulley/Error/Assert.h>
+#include <Voxel/Utility/Debug/Assert.h>
 
 Element getElement(size_t i) {
-  PixAssert(i < Elements.size(), "getElement() : Out of range access");
+  VoxxAssert(i < Elements.size(), "getElement() : Out of range access");
   return Elements[i];
 }
 ```
 
-Note that ```PixAssert``` will add the file and line number. All assertations
-with ```PixAssert``` are removed when compiling in release mode ```-DNDEBUG```.
+Note that ```VoxxAssert``` will add the file and line number. All assertations
+with ```VoxxAssert``` are removed when compiling in release mode,
+i.e when the ```-DNDEBUG``` flag is passed.
 
 ### Using namespace::std
 
@@ -656,11 +632,11 @@ namespace to represent it. For example:
 
 ```cpp
 // This is a case which can be simplified.
-pixel::snap::math::sum(x, y);
+Voxx::Compute::Math::sum(x, y);
 
 // To this.
-namespace math = pixel::snap::math;
-math::sum(x, y);
+namespace Math = Voxx::Compute::Math;
+Math::sum(x, y);
 ```
 
 ### Using std::endl
@@ -738,13 +714,18 @@ This is done for the following reasons:
 2. This makes it immediately clear whether or not the container is modified, 
    without even having to look at the implementation of the loop. This is 
    enforced by the requirement of writing a comment for loops which modify the
-   container. 
+   container.
+
+Most of the Voxel containers provide their own implementations of
+```forEach()```, which can be used instead of iteration. Additionally, the main
+[Voxel](ttps://github.com/Voxelated/Voxel) library provides an implementation of
+```forEach()``` for ```std::tuple```, which is useful.
 
 ### Inlining
 
 For small functions (approx < 10 lines), the ```inline``` keyword may be used 
-to hint to the compiler that it should inline the function. However, where a 
-function is inlined implicitly, then avoid the use of the ```inline```
+to __hint__ to the compiler that it should inline the function. However, where
+a function is inlined implicitly, then avoid the use of the ```inline```
 keyword. For example:
 
 The inline keyword here is not implicit, so it may be used:
@@ -778,13 +759,75 @@ Mark  class methods ```const``` whenever they do not modify class variables.
 Make use of ```noexcept``` wherever a function **will not** throw an exception. 
 As with ```const```, this allows for some optimisation. Specifically, the
 optimizer doesn't need to keep track of the runtime stack in an unwindable way,
-and they don't need to ensure that objects are destructe in the inverse order
-in which they were created. This makes life easier for the optimizer. 
-Additionally, since Pixel has its own error handling suite, and use of 
-exceptions are not allowed, many methods will be ```noexcept```.
+and they don't need to ensure that objects are destructein the inverse order
+in which they were created. This makes life easier for the optimizer.
 
 Besides having potential optimization gains, ```noexcept``` can also make it
 clear to anyone reading the code that the method does not throw an exception.
+
+### Final and Override
+
+Use the ```override``` keyword for any derived class implementations of the same
+base class functions. Additionally, if it is known that the derived
+implementation will not be overriden, mark it as ```final```.
+
+```cpp
+struct Base {
+  virtual void someFunc() {
+    // Default impl ...
+  }
+};
+
+struct Derived : public Base {
+  virtual void simFunc() final override {
+    // Overriden final implementation ...
+  }
+};
+```
+
+### Forwarding (Universal) and Rvalue-References
+
+Forwarding references (termed [Universal references]
+(https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers)) are
+(from [temp.deduct](http://eel.is/c++draft/temp.deduct#call-3)) :
+
+> A forwarding reference is an rvalue reference to a cv-unqualified template parameter. If P is a forwarding reference and the argument is an lvalue, the type “lvalue reference to A” is used in place of A for type deduction.
+
+i.e:
+
+```cpp
+// Here T&& is a forwarding reference, and can either be lvalue reference
+// or rvalue reference
+template <typename T>
+void func(T&& param);
+```
+where:
+```cpp
+int x = 10;
+func(x);    // x is lvalue
+func(10);   // 10 is rvalue
+```
+
+for functions which take a forwarding reference, the parameter(s) should always
+be forwarded with ```std::forward```, unless the parameter is used multiple
+times, since ```std::forward``` may consume the parameter if it is deduced to be
+an rvalue reference. For example:
+
+```cpp
+// Example for forwarding reference used once:
+template <typename T>
+void interface(T&& param) {
+  implementation(std::forward<T>(param));
+}
+
+// Example of forwarding reference used multiple times:
+template <typename T>
+void interface(T&& param) {
+  firstUse(param);
+  finalUseWhichMayConsume(std::forward<T>(param));
+}
+```
+
 
 ## Formatting
 -------------------------------------------------------------------------------
@@ -805,7 +848,7 @@ while (true)            //...
 
 // Functions:
 function(argument);
-PIXEL_MACRO(A);
+VoxxMacro(A);
 auto x = sum(4, 5) + divide(4, 2);
 ```
 
@@ -820,7 +863,7 @@ while( true )           // ...
 // Functions:
 function( argument );
 function (argument);
-PIXEL_MACRO ( A );
+VoxxMacro ( A );
 auto x = sum (4, 5) + divide( 4, 2 );
 ```
 
@@ -835,3 +878,311 @@ OtherType otherType;
 ```
 Some may say that this is irrelevant and a waste of time, but it makes the code
 easier to read, and look nice, so follow the convention.
+
+### Classes and Structs
+
+For classes and structs, the **opening brace** should be on the **same line** 
+as the class declaration, and the closing brace should be on its own line.
+
+The ```public```, ```protected``` and ```private``` keywords should be 
+indented **one space**. Everything else should be indented **two spaces**, and 
+variables and aliases should be **aligned in** columns.
+
+The order of declarations should be as follows:
+
+- List of friend classes
+- Public aliases
+- Public variables
+- Public methods
+- Protected aliases 
+- Protected variables
+- Protected methods
+- Private aliases
+- Private variables
+- Private methods
+
+This allows the public interface to easily be found at the beginning of the
+class. Each of the sections within the access specifier should be separated by 
+a space (for example there should be a space between the end of the public 
+aliases and the public variables, etc...).
+
+The following is an example of a correctly formatted class (including correct 
+commenting):
+
+```cpp
+/// Example class illustrating correct class formatting.
+class ExampleFormatting {
+ public:
+  friend class Formatter;
+
+  /// Alias for formatting type.
+  using formattingType = SomeFormat;
+  /// Alias for some other type.
+  using someOtherType  = SomeType;
+
+  int    numFormats;        //!< Number of formats.
+  float  formatPrecision;   //!< Precision of a format.
+
+  /// Default constructor: Does nothing.
+  ExampleFormatting() {};
+
+ protected:
+  // ...
+
+ private:
+  /// Internal alias for format storage.
+  using FormatVector = std::vector<Format>;
+
+  FormatVector  Formats;    //!< Storage of the formats.
+  bool          MustFormat; //!< If some formatting must be done.
+
+  /// Checks if a format is valid.
+  /// \param[in] index The index of the format to check the validity of.
+  bool isValidFormat(size_t index) const;
+};
+```
+
+For constructors, the initialization of member variables should be on the same
+line as the constructor declaration, if they can fit, otherwise they should
+start on the next line, without indentation. If they cannot all fit on the
+following line, then they should each be on a separate line with a 4 space
+indent, and all comma's should be in the same column. For example:
+
+```cpp
+class ExampleClass {
+ public:
+  // Initialization can fit on the same line:
+  ExampleClass(int a, int b) : TotalCount(a), SubCount(b) {}
+
+  // Initialization will fit on a single new line for this:
+  ExampleClass(SomeComplexType s, SomeOtherComplexType sc, int a);
+
+  // Initialization will not fit on a single new line for this:
+  ExampleClass(SomeComplexType s, SomeOtherComplextType sc, 
+    AnotherType at, YetAnotherType yat, int a);
+
+ private:
+  SomeComplextType      ComplexTypeA;
+  SomeOtherComplexType  ComplexTypeB;
+  AnotherType           TypeC;
+  YetAnotherType        TypeD;
+  int                   TotalCount;
+  int                   SubCount;
+};
+
+ExampleClass::ExampleClass(SomeComplexType      s ,
+                           SomeOtherComplexType sc,
+                           int                  a )
+: ComplexTypeA(s), ComplexTypeB(sc), TotalCount(a), SubCount(0) {
+  // Rest of implementation ...
+}
+
+ExampleClass::ExampleClass(SomeComplexType       s  ,
+                           SomeOtherComplextType sc , 
+                           AnotherType           at ,
+                           YetAnotherType        yat,
+                           int                   a  )
+:   ComplexTypeA(s) ,
+    ComplexTypeB(sc),
+    TypeC(at)       , 
+    TypeD(yat)      , 
+    TotalCount(a)   ,
+    SubCount(0)     {
+}
+```
+
+### Lambda Expressions
+
+For lambda expression, the opening brace should be on the same line as the
+lambda, the closing bracket should be on its own line, followed by the
+closing ```)``` bracket (if appropriate) and the semi-colon. The body of the 
+lambda should be indented **2** spaces further than the line above which 
+declares the lambda. For example:
+
+```cpp
+for_each(someVector.begin(), someVector.end(), [] (int& n) {
+  n++;      // Two space indent, from line above.
+});         // Closing brace and bracket on the same line.
+```
+
+This reduces vertical space and allows more code to fit into a single screen,
+allowing whomever is reading the code to gain more context.
+
+In the case where the captures and arguments for the lambda roll over to a new 
+line (past the 80 character limit), place the captures and parameters on a new
+line with a __2__ space indent, and then indent the body a further __2__ spaces.
+Use discretion to make the code as readable as possible. For example, this is one option:
+
+```cpp
+std::for_each(someVector.begin(), someVector.end(),
+  [&someVariable] (int& n) {
+    n++;                       // Further two space indent.
+  }                            // Closing brace lined up with capture start.
+);                             // Closing brace lined up with function start.
+```
+
+When there are multiple successive lambda functions, start each one on a new 
+line, with the ```[]``` indented two spaces further than the previous
+indentation, and the body of the lambda indented two spaces from the ```[]```. 
+Line up the ```[]``` brackets from each lambda. 
+
+If the lambdas are surrounded by opening and closing round brackets (as in the 
+case of a function which takes multiple lambdas), then place the 
+closing ```)``` bracket and the semi-colon which follows on their own line. For 
+example:
+
+```cpp
+void someFunctionWithMultpleLambdas(
+  [] (int& n) {               // Indented 2 spaces from previous indentation.
+    n++;                      // Further two space indent.
+  }, 
+  [captureVariable] () {      // Lines up with previous lambda's capture.
+    // Do something ...
+  }
+);                            // Placed on own line.
+```
+
+### Namespaces
+
+Each namespace should be declared on it's own line, with an opening brace on
+the same line, and should use CamelCase, starting with an uppercase letter.
+The opening braces of namespaces should line up, and the end of the namespace
+should have a closing brace on its own line and a comment
+```// namespace <namespace_name>``` to indicate the end of the namespace. This
+makes it easy to search for the end of a namespace using its name, for files
+which have multiple namespaces. The body of the namespace should not be
+indented. For example:
+
+This is a general namespace example:
+
+```cpp
+namespace Example {
+class Foo {
+  // Foo details ...
+};
+}  // namespace Example
+```
+
+#### Anonymous and Detail Namespaces
+
+Anonymous namespaces are a great feature of C++ as they let the compiler know
+that the contents of the anonymous namespace are only visible to the current
+translational unit, which allows the compiler to perform more aggressive
+optimization. These are essentially the same as ```static``` functions in C. 
+In C++, however, anonymous namespaces are more general than ```static``` 
+since they can make an entire class private to a translational unit, which
+should be their primary use.
+
+When using anonymous namespaces, make them as small as possible, and use them
+for class declarations only (not functions). For example:
+
+This is good:
+
+```cpp
+namespace {
+
+struct Comparator {
+  Comparator();
+  bool operator()(int a, int b) const;
+};
+
+}  // namespace anon
+
+static void otherFunction() {
+  // ...
+}
+
+bool Comparator::operator()(int a, int b) const {
+  return a < b;
+}
+```
+
+While this is bad:
+
+```cpp
+namespace {
+
+struct Comparator {
+  Comparator();
+  bool operator()(int a, int b) const;
+}
+
+void otherFunction() {
+  // ...
+}
+
+bool Comparator::operator()(int a, int b) const {
+  return a < b;
+}
+
+} // namespace anon
+```
+
+There is no need for ```operator()``` to be included in the anonymous 
+namespace. For ```someFunction()``` it is difficult to tell that it is local 
+to the file in the case that it is in the anonymous namespace.
+
+Functions and variables should rather be part of a ```Detail``` namespace
+and/or use the ```static``` keyword, if they are intended to be used only in 
+the surrounding context. For example:
+
+```cpp
+namespace Detail {
+
+static int  objectCount = 4;
+static void someFunction() {
+  // ...
+}
+
+void someOtherFunction() {
+  // ...
+}
+
+}  // namespace Detail
+```
+
+### Pointers and References
+
+For pointers are references, attach the ```*``` or ```&``` operators to the
+type rather than to the name. Additionally, the use of ```const``` for 
+pointers and ints is shown below:
+
+The following is good convention for pointers:
+
+```cpp
+// Good for pointers:
+int*              p;      // Non-const pointer to non-const int.
+int* const        p;      // Const pointer to a non-const int.
+const int*        p;      // Non-const pointer to const int.
+const int* const  p;      // Const pointer to const int.
+```
+
+While the following is bad for pointers:
+
+```cpp
+int const*        p;
+int              *p;
+int * const       p;
+const int        *p;
+const int * const p;
+```
+
+The following is good for references:
+
+```cpp
+int&              r;      // Non-const int reference.
+const int&        r;      // Const int reference.
+```
+
+While the following is bad for references:
+
+```cpp
+int              &r;
+const int        &r;
+int const&        r;
+int const        &r;
+```
+
+## Naming
+--------------------------------------------------------------------------------
+
