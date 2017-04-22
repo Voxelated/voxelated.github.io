@@ -1,35 +1,20 @@
 ---
 layout: page
-title:  Pixel Developer Documentation
+title:  Voxel Documentation
 ---
 
-Welcome to the internal documentation and resources for all Pixel software. The
-documentation is very important, and allows the code base to be clean and
-easy to understand. 
+This is the main page for docmentation related to Voxel, welcome!
 
 ### Overview
 -------------------------------------------------------------------------------
 
-Pixel aims to eventually develop the most technologically advanced 3D software,
-in any field where 3D software can be of benefit. With VR being in its infancy,
-the potential for quality 3D software is immense. 
-
-Our initial aim is essentially to create what can be thought of as the
-intersection of Wikipedia, Pixar, and a StackOverflow like site. It allows
-people to create beautifully rendered 3D animations (educational videos), to
-visually explain concepts in all fields.
-
-Consider the following simple example: A student is struggling to understand
-forces -- say they can't determine acceleration/velocity/position from time
-graphs of the other quantities. Someone wanting to explain this can use the
-software to easily communicate this with a 3D scene of an elevator moving, and
-attach graphs for the quantities to observe how they change with time. The
-person creates the animation in real-time, with the person on the other end of
-the network sharing the animation, and also being able to edit it.
-
-The above example is a simple case, and the overall goal is to provide software
-which allows the following for all levels, even complex physical simulations
-such of fluid flow and rigid body dynamics.
+The voxel libraries (found at [Voxelated](https://github.com/Voxelated) are a
+collection of libraries which provide general C++, compute, and graphics
+related functionality. The implementations are intended to execute efficiently,
+however, the reason for these libraries is to learn, and thus there are likely
+more efficient implementations available. Where functionality is implemented
+which is known to be provided by another library, the implementations are
+benchmarked to accurately compare the performance.
 
 ### Getting Started
 -------------------------------------------------------------------------------
