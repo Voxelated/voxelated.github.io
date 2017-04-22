@@ -1,8 +1,24 @@
+//==--- js/init.js -------------------------------------------- -*- .js -*- ==//
+//
+//                                     Voxel
+//
+//                        Copyright (c) 2017 Rob Clucas
+//  
+//  This file is distributed under the MIT License. See LICENSE for details.
+//
+//==------------------------------------------------------------------------==//
+//
+//  \file  init.js
+//  \brief Javascript initialization script for the documentation.
+//
+//==------------------------------------------------------------------------==//
+
 $(document).ready(function(){
   $('.button-collapse').sideNav();
   $('.scrollspy').scrollSpy();
   $('.collapsible').collapsible();
 
+  // Support for the menu:
   $('.button-collapse').on('click', function(){
     if ($(this).hasClass('active')) {
       $(this).removeClass('active');
@@ -13,6 +29,7 @@ $(document).ready(function(){
     }
   });
 
+  // Make table highlighted:
   $('table').addClass('highlighted');
 });
 

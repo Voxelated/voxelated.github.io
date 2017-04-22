@@ -1,9 +1,9 @@
 # Site settings
-title:            Pixel Internal Documentation
+title:            Voxel Documentation
 email:            robjclucas@gmail.com
-description:      Internal documentation for all Pixel code and guidelines.
-baseurl:          ""    # Site subdir  e.g. /blog
-url:              "127.0.0.1" # Site maindir
+description:      Documentation for Voxel.
+baseurl:          ""                            # Site subdir  e.g. /blog
+url:              "https://voxelated.github.io" # Site maindir
 twitter_username:
 github_username:
 
