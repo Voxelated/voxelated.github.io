@@ -1189,3 +1189,314 @@ int const        &r;
 ## Naming
 --------------------------------------------------------------------------------
 
+Naming is important as poor naming can cause confusion when trying to
+understand how code works, and can therefore lead to bugs. Names should be
+descriptive, allowing the reader to understand the usage and intention of
+a variable or type from it's name. Avoid abbreviations where possible, and
+conform to the capitalization conventions, as they are designed to allow for 
+immediate identification of types, variables, functions, access scope, etc..., without having to actually search for that information.
+
+### Type Names
+
+Type names, such as classes, structs, typedefs, alias's, and type template
+parameters, should be nouns, use CamelCase, and start with a capital letter. 
+Enums have additional rules -- see [Enums](@ref pix-cc-naming-enums).
+
+The following are examples:
+
+```cpp
+// Classes an structs:
+class  ErrorHandler {};
+struct FileProperties {}:
+
+// Typedefs (for the odd case that they are used):
+typedef std::array<float, 3> Vec3f;
+
+// Aliases:
+using FloatArray = std::array<float>;
+
+// Template type parameter:
+template <typename AllocatorType>
+class SmallVector {
+  // ...
+};
+```
+
+### Enums
+
+Enum declarations are types, so they should follow the formatting of type names
+by using CamelCase. The contents of the enum should also use CamelCase,
+starting with a capital letter. 
+
+Preferably enums should be scoped, however, sometimes the intent is to use the
+numeric value of the enum, in which case it is simpler, and clearer, to not have
+to ```static_cast<>``` the scoped enum to the appropriate numeric type. In this
+case, it's okay to use a non-scoped enum, but when using the enum values they
+should be treated as if they are scoped, and should be accessed though the enum
+name with the scope resolution operator ```::```. For example:
+
+```cpp
+// An enum for which the numeric value is required:
+enum PropertyKind : uint8_t {
+  SomeProp      = 0, 
+  SomeOtherProp = 1
+};
+
+// PropertyKind:: is not required, but should be used,
+// and has type uint8_t here:
+PropertyKind::SomeProp;
+```
+
+A scoped enum is similar, but has the type of the enum (this should be used
+wherever possible):
+
+```cpp
+// A scoped enum:
+enum class PropertyKind : uint8_t {
+  SomeProp      = 0, 
+  SomeOtherProp = 1
+};
+
+// PropertyKind:: is required, and has type PropertyKind:
+PropertyKind::SomeProp;
+```
+
+### Variables
+
+Variables should be nouns, and the name should be written using CamelCase,
+starting with a lowercase letter. Private member variables, however, should
+begin with an uppercase letter. For example:
+
+This is a local variable naming example:
+
+```cpp
+int someInt = 4;
+```
+
+This is a class naming example:
+
+```cpp
+class NamingExample {
+ public:
+  // Public member variable:
+  int someInt;
+
+  // Constant expression:
+  static constexpr auto someVar = someValue;
+
+  // Function arguments:
+  NamingExample(int someOtherInt)
+  : someInt(0), SomeOtherInt(someOtherInt) {}
+
+ private:
+  // Private member variable:
+  int SomeOtherInt;
+};
+```
+
+This is a struct naming example:
+
+```cpp
+struct Params {
+  // Public variables as above for classes:
+  bool    firstFlag;
+  size_t  maxRecursiveCalls;
+
+ private:
+  // Private variables also as above:
+  bool AnotherFlag;
+};
+```
+
+### Functions 
+
+Function names should be verbs, and use CamelCase, with the first word starting
+with a lowercase letter -- just like public and local variables. The reason for
+using the same convention for public and local variables, and functions, is 
+that function calls are easily identifiable from the fact that they need 
+arguments (or empty brackets). Using the same style makes the code look better
+without making it less readable. 
+
+The following is a function naming example:
+
+```cpp
+void        containsFoo();
+FileHandle  openFile():
+```
+
+When the arguments of a function will exceed the 80 character limit, then begin
+each new line of function arguments with:
+
+1.  - A hanging indent if the longest parameter will fit in the 80 columns
+    - A __2 (definition) or 4 (implementation)__ space indent if all parameters
+      will fit into a single line
+2.  - A __2__ space hanging indent on the next line if the function is a
+      definition
+    - A __4__ space hanging indent on the next line if the function has an
+      implementation
+
+If the return type of the function is long, for example has 
+```constexpr inline someLongType``` then the entire return type can be placed on
+its own line before the function name, which will allow function signatures
+which fall into 2 above, to be formatted as 1 above. This is common when a
+function signature is prefixed with a macro. Examples are shown below.
+
+Additionally, add the ```constexpr``` specifier whenever a function can be
+computed at compile-time. In the worst case, the compiler will warn you that
+the constexpr function never produces a constant expression.
+
+The following are examples:
+
+__First Option : (Preferred):__
+
+Here the longest parameter will fit into 80 columns, so a hanging indent should
+be used:
+
+```cpp
+// Hanging indent - definition:
+int aFunctionWithManyLongArguments(ArgumentTypeOne   argOne  ,
+                                   ArgumentTypeTwo   argTwo  ,
+                                   ArgumentTypeThree argThree);
+
+// Hanging indent - implemetation:
+int aFunctionWithManyLongArguments(ArgumentTypeOne   argOne  ,
+                                   ArgumentTypeTwo   argTwo  ,
+                                   ArgumentTypeThree argThree) {
+ // Implementation ...
+}
+```
+
+Alternatively, since all parameters can fit on a single line, this is also an
+option:
+
+```cpp
+// All parameters fit on one line (defintion : 2 space indent):
+constexpr inline auto aFunctionWithManyLongArguments(
+  ArgumentTypeOne argOne, ArgumentTypeTwo argTwo, ArgumentTypeThree argThree);
+
+// All parameters fit on one line (implementation : 4 space indent):
+constexpr inline auto aFunctionWithManyLongArguments(
+    ArgumentTypeOne argOne, ArgumentTypeTwo argTwo, ArgumentTypeThree argThree) {
+  // Implementation ...
+}
+```
+
+__Second Option: (Last Resort):__
+
+All parameters will not fit on a single line, and a hanging indent is not
+possible:
+
+``cpp
+// Definition (2 space indent):
+constexpr inline auto aFunctionWithManyLongArguments(
+  ArgumentTypeOne   argOne  ,
+  ArgumentTypeTwo   argTwo  ,
+  ArgumentTypeThree argThree,
+  ArgumentTypeFour  argFour ) noexcept;
+
+// Implementation (4 space indent):
+constexpr inline auto aFunctionWithManyLongArguments(
+    ArgumentTypeOne   argOne  ,
+    ArgumentTypeTwo   argTwo  ,
+    ArgumentTypeThree argThree,
+    ArgumentTypeFour  argFour ) noexcept;  
+```
+
+The above example can specify the return type on its own line, allowing the
+paramters to be formatted with a hanging indent:
+
+``cpp
+// Definition:
+constexpr inline auto 
+aFunctionWithManyLongArguments(ArgumentTypeOne   argOne  ,
+                               ArgumentTypeTwo   argTwo  ,
+                               ArgumentTypeThree argThree,
+                               ArgumentTypeFour  argFour ) noexcept;
+
+// Implementation:
+constexpr inline auto 
+aFunctionWithManyLongArguments(ArgumentTypeOne   argOne  ,
+                               ArgumentTypeTwo   argTwo  ,
+                               ArgumentTypeThree argThree,
+                               ArgumentTypeFour  argFour ) noexcept {
+  // Implementation ...
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
