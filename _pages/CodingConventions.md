@@ -1200,7 +1200,7 @@ immediate identification of types, variables, functions, access scope, etc..., w
 
 Type names, such as classes, structs, typedefs, alias's, and type template
 parameters, should be nouns, use CamelCase, and start with a capital letter. 
-Enums have additional rules -- see [Enums](@ref pix-cc-naming-enums).
+Enums have additional rules -- see [Enums](#enums).
 
 The following are examples:
 
