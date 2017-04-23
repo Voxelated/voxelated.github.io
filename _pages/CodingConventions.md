@@ -1405,7 +1405,7 @@ constexpr inline auto aFunctionWithManyLongArguments(
 The above example can specify the return type on its own line, allowing the
 paramters to be formatted with a hanging indent:
 
-``cpp
+```cpp
 // Definition:
 constexpr inline auto 
 aFunctionWithManyLongArguments(ArgumentTypeOne   argOne  ,
