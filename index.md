@@ -19,16 +19,13 @@ benchmarked to accurately compare the performance.
 ### Getting Started
 -------------------------------------------------------------------------------
 
-The first thing to do is to get a development environment setup. See the
-[Getting Started](GettingStarted.html) page, or select the link at the top of
-the page.
+The [Getting Started](GettingStarted.html) page provides an introduction to the Voxel libraries.
 
 ### Guides
 -------------------------------------------------------------------------------
 
-The next thing to do would be to read through the guides. This is very
-important for getting code successfully committed into the code base. See the
-[Guides](Guides.html) page, or select the link at the top of the page.
+The [Guides](Guides.html) page gives a list of useful articles which describe
+how to do something, or use a specific piece of software, etc.
 
 ### Libraries
 -------------------------------------------------------------------------------
