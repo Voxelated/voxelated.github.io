@@ -19,7 +19,8 @@ var subHeading  = "h3";
 
 $(document).ready(function(){
   var tableOfContents = 
-    "<ul id='tocscroll' class='collapsible popout table-of-contents'" + 
+    "<ul id='tocscroll' class='collapsible popout table-of-contents " + 
+    "hide-on-small-and-down hide-on-med-and-down' "                   +
     "data-collapsible='accordion'>";
 
   var element,  // The element we are looking at.
@@ -58,7 +59,7 @@ $(document).ready(function(){
 
   // Set properties of the TOC widget:
   document.getElementById("tocscroll").style.position  = "fixed";
-  document.getElementById("tocscroll").style.width     = "17%";
+  //document.getElementById("tocscroll").style.width     = "17%";
   document.getElementById("tocscroll").style.marginTop = "3%";
 
   // Initialize the added elements:

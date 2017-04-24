@@ -29,6 +29,10 @@ $(document).ready(function(){
     }
   });
 
+  // Append hiding for small screens to all navbar elements:
+  $('.voxel-navbar-element').addClass('hide-on-med-and-down');
+  $('.voxel-navbar-element').addClass('hide-on-small-and-down');
+
   // Make table highlighted:
   $('table').addClass('highlighted');
 });
