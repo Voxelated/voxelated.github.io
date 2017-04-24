@@ -1,4 +1,6 @@
-.highlight  { 
+.highlight  {
+  font-size             : 1em;
+  font-family           : monospace, monospace;
   white-space           : pre;
   overflow              : auto;
   word-wrap             : normal;
@@ -7,7 +9,7 @@
   border-radius         : 3px;
   padding               : 15px;
   background            : rgb(218, 217, 226);
-  color                 : rgba(0, 24, 49, 0.72); 
+  color                 : rgba(0, 24, 49, 0.72);
 }
 .highlight .hll   { background-color: #ffc; }
 .highlight .c     { color: #999988; font-style: italic }                    /* Comment */

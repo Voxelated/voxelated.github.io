@@ -31,10 +31,11 @@ main {
 }
 
 .site-content {
-  flex: 1;
-  transition: margin-left .25s;
-  height: 100%;
-  text-align: justify;
+  flex          : 1;
+  transition    : margin-left .25s;
+  height        : 100%;
+  text-align    : justify;
+  padding-top   : 40px;
 }
 
 .shift-right {
