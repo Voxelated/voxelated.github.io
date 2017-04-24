@@ -1,4 +1,4 @@
 _site
 .env
-._sass-cache/
+_sass-cache/
 /Gemfile.lock
