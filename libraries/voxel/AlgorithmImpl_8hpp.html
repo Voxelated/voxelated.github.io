@@ -12,9 +12,13 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
+    <!-- NOTE: We first load the doxygen stylesheet, and then we try and load the stylesheet of the site
+               to which this documentation will belong, and then we load the custom stylesheet
+      -->
     <link href="doxygen.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/main.css" rel="stylesheet" type="text/css"/>
     <link href="sytlesheet.css" rel="stylesheet" type="text/css"/>
-    <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+    <!-- Load the javascript which converts the doxygen output to material style -->
     <script type="text/javascript" src="DoxyFormat.js"></script>
   </head>
   <div class="navbar-fixed z-depth-1">
