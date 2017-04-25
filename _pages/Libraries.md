@@ -50,12 +50,13 @@ All libraries should have the following structure:
 
 For an example, see [Voxel](https://github.com/Voxelated/Voxel). The root
 ```CmakeLists.txt``` file must have functionality to package the library.
-See (Cmake package guide). The ```FetchFiles.py``` scripts fetches the
-required files to correctly format the Doxygen documentation, and can be
-found in the  [DoxyFormat](https://github.com/Voxelated/DoxyFormat) repository.
-The ```docs/``` directory in [Voxel](https://github.com/Voxelated/Voxel)
-provides a good example of how to build a library's documentation, and requires
-only minor changes for new library's.
+See [Cmake Packaging](CmakePackaging.html). The ```FetchFiles.py``` script
+fetches the required files to correctly format the Doxygen documentation, and
+can be found in the  [DoxyFormat](https://github.com/Voxelated/DoxyFormat)
+repository. The ```docs/``` directory in
+[Voxel] (https://github.com/Voxelated/Voxel) provides a good example of how to
+build a library's documentation, and requiresonly minor changes for new
+library's.
 
 
 ## Documenting a Library
@@ -77,12 +78,12 @@ them into a **DoxyFormat/** directory in the directory from which it was run.
 In the **docs/** directory in the library, add the file path to the relevant
 section in the Doxyfile:
 
-| Filepath to add          | Doxyfile Section      |
-|:-------------------------|:----------------------|
-| DoxyFormat/header.html   | HTML_HEADER           |
-| DoxyFormat/footer.html   | HTML_FOOTER           |
-| DoxyFormat/pixel.css     | HTML_EXTRA_STYLESHEET |
-| DoxyFormat/DoxyFormat.js | HTML_EXTRA_FILES      |
+| Filepath to add           | Doxyfile Section      |
+|:------------------------- |:----------------------|
+| DoxyFormat/header.html    | HTML_HEADER           |
+| DoxyFormat/footer.html    | HTML_FOOTER           |
+| DoxyFormat/stylesheet.css | HTML_EXTRA_STYLESHEET |
+| DoxyFormat/DoxyFormat.js  | HTML_EXTRA_FILES      |
 
 Using the 
 
@@ -108,12 +109,12 @@ cmake -D{CMAKE_PARAMS} ..
 make Docs
 ~~~~
 will make a ```html/``` directory with ```index.html``` at  ```LibRoot/build/docs/```,
-which can then be opened with a browser to view the generated documentation. 
+which can then be opened with a browser to view the generated documentation.
 
 ### Library Overview
 
-Each library should have a well-written overview, which is also the main page
-for the Doxygen generated documentation (the **README.md** file in the library
+Each library should have a well-written overview see [Overview Formatting](#overview-formatting), which is also the main page for the Doxygen generated
+documentation (the **README.md** file in the library
 root directory). It should contain the following sections:
 
 1. An introduction and decription of the purpose of the librrary i.e why the
@@ -125,11 +126,22 @@ root directory). It should contain the following sections:
    benchmarks should compare the implementations against existing implementations.
    To do this, use the [Google Benchmarking Framework](https://github.com/google/benchmark).
 
+### Overview Formatting
+
+The documentation build scripts search through the html source looking for h2
+headers (```##```), and subsequent h3 headers (```###```), and generate a
+dynamic table of contents for the page from thiose headers. Thus h2 and h3
+headers should be used for documentation pages, unless a dynamic table of
+contents is not desired, in which case use h1, h3, h4 headers.
+
+For example, to generate a dynamic contents list with only the main headers, use h4 headers after h1/h2 headers.
 
 ## List of Libraries
 
-### Voxel
+The following is a list of Voxel's libraries:
 
-[Voxel](libraries/voxel/index.html) is the main library for Voxel, and contains
-common functionality used by other libraries.
+| Library Name | Brief Description |
+|:-------------|:------------------|
+| [Voxel](libraries/voxel/index.html) | Main library for Voxel, containing
+common functionality used by other libraries. |
 
