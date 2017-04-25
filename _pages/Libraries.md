@@ -142,6 +142,4 @@ The following is a list of Voxel's libraries:
 
 | Library Name | Brief Description |
 |:-------------|:------------------|
-| [Voxel](libraries/voxel/index.html) | Main library for Voxel, containing
-common functionality used by other libraries. |
-
+| [Voxel](libraries/voxel/index.html) | Main library for Voxel, containing common functionality used by other libraries. |

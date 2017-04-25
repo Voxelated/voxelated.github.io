@@ -9,6 +9,5 @@ list of guides and their descriptions:
 
 | Guide Name | Description |
 |:-----------|:------------|
-| [Coding Conventions](CodingConventions.html) | Defines the conventions used
-when implementing functionality for Voxel. |
+| [Coding Conventions](CodingConventions.html) | Defines the conventions used when implementing functionality for Voxel. |
 | [Cmake Packaging](CmakePackaging.html) | Instructions for creating a config file to package a cmake project |

@@ -25,8 +25,7 @@ defined:
 | **Foo_INCLUDE_DIRS** | The location of the header files for Foo |
 | **Foo_LIBRARY_DIRS** | The location of Foo's libraries |
 | **Foo_LIBRARIES**    | A list of all libraries defined by Foo |
-| **Foo_LIBS**         | A list of libraries specified with the COMPONENTS
-command when using find package |
+| **Foo_LIBS**         | A list of libraries specified with the COMPONENTS command when using find package |
 | **Foo_DEFINITIONS**  | Compiler flags required by the source |
 | **Foo_FOUND**        | If the library Foo was found |
 | **Foo_DIR**          | The prefix of the directory where Foo was found |
