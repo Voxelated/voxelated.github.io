@@ -68,7 +68,7 @@ good, and into ensuring that the libraries are well documented.
 ### Formatting
 
 A library's documentation should be generated using Doxygen, using the custom
-formatting files. The [DoxyFormat](https://github.com/Voxelated/DoxyFormat)
+formatting files. The [MaterialDoxygen](https://github.com/Voxelated/MaterialDoxygen)
 repository has all the files which are required for ensuring that the
 documentaton is correctly formatted.
 
@@ -95,9 +95,11 @@ __Note:__ The ```docs``` directory in the [Voxel](https://github.com/Voxelated/V
 
 1. Change ```PROJECT_NAME``` to the project name.
 2. Change ```PROJECT_BRIEF``` appropriately.
-3. Change ```@Voxel_SOURCE_DIR@``` in ```INPUT``` to ```@CmakeLibraryName_SOURCE_DIR@```
-4. Change ```@Voxel_SOURCE_DIR@/README.md``` in ```USE_MDFILE_AS_MAIN_PAGE``` to
-   ```@CmakeLibraryName_SOURCE_DIR@```.
+3. Change ```@Voxel_SOURCE_DIR@``` for the ```INPUT``` variable
+   to ```@CmakeLibraryName_SOURCE_DIR@```
+4. Change ```@Voxel_SOURCE_DIR@/README.md``` for
+   the ```USE_MDFILE_AS_MAIN_PAGE``` variable
+   to ```@CmakeLibraryName_SOURCE_DIR@```.
 
 This configuration creates a ```Docs``` target for cmake, so (from the root):
 ~~~bash
@@ -125,4 +127,9 @@ root directory). It should contain the following sections:
 
 
 ## List of Libraries
+
+### Voxel
+
+[Voxel](libraries/voxel/index.html) is the main library for Voxel, and contains
+common functionality used by other libraries.
 

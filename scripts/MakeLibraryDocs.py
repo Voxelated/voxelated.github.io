@@ -1,35 +1,47 @@
-import subprocess, os
-from shutil import copytree
-from distutils.dir_util import copy_tree as copytree_ow
+# /usr/bin/python
+#
+#==--- VoxelDocs/MakeLibraryDocs.py -----------------------------------------==#
+#
+# File        : MakeLibraryDocs.py
+# Description : Makes the documentation for each of the libraries.
+#
+#==--------------------------------------------------------------------------==#
+
+
+import subprocess, os, shutil
 
 def git(*args):
   return subprocess.check_call(['git'] + list(args))
 
 startDir = os.getcwd()
+libDir   = startDir + '/../libraries/'
 
 libraries = {
-  'Meta'   : 'https://github.com/PixelTechnologies/Meta.git',
-  'Pulley' : 'https://github.com/PixelTechnologies/Pulley.git'
+  'Voxel'  : 'https://github.com/Voxelated/Voxel.git',
 }
-
-# Fetch all the formatting files:
-import FetchFiles
 
 # Build docs for each of the libraries:
 os.chdir(startDir)
 for libname, liburl in libraries.items():
+  if (os.path.exists(libname)):
+    shutil.rmtree(libname)
+
   print('\nCloning: ' + libname + ':\n')
   git('clone', liburl)
 
-  os.chdir(libname + '/Docs')
-  copytree(startDir + '/DoxyFormat', 'DoxyFormat');
-  subprocess.call('doxygen')
-  copytree_ow('html', '../../../libraries/' + libname)
+  os.chdir(libname)
+  os.mkdir('build')
+  os.chdir('build')
+  subprocess.call(['ls','-l'])
+  subprocess.call(['cmake',
+                   '-DCMAKE_BUILD_TYPE=Release',
+                   '..'])
+  subprocess.call(['make', '-j2', 'Docs'])
 
-  print('\nBuilt documentation for: ' + libname + '\n')
+  outputDir = libDir + libname.lower()
+  if (os.path.exists(outputDir)):
+    shutil.rmtree(outputDir)
 
-  os.chdir(startDir)
-  subprocess.call(['rm', '-rf', libname])
-
-os.chdir(startDir)
-subprocess.call(['rm', '-rf', 'DoxyFormat'])
+  os.rename('docs/html', outputDir)
+  os.chdir(startDir);
+  shutil.rmtree(libname)

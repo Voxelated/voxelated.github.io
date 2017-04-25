@@ -890,16 +890,16 @@ variables and aliases should be **aligned in** columns.
 
 The order of declarations should be as follows:
 
-- List of friend classes
-- Public aliases
-- Public variables
-- Public methods
-- Protected aliases 
-- Protected variables
-- Protected methods
-- Private aliases
-- Private variables
-- Private methods
+1. List of friend classes
+2. Public aliases
+3. Public variables
+4. Public methods
+5. Protected aliases 
+6. Protected variables
+7. Protected methods
+8. Private aliases
+9. Private variables
+10. Private methods
 
 This allows the public interface to easily be found at the beginning of the
 class. Each of the sections within the access specifier should be separated by 
