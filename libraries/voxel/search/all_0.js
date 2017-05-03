@@ -1,11 +1,27 @@
 var searchData=
 [
+  ['additionalfeatures',['AdditionalFeatures',['../namespaceVoxx_1_1System_1_1CpuId.html#a38c55e57c5699e5b6dd27590d57f1ba0abc44c863a7a52a5f894977ea1531bb44',1,'Voxx::System::CpuId']]],
+  ['aes',['Aes',['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13babeee9aa52ad62ad7e93a0db1207f9fd7',1,'Voxx::System::CpuInfo::Aes()'],['../structVoxx_1_1System_1_1CpuInfo.html#a24a38782ca483485412fb9413a642d31',1,'Voxx::System::CpuInfo::aes() noexcept']]],
   ['algorithm_2ehpp',['Algorithm.hpp',['../Algorithm_8hpp.html',1,'']]],
   ['algorithmfwd_2ehpp',['AlgorithmFwd.hpp',['../AlgorithmFwd_8hpp.html',1,'']]],
   ['algorithmimpl_2ehpp',['AlgorithmImpl.hpp',['../AlgorithmImpl_8hpp.html',1,'']]],
+  ['apicid',['Apicid',['../classVoxx_1_1System_1_1ThreadInfo.html#a23490737bc305fa76c8758eb19816e71',1,'Voxx::System::ThreadInfo::Apicid()'],['../namespaceVoxx_1_1System_1_1CpuId.html#a449e844dd811b9fa4f1dda4391409ac6',1,'Voxx::System::CpuId::apicid()']]],
   ['arch',['Arch',['../classVoxx_1_1GpuInfo.html#a055ff5ff1c412f64ffdca97e042ea373adab6a24f57eab96202090fd92609a0e9',1,'Voxx::GpuInfo']]],
   ['architecture',['architecture',['../classVoxx_1_1GpuInfo.html#a422175e16b0fbd6e86ae8d6e7e656e51',1,'Voxx::GpuInfo']]],
   ['architecturestring',['architectureString',['../classVoxx_1_1GpuInfo.html#a78dc3abfbdf70456e31114b9e9e33df8',1,'Voxx::GpuInfo']]],
-  ['avx1',['Avx1',['../namespaceVoxx_1_1System.html#adc95a9ca56ec6dd43e9753ace2e7b88da58e771cf00c97964084857235a26e513',1,'Voxx::System']]],
-  ['avx2',['Avx2',['../namespaceVoxx_1_1System.html#adc95a9ca56ec6dd43e9753ace2e7b88daed3d99b5c043599fd1d9ca5464170f2b',1,'Voxx::System']]]
+  ['associativity',['associativity',['../structVoxx_1_1System_1_1CacheInfo.html#a5bbea51eab4d54e4149bb324f908014f',1,'Voxx::System::CacheInfo']]],
+  ['avx',['Avx',['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13ba9bf7f25546a76a34d79ac696c63d3f84',1,'Voxx::System::CpuInfo::Avx()'],['../structVoxx_1_1System_1_1CpuInfo.html#adfdf5fbbf9068168db353978e642e033',1,'Voxx::System::CpuInfo::avx() noexcept']]],
+  ['avx2',['Avx2',['../structVoxx_1_1System_1_1CpuInfo.html#aa6b39aedf6367efaf62683a7b813933ca94153abea17c74bfd6c497c57cc3d235',1,'Voxx::System::CpuInfo::Avx2()'],['../structVoxx_1_1System_1_1CpuInfo.html#a15db970ec20c701f416ecccd44405cab',1,'Voxx::System::CpuInfo::avx2() noexcept']]],
+  ['avx512',['avx512',['../structVoxx_1_1System_1_1CpuInfo.html#a5b5eae35c4db3839d6e3cf4270b21cd8',1,'Voxx::System::CpuInfo']]],
+  ['avx512bw',['Avx512Bw',['../structVoxx_1_1System_1_1CpuInfo.html#aa6b39aedf6367efaf62683a7b813933cae05199c2635f174cceecfe688b12393f',1,'Voxx::System::CpuInfo']]],
+  ['avx512cd',['Avx512Cd',['../structVoxx_1_1System_1_1CpuInfo.html#aa6b39aedf6367efaf62683a7b813933ca7a74b2ed2e7770e6247b399492c1385d',1,'Voxx::System::CpuInfo']]],
+  ['avx512dq',['Avx512Dq',['../structVoxx_1_1System_1_1CpuInfo.html#aa6b39aedf6367efaf62683a7b813933ca2cb5e0483408e32c543d5867c97c9551',1,'Voxx::System::CpuInfo']]],
+  ['avx512er',['Avx512Er',['../structVoxx_1_1System_1_1CpuInfo.html#aa6b39aedf6367efaf62683a7b813933cae0e3bcd623f313658fab8dd1909fe8c6',1,'Voxx::System::CpuInfo']]],
+  ['avx512f',['Avx512F',['../structVoxx_1_1System_1_1CpuInfo.html#aa6b39aedf6367efaf62683a7b813933ca77e11244776080934cecc5ded86e1f95',1,'Voxx::System::CpuInfo']]],
+  ['avx512fmaps',['Avx512Fmaps',['../structVoxx_1_1System_1_1CpuInfo.html#a718c11d980592a1baddb47d3f288d6e0a9b71358e6226ff3ee41985f5e58c482c',1,'Voxx::System::CpuInfo']]],
+  ['avx512ifma',['Avx512Ifma',['../structVoxx_1_1System_1_1CpuInfo.html#aa6b39aedf6367efaf62683a7b813933ca86ab4570d583dcd7e6d3968344b1da5b',1,'Voxx::System::CpuInfo']]],
+  ['avx512nn',['Avx512Nn',['../structVoxx_1_1System_1_1CpuInfo.html#a718c11d980592a1baddb47d3f288d6e0aaac5b969a4cdacc35309b0319bef1eb8',1,'Voxx::System::CpuInfo']]],
+  ['avx512pf',['Avx512Pf',['../structVoxx_1_1System_1_1CpuInfo.html#aa6b39aedf6367efaf62683a7b813933ca15eab15b830ffcccd33b60b76245d78d',1,'Voxx::System::CpuInfo']]],
+  ['avx512vbmi',['Avx512Vbmi',['../structVoxx_1_1System_1_1CpuInfo.html#a3af94db53b526b199f8f4a8e6cc54686a577a050d9bf860af940d291751f52236',1,'Voxx::System::CpuInfo']]],
+  ['avx512vl',['Avx512Vl',['../structVoxx_1_1System_1_1CpuInfo.html#aa6b39aedf6367efaf62683a7b813933ca786992ef9cc3be05064ae9924f591e25',1,'Voxx::System::CpuInfo']]]
 ];

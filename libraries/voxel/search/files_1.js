@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['bitwise_2ehpp',['Bitwise.hpp',['../Bitwise_8hpp.html',1,'']]]
+  ['bitmanip_2ehpp',['BitManip.hpp',['../BitManip_8hpp.html',1,'']]],
+  ['bitmask_2ehpp',['BitMask.hpp',['../BitMask_8hpp.html',1,'']]]
 ];

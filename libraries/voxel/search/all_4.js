@@ -1,10 +1,14 @@
 var searchData=
 [
-  ['file',['File',['../namespaceVoxx_1_1Io.html#a48abf91849897235a1e3b28047677c8fa0b27918290ff5323bea1e3b78a9cf04e',1,'Voxx::Io']]],
-  ['fillgpuinfo',['fillGpuInfo',['../classVoxx_1_1GpuInfo.html#a817544622bc830d5a6f5c6783432582b',1,'Voxx::GpuInfo']]],
-  ['firstsetbitindex',['firstSetBitIndex',['../namespaceVoxx.html#a699d6b6407db40a55a72bece0f01c1ec',1,'Voxx']]],
-  ['foreach',['forEach',['../namespaceVoxx.html#a64af39d58718981217fcc23fc763f9e7',1,'Voxx::forEach(std::tuple&lt; Ts... &gt; &amp;&amp;tuple, Callable callable)'],['../namespaceVoxx.html#a506474002f85b692ae20b34002b9459e',1,'Voxx::forEach(const std::tuple&lt; Ts... &gt; &amp;tuple, Callable callable)']]],
-  ['foreachimpl',['forEachImpl',['../AlgorithmImpl_8hpp.html#a9c649d85e5bf558675509d9362a8a864',1,'Voxx::Detail::forEachImpl(const std::tuple&lt; Ts... &gt; &amp;tuple, Callable &amp;&amp;callable, std::index_sequence&lt; I... &gt;)'],['../AlgorithmImpl_8hpp.html#afac905a09c036e19ed0f852543e3ce00',1,'Voxx::Detail::forEachImpl(std::tuple&lt; Ts... &gt; &amp;&amp;tuple, Callable &amp;&amp;callable, std::index_sequence&lt; I... &gt;)']]],
-  ['format',['format',['../structVoxx_1_1Io_1_1Output_3_01Mode_1_1Console_01_4.html#a96a96ed1380bee84ee36c7dfe63ca029',1,'Voxx::Io::Output&lt; Mode::Console &gt;::format(Value &amp;&amp;value, FormatTag&lt; ValueFormat &gt; tag)'],['../structVoxx_1_1Io_1_1Output_3_01Mode_1_1Console_01_4.html#a8bef8cc0f41be7436dae473a2d56c894',1,'Voxx::Io::Output&lt; Mode::Console &gt;::format(Value &amp;&amp;value, FormatTag&lt; Format::Hex &gt; tag)'],['../namespaceVoxx_1_1Io.html#a189e793f9f2acd3daa5a664df6cc7bae',1,'Voxx::Io::Format()']]],
-  ['formattag',['FormatTag',['../structVoxx_1_1Io_1_1Output_3_01Mode_1_1Console_01_4_1_1FormatTag.html',1,'Voxx::Io::Output&lt; Mode::Console &gt;']]]
+  ['eax',['eax',['../structVoxx_1_1System_1_1CpuIdRegisters.html#a81092aa074e8e9e4c6d86babc5823397',1,'Voxx::System::CpuIdRegisters']]],
+  ['ebx',['ebx',['../structVoxx_1_1System_1_1CpuIdRegisters.html#a2f9a065eb8fcb2f19015a8e8285f9a35',1,'Voxx::System::CpuIdRegisters']]],
+  ['ecx',['ecx',['../structVoxx_1_1System_1_1CpuIdRegisters.html#a2c29e15b60568ec8ccb7d36434762665',1,'Voxx::System::CpuIdRegisters']]],
+  ['edx',['edx',['../structVoxx_1_1System_1_1CpuIdRegisters.html#a49fd2258de71990c01a0d8936d64cdc2',1,'Voxx::System::CpuIdRegisters']]],
+  ['elements',['Elements',['../classVoxx_1_1BitMask.html#a16c374efc944b401892a20a96c4329af',1,'Voxx::BitMask']]],
+  ['elementsperbucket',['elementsPerBucket',['../classVoxx_1_1BitMask.html#a6337ad2a0ce8de2b233ad1d83fff5aa5',1,'Voxx::BitMask']]],
+  ['errortype',['ErrorType',['../classVoxx_1_1Thread_1_1ThreadException.html#acf0420e61c3bbe927825b1ae3daef2c2',1,'Voxx::Thread::ThreadException']]],
+  ['extendedfeaturebitsebx',['ExtendedFeatureBitsEbx',['../structVoxx_1_1System_1_1CpuInfo.html#aa6b39aedf6367efaf62683a7b813933c',1,'Voxx::System::CpuInfo']]],
+  ['extendedfeaturebitsecx',['ExtendedFeatureBitsEcx',['../structVoxx_1_1System_1_1CpuInfo.html#a3af94db53b526b199f8f4a8e6cc54686',1,'Voxx::System::CpuInfo']]],
+  ['extendedfeaturebitsedx',['ExtendedFeatureBitsEdx',['../structVoxx_1_1System_1_1CpuInfo.html#a718c11d980592a1baddb47d3f288d6e0',1,'Voxx::System::CpuInfo']]],
+  ['extendedfeatures',['ExtendedFeatures',['../structVoxx_1_1System_1_1CpuInfo.html#ac902b894d2d2955bfd774dfab137e7ff',1,'Voxx::System::CpuInfo::ExtendedFeatures()'],['../namespaceVoxx_1_1System_1_1CpuId.html#a65efddcdd13d5cc8e0f06ceab57b6291',1,'Voxx::System::CpuId::extendedFeatures()']]]
 ];

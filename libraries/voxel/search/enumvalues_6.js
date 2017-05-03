@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['multiprocessors',['Multiprocessors',['../classVoxx_1_1GpuInfo.html#a055ff5ff1c412f64ffdca97e042ea373ae76140f0828b2d606937187f9d9d4015',1,'Voxx::GpuInfo']]]
+  ['instruction',['Instruction',['../structVoxx_1_1System_1_1CacheInfo.html#add07387b2ccef7e2a625afd413187bd4ac742c5a36b6307267bb709355feb2c41',1,'Voxx::System::CacheInfo']]],
+  ['invalid',['Invalid',['../structVoxx_1_1System_1_1CacheInfo.html#add07387b2ccef7e2a625afd413187bd4a4bbb8f967da6d1a610596d7257179c2b',1,'Voxx::System::CacheInfo']]]
 ];

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['setarchitecture',['setArchitecture',['../classVoxx_1_1GpuInfo.html#a930be12c2d8a3eadcc0b3347f5d4ce24',1,'Voxx::GpuInfo']]],
-  ['setcorespermultiprocessor',['setCoresPerMultiprocessor',['../classVoxx_1_1GpuInfo.html#a0ec1c029f5bccf62a40093f9ca27a68e',1,'Voxx::GpuInfo']]],
-  ['setmultiprocessors',['setMultiprocessors',['../classVoxx_1_1GpuInfo.html#a0d5e990e03c3922ddefb84c21b315a1a',1,'Voxx::GpuInfo']]],
-  ['setproperty',['setProperty',['../classVoxx_1_1GpuInfo.html#a6de9db757f2347c58921eb998d181aad',1,'Voxx::GpuInfo']]]
+  ['leastsetbitonly',['leastSetBitOnly',['../namespaceVoxx.html#a7dcc2e893e5039c64f515dcf0d2fe45a',1,'Voxx']]],
+  ['level',['level',['../structVoxx_1_1System_1_1CacheInfo.html#aad04d3f31d90ba0aae56dca7ec453b63',1,'Voxx::System::CacheInfo']]],
+  ['linesize',['lineSize',['../structVoxx_1_1System_1_1CacheInfo.html#aa0b4c727a5d2416178ab9ba381f7cb7e',1,'Voxx::System::CacheInfo']]]
 ];

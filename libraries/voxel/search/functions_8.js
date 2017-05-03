@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['physicalcores',['physicalCores',['../classVoxx_1_1GpuInfo.html#aefe30ecad43fd1c49c2ee6e19fd02c4c',1,'Voxx::GpuInfo::physicalCores()'],['../namespaceVoxx_1_1System.html#aa5071515cd6c94bd99ac0dac8bc5aedb',1,'Voxx::System::physicalCores()'],['../namespaceVoxx_1_1System_1_1Cx.html#ad1847865ea4e881022bd79b62eaf2557',1,'Voxx::System::Cx::physicalCores()']]],
-  ['print',['print',['../classVoxx_1_1GpuInfo.html#a6325278b80255e528b9fe859ddd880d6',1,'Voxx::GpuInfo']]],
-  ['printraw',['printRaw',['../classVoxx_1_1GpuInfo.html#af29648d4bbe3e7b55ddbafafda282f6c',1,'Voxx::GpuInfo']]],
-  ['printreadable',['printReadable',['../classVoxx_1_1GpuInfo.html#a648b3be564d4ea67c6ca37c862068dd8',1,'Voxx::GpuInfo']]]
+  ['invoke',['invoke',['../namespaceVoxx.html#afb7ea17b1ba27003cb4ead8f14df44c0',1,'Voxx::invoke(Callable &amp;&amp;callable, T &amp;&amp;element, Ts &amp;&amp;... elements)'],['../namespaceVoxx.html#a8f298ff9ad3e259c12dec4bd3c4ec980',1,'Voxx::invoke(Callable &amp;&amp;callable, const T &amp;element, const Ts &amp;... elements)']]],
+  ['isdatacache',['isDataCache',['../structVoxx_1_1System_1_1CacheInfo.html#ab6855a91a690a955435ba65da84c5628',1,'Voxx::System::CacheInfo']]]
 ];

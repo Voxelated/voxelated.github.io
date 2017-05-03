@@ -91,6 +91,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
@@ -102,12 +103,19 @@ $(function() {
 <p>This file defines debugging functionality.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="Portability_8hpp_source.html">Portability.hpp</a>&quot;</code><br />
-<code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;exception&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;cstdio&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 </div>
 <p><a href="Debug_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoxx_1_1DebugException.html">Voxx::DebugException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Debug exception class can be used when throwing exceptions from the debugCheck() function.  <a href="classVoxx_1_1DebugException.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceVoxx"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceVoxx.html">Voxx</a></td></tr>
@@ -129,6 +137,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a059e9abe3e2e00395fdb614f66ccb2c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceVoxx.html#a059e9abe3e2e00395fdb614f66ccb2c9">Voxx::checkCudaError</a> (cudaError_t code, const char *file, int line)</td></tr>
 <tr class="memdesc:a059e9abe3e2e00395fdb614f66ccb2c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a cude error code was a success, and if not, then it prints the error message.  <a href="namespaceVoxx.html#a059e9abe3e2e00395fdb614f66ccb2c9">More...</a><br /></td></tr>
 <tr class="separator:a059e9abe3e2e00395fdb614f66ccb2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b8edc089fbe401cd2cbd5ec12e5250"><td class="memTemplParams" colspan="2">template&lt;typename Functor , typename... Args&gt; </td></tr>
+<tr class="memitem:a42b8edc089fbe401cd2cbd5ec12e5250"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Debug_8hpp.html#a42b8edc089fbe401cd2cbd5ec12e5250">Voxx::Debug::catcher</a> (Functor &amp;&amp;functor, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a42b8edc089fbe401cd2cbd5ec12e5250"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes the functor if NDEBUG is not defined and catches all exceptions, otherwise (if NDEBUG <b>is</b> defined__ removes the call to the functor, as well as the catch code, which will allow to compiler to remove this code entirely for release builds.  <a href="Debug_8hpp.html#a42b8edc089fbe401cd2cbd5ec12e5250">More...</a><br /></td></tr>
+<tr class="separator:a42b8edc089fbe401cd2cbd5ec12e5250"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file defines debugging functionality. </p>
@@ -148,9 +160,65 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                          <a class="code" href="namespaceVoxx.html#a059e9abe3e2e00395fdb614f66ccb2c9">\</a></div><div class="line"><a class="code" href="namespaceVoxx.html#a059e9abe3e2e00395fdb614f66ccb2c9">  Voxx::checkCudaError</a>((result), __FILE__, __LINE__); }</div><div class="ttc" id="namespaceVoxx_html_a059e9abe3e2e00395fdb614f66ccb2c9"><div class="ttname"><a href="namespaceVoxx.html#a059e9abe3e2e00395fdb614f66ccb2c9">Voxx::checkCudaError</a></div><div class="ttdeci">void checkCudaError(cudaError_t code, const char *file, int line)</div><div class="ttdoc">Checks if a cude error code was a success, and if not, then it prints the error message. </div><div class="ttdef"><b>Definition:</b> Debug.hpp:55</div></div>
+<b>Value:</b><div class="fragment"><div class="line">{                                          <a class="code" href="namespaceVoxx.html#a059e9abe3e2e00395fdb614f66ccb2c9">\</a></div><div class="line"><a class="code" href="namespaceVoxx.html#a059e9abe3e2e00395fdb614f66ccb2c9">  Voxx::checkCudaError</a>((result), __FILE__, __LINE__); }</div><div class="ttc" id="namespaceVoxx_html_a059e9abe3e2e00395fdb614f66ccb2c9"><div class="ttname"><a href="namespaceVoxx.html#a059e9abe3e2e00395fdb614f66ccb2c9">Voxx::checkCudaError</a></div><div class="ttdeci">void checkCudaError(cudaError_t code, const char *file, int line)</div><div class="ttdoc">Checks if a cude error code was a success, and if not, then it prints the error message. </div><div class="ttdef"><b>Definition:</b> Debug.hpp:60</div></div>
 </div><!-- fragment -->
 <p>Macro to check for Cuda call errors, when in debug mode. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="file_a42b8edc089fbe401cd2cbd5ec12e5250"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a42b8edc089fbe401cd2cbd5ec12e5250">&sect;&nbsp;</a></span>catcher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Functor , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voxx::Debug::catcher </td>
+          <td>(</td>
+          <td class="paramtype">Functor &amp;&amp;&#160;</td>
+          <td class="paramname"><em>functor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Invokes the functor if NDEBUG is not defined and catches all exceptions, otherwise (if NDEBUG <b>is</b> defined__ removes the call to the functor, as well as the catch code, which will allow to compiler to remove this code entirely for release builds. </p>
+<p>This will only catch exceptions derived from std::exception, which should be all exceptions.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">functor</td><td>The functor to execute in debug mode. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>The arguments to the functor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Functor</td><td>The type of the functor. </td></tr>
+    <tr><td class="paramname">Args</td><td>The types of the arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

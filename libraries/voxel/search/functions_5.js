@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['intrinsicasstring',['intrinsicAsString',['../namespaceVoxx_1_1System.html#a381909bdd23206944c4b203637ab728e',1,'Voxx::System']]],
-  ['intrinsicset',['intrinsicSet',['../namespaceVoxx_1_1System.html#ad852dac77afc61954835c4f607507849',1,'Voxx::System::intrinsicSet()'],['../namespaceVoxx_1_1System_1_1Cx.html#a6b52632323746d5e8acb9b55f4500cdf',1,'Voxx::System::Cx::intrinsicSet()']]],
-  ['invoke',['invoke',['../namespaceVoxx.html#afb7ea17b1ba27003cb4ead8f14df44c0',1,'Voxx::invoke(Callable &amp;&amp;callable, T &amp;&amp;element, Ts &amp;&amp;... elements)'],['../namespaceVoxx.html#a8f298ff9ad3e259c12dec4bd3c4ec980',1,'Voxx::invoke(Callable &amp;&amp;callable, const T &amp;element, const Ts &amp;... elements)']]]
+  ['features',['features',['../namespaceVoxx_1_1System_1_1CpuId.html#a42308fc57043e3d473f8f2981f117a9b',1,'Voxx::System::CpuId']]],
+  ['fillgpuinfo',['fillGpuInfo',['../classVoxx_1_1GpuInfo.html#a817544622bc830d5a6f5c6783432582b',1,'Voxx::GpuInfo']]],
+  ['firstsetbitindex',['firstSetBitIndex',['../namespaceVoxx.html#a3ffb4a0f85fdb95a1742cf258e1adba5',1,'Voxx']]],
+  ['foreach',['forEach',['../namespaceVoxx.html#a64af39d58718981217fcc23fc763f9e7',1,'Voxx::forEach(std::tuple&lt; Ts... &gt; &amp;&amp;tuple, Callable callable)'],['../namespaceVoxx.html#a506474002f85b692ae20b34002b9459e',1,'Voxx::forEach(const std::tuple&lt; Ts... &gt; &amp;tuple, Callable callable)']]],
+  ['foreachimpl',['forEachImpl',['../AlgorithmImpl_8hpp.html#a9c649d85e5bf558675509d9362a8a864',1,'Voxx::Detail::forEachImpl(const std::tuple&lt; Ts... &gt; &amp;tuple, Callable &amp;&amp;callable, std::index_sequence&lt; I... &gt;)'],['../AlgorithmImpl_8hpp.html#afac905a09c036e19ed0f852543e3ce00',1,'Voxx::Detail::forEachImpl(std::tuple&lt; Ts... &gt; &amp;&amp;tuple, Callable &amp;&amp;callable, std::index_sequence&lt; I... &gt;)']]],
+  ['format',['format',['../structVoxx_1_1Io_1_1Output_3_01Mode_1_1Console_01_4.html#a96a96ed1380bee84ee36c7dfe63ca029',1,'Voxx::Io::Output&lt; Mode::Console &gt;::format(Value &amp;&amp;value, FormatTag&lt; ValueFormat &gt; tag)'],['../structVoxx_1_1Io_1_1Output_3_01Mode_1_1Console_01_4.html#a8bef8cc0f41be7436dae473a2d56c894',1,'Voxx::Io::Output&lt; Mode::Console &gt;::format(Value &amp;&amp;value, FormatTag&lt; Format::Hex &gt; tag)']]]
 ];

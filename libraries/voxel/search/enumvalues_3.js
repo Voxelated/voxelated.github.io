@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['file',['File',['../namespaceVoxx_1_1Io.html#a48abf91849897235a1e3b28047677c8fa0b27918290ff5323bea1e3b78a9cf04e',1,'Voxx::Io']]]
+  ['data',['Data',['../structVoxx_1_1System_1_1CacheInfo.html#add07387b2ccef7e2a625afd413187bd4af6068daa29dbb05a7ead1e3b5a48bbee',1,'Voxx::System::CacheInfo']]]
 ];

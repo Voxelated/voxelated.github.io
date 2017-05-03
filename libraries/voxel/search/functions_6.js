@@ -1,10 +1,14 @@
 var searchData=
 [
-  ['l1cachesize',['l1CacheSize',['../namespaceVoxx_1_1System.html#ad2559ddd23ac291356acb323883856de',1,'Voxx::System::l1CacheSize()'],['../namespaceVoxx_1_1System_1_1Cx.html#a0d07c33967fdadddf95b9d70b698f654',1,'Voxx::System::Cx::l1CacheSize()']]],
-  ['l1sharing',['l1Sharing',['../namespaceVoxx_1_1System.html#a8a6f7f0fc4246eabbd4fd09a4612702c',1,'Voxx::System::l1Sharing()'],['../namespaceVoxx_1_1System_1_1Cx.html#a75a5a2063a0b11798f56bdfc7a63ce40',1,'Voxx::System::Cx::l1Sharing()']]],
-  ['l2cachesize',['l2CacheSize',['../namespaceVoxx_1_1System.html#af4fc96b1353ca89abce605a0332bd053',1,'Voxx::System::l2CacheSize()'],['../namespaceVoxx_1_1System_1_1Cx.html#a659a5c6bbccc178b83993390af6a7bed',1,'Voxx::System::Cx::l2CacheSize()']]],
-  ['l2sharing',['l2Sharing',['../namespaceVoxx_1_1System.html#ac09c6b1f9b8d1f29a402289933b110ea',1,'Voxx::System::l2Sharing()'],['../namespaceVoxx_1_1System_1_1Cx.html#aa654c45c77f52125a5f3f935c60a3b15',1,'Voxx::System::Cx::l2Sharing()']]],
-  ['l3cachesize',['l3CacheSize',['../namespaceVoxx_1_1System.html#ac91f76426c6f956605d6b8c9691a42ca',1,'Voxx::System::l3CacheSize()'],['../namespaceVoxx_1_1System_1_1Cx.html#a79db2f45baba539c9ed30e4e66c4aa67',1,'Voxx::System::Cx::l3CacheSize()']]],
-  ['leastsetbitonly',['leastSetBitOnly',['../namespaceVoxx.html#ab269e0fa971d058fda5080003f62f628',1,'Voxx']]],
-  ['logicalcores',['logicalCores',['../namespaceVoxx_1_1System.html#ab819695392c9eeb989418feb9eded321',1,'Voxx::System::logicalCores()'],['../namespaceVoxx_1_1System_1_1Cx.html#aa241f14a013525c0ff58ba819a5a7426',1,'Voxx::System::Cx::logicalCores()']]]
+  ['getaffinity',['getAffinity',['../Thread_8hpp.html#a1b5a58e6a026f35372fe33a10a474349',1,'Voxx::Thread']]],
+  ['getaffinitymask',['getAffinityMask',['../structVoxx_1_1System_1_1CpuInfo.html#a163082c05212a56456e87ec554837e44',1,'Voxx::System::CpuInfo']]],
+  ['getbit',['getBit',['../namespaceVoxx.html#ade16a233dfb1a8c1b50ea484122ff82e',1,'Voxx']]],
+  ['getbits',['getBits',['../namespaceVoxx.html#ab30e87a4007f273653fc5847a87a88d7',1,'Voxx']]],
+  ['getcacheinfo',['getCacheInfo',['../structVoxx_1_1System_1_1CpuInfo.html#a8a4af4138130dccb00e22da339e89b65',1,'Voxx::System::CpuInfo']]],
+  ['getcorecount',['getCoreCount',['../structVoxx_1_1System_1_1CpuInfo.html#a77d2de652014a51c9c29a13fffdc8dc0',1,'Voxx::System::CpuInfo']]],
+  ['getproperty',['getProperty',['../classVoxx_1_1GpuInfo.html#a161d85a627bfc061c820c2f8e64c2d4a',1,'Voxx::GpuInfo']]],
+  ['getthreadcount',['getThreadCount',['../structVoxx_1_1System_1_1CpuInfo.html#ab3c5cbd40afde4f04f88165989063d35',1,'Voxx::System::CpuInfo']]],
+  ['gpucount',['gpuCount',['../GpuInfo_8hpp.html#aa9ae9a47e3f2683c452ac2cefb85c764',1,'Voxx::System']]],
+  ['gpuinfo',['GpuInfo',['../classVoxx_1_1GpuInfo.html#a6be8199846400d434a2093e52435bc0a',1,'Voxx::GpuInfo']]],
+  ['grow',['grow',['../classVoxx_1_1BitMask.html#a28e0d1919b02070324938e2f3239f067',1,'Voxx::BitMask']]]
 ];

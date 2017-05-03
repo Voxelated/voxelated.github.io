@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['gpuinfo',['GpuInfo',['../classVoxx_1_1GpuInfo.html',1,'Voxx']]]
+  ['cacheinfo',['CacheInfo',['../structVoxx_1_1System_1_1CacheInfo.html',1,'Voxx::System']]],
+  ['cpuidregisters',['CpuIdRegisters',['../structVoxx_1_1System_1_1CpuIdRegisters.html',1,'Voxx::System']]],
+  ['cpuinfo',['CpuInfo',['../structVoxx_1_1System_1_1CpuInfo.html',1,'Voxx::System']]]
 ];

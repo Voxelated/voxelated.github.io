@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['invalid',['Invalid',['../namespaceVoxx_1_1System.html#adc95a9ca56ec6dd43e9753ace2e7b88da4bbb8f967da6d1a610596d7257179c2b',1,'Voxx::System']]]
+  ['hex',['Hex',['../namespaceVoxx_1_1Io.html#a189e793f9f2acd3daa5a664df6cc7baea92640bd72988395b326c888614f8937a',1,'Voxx::Io']]],
+  ['hyperthreading',['Hyperthreading',['../structVoxx_1_1System_1_1CpuInfo.html#ace094a077e3d533f90c6da614474c85ca916d4dbc97310dc4f36fd810b26ec02c',1,'Voxx::System::CpuInfo']]],
+  ['hypervisor',['Hypervisor',['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13ba37e95d9f83d7019d9ebf56dffc47923d',1,'Voxx::System::CpuInfo']]]
 ];

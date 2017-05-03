@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['getproperty',['getProperty',['../classVoxx_1_1GpuInfo.html#a161d85a627bfc061c820c2f8e64c2d4a',1,'Voxx::GpuInfo']]],
-  ['gpucount',['gpuCount',['../namespaceVoxx_1_1System.html#a80d59a757fae4f55b6b73adc88fc40e2',1,'Voxx::System']]],
-  ['gpuinfo',['GpuInfo',['../classVoxx_1_1GpuInfo.html#a6be8199846400d434a2093e52435bc0a',1,'Voxx::GpuInfo']]]
+  ['eax',['eax',['../structVoxx_1_1System_1_1CpuIdRegisters.html#a81092aa074e8e9e4c6d86babc5823397',1,'Voxx::System::CpuIdRegisters']]],
+  ['ebx',['ebx',['../structVoxx_1_1System_1_1CpuIdRegisters.html#a2f9a065eb8fcb2f19015a8e8285f9a35',1,'Voxx::System::CpuIdRegisters']]],
+  ['ecx',['ecx',['../structVoxx_1_1System_1_1CpuIdRegisters.html#a2c29e15b60568ec8ccb7d36434762665',1,'Voxx::System::CpuIdRegisters']]],
+  ['edx',['edx',['../structVoxx_1_1System_1_1CpuIdRegisters.html#a49fd2258de71990c01a0d8936d64cdc2',1,'Voxx::System::CpuIdRegisters']]],
+  ['extendedfeatures',['extendedFeatures',['../namespaceVoxx_1_1System_1_1CpuId.html#a65efddcdd13d5cc8e0f06ceab57b6291',1,'Voxx::System::CpuId']]]
 ];

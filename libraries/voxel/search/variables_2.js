@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['width',['width',['../structVoxx_1_1Io_1_1Output_3_01Mode_1_1Console_01_4.html#a17636c07e910377fce626c990d1bd775',1,'Voxx::Io::Output&lt; Mode::Console &gt;']]]
+  ['caches',['Caches',['../structVoxx_1_1System_1_1CpuInfo.html#a66bf333f3f370247977000315dc22e54',1,'Voxx::System::CpuInfo']]],
+  ['coremask',['coreMask',['../structVoxx_1_1System_1_1TopologyMasks.html#aba709241a9f2df84fe76584adbf11a70',1,'Voxx::System::TopologyMasks']]],
+  ['coresharinglevel',['CoreSharingLevel',['../structVoxx_1_1System_1_1CpuInfo.html#a65e0333a96b0c19db45e00be9be87690',1,'Voxx::System::CpuInfo']]]
 ];
