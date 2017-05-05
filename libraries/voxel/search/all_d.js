@@ -5,7 +5,7 @@ var searchData=
   ['packagemaskshift',['packageMaskShift',['../structVoxx_1_1System_1_1TopologyMasks.html#a54e170b4f6b3b20c84578beddbcaca69',1,'Voxx::System::TopologyMasks']]],
   ['packages',['Packages',['../structVoxx_1_1System_1_1CpuInfo.html#af68a087c416faa4c937540cc5bfc69dd',1,'Voxx::System::CpuInfo']]],
   ['partitions',['partitions',['../structVoxx_1_1System_1_1CacheInfo.html#ab83f9d8657d8bcdecc4f58257daeeccc',1,'Voxx::System::CacheInfo']]],
-  ['physicalcores',['PhysicalCores',['../structVoxx_1_1System_1_1CpuInfo.html#ad193e801f3abd1a134b309b485ffcf37',1,'Voxx::System::CpuInfo::PhysicalCores()'],['../classVoxx_1_1GpuInfo.html#aefe30ecad43fd1c49c2ee6e19fd02c4c',1,'Voxx::GpuInfo::physicalCores()']]],
+  ['physicalcores',['physicalCores',['../classVoxx_1_1GpuInfo.html#aefe30ecad43fd1c49c2ee6e19fd02c4c',1,'Voxx::GpuInfo::physicalCores()'],['../structVoxx_1_1System_1_1CpuInfo.html#ad193e801f3abd1a134b309b485ffcf37',1,'Voxx::System::CpuInfo::PhysicalCores()']]],
   ['portability_2ehpp',['Portability.hpp',['../Portability_8hpp.html',1,'']]],
   ['print',['print',['../classVoxx_1_1BitMask.html#a099a5811bc453ee94d3438c4311ed38c',1,'Voxx::BitMask::print()'],['../classVoxx_1_1System_1_1ThreadInfo.html#a0678b572506471705b534e32ea0d00e2',1,'Voxx::System::ThreadInfo::print()'],['../structVoxx_1_1System_1_1CacheInfo.html#a82a5cd08d5a5a21948eb8506064652a1',1,'Voxx::System::CacheInfo::print()'],['../structVoxx_1_1System_1_1CpuInfo.html#af2d47f0e08fffbebd84498aee7fc4785',1,'Voxx::System::CpuInfo::print()'],['../classVoxx_1_1GpuInfo.html#a6325278b80255e528b9fe859ddd880d6',1,'Voxx::GpuInfo::print()']]],
   ['printraw',['printRaw',['../classVoxx_1_1GpuInfo.html#af29648d4bbe3e7b55ddbafafda282f6c',1,'Voxx::GpuInfo']]],

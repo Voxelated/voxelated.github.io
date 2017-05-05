@@ -2,6 +2,7 @@ var searchData=
 [
   ['cacheinfo',['CacheInfo',['../structVoxx_1_1System_1_1CacheInfo.html#a459db83b878f9a3be76db259bdee1079',1,'Voxx::System::CacheInfo::CacheInfo() noexcept'],['../structVoxx_1_1System_1_1CacheInfo.html#ae3fd00f0197d3b0bf1752da506e57000',1,'Voxx::System::CacheInfo::CacheInfo(CpuIdRegisters regs) noexcept'],['../structVoxx_1_1System_1_1CpuInfo.html#a54ae6ce3298a9c023177e57dbbda4307',1,'Voxx::System::CpuInfo::cacheInfo()']]],
   ['cachelinesize',['cacheLineSize',['../structVoxx_1_1System_1_1CpuInfo.html#a5e3545bf7934d938b93425051b8396ee',1,'Voxx::System::CpuInfo']]],
+  ['callablewrapper',['CallableWrapper',['../structVoxx_1_1CallableWrapper.html#ad7eecb46c6a39105c22e1ff6372e1bc7',1,'Voxx::CallableWrapper::CallableWrapper(CallableType &amp;&amp;callable, WrappedArgsType &amp;&amp;args)'],['../structVoxx_1_1CallableWrapper.html#ac6a6b0e08fe79d5fbb18265bfd627068',1,'Voxx::CallableWrapper::CallableWrapper(const CallableWrapper &amp;other)'],['../structVoxx_1_1CallableWrapper.html#a036bf65c1554fba5ced86651546ea75e',1,'Voxx::CallableWrapper::CallableWrapper(CallableWrapper &amp;&amp;other) noexcept']]],
   ['capacity',['capacity',['../classVoxx_1_1BitMask.html#ac79fef412a26e1d1b0263814d8f1fe85',1,'Voxx::BitMask']]],
   ['catcher',['catcher',['../Debug_8hpp.html#a42b8edc089fbe401cd2cbd5ec12e5250',1,'Voxx::Debug']]],
   ['checkcudaerror',['checkCudaError',['../namespaceVoxx.html#a059e9abe3e2e00395fdb614f66ccb2c9',1,'Voxx']]],

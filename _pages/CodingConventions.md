@@ -828,6 +828,72 @@ void interface(T&& param) {
 }
 ```
 
+### Prefer Return Values to Output Parameters
+
+As per the [CoreGuidlines:F20](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rf-out) return values are self-documenting. Additionally, the
+result in cleaner code:
+
+This:
+
+~~~
+auto result = someFunction(intputParam);
+~~~
+
+is much cleaner than this:
+
+~~~
+// We also have to explicitly declare the type in this case.
+SomeType result;
+someFunction(result, inputParam);
+~~~
+
+This also allows (Names) Return Value Optimization where additional copies of
+a temporary obeject will not be created when the object is returned, i.e, for
+the follwing code:
+
+~~~
+// Named RVO
+SomeType createSomeType() {
+  SomeType type;
+
+  // Create type ...
+
+  return type;
+}
+
+// RVO 
+SomeType createSomeType() {
+  return SomeType{someArgs...};
+}
+
+auto someType = createSomeType();
+~~~
+
+The compiler only creates ``someType`` once, rather than constructing ``type``,
+copying ``type`` into a temporary object which it will return, and then copying
+that temporary object into ``someType``, which is nice because we can write the
+more elegant looking code, and get the optimal performance for this situation.
+
+Return Value Optimization will still work if ``type`` is ``const``, i.e, for
+
+~~~
+SomeType createSomeType() {
+  const SomeType type;
+
+  // Create type ...
+
+  return type;
+}
+~~~
+
+However, if RVO cannot be done by the compiler, it will try to move the object
+created in the function which is then being returned (``type``), and the use
+of ``const`` might interfere with the move operation, in which case ``const``
+should not be added to the object created inside the function.
+
+__In summary__: Add ``const`` to any object local to a function which will be 
+returned, unless it is cheaply movable, in which case __do not__ mark the local
+object __const__.
 
 ## Formatting
 -------------------------------------------------------------------------------

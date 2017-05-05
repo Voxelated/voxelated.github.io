@@ -18,6 +18,7 @@ libDir   = startDir + '/../libraries/'
 
 libraries = {
   'Voxel'  : 'https://github.com/Voxelated/Voxel.git',
+  'Xpress' : 'https://github.com/Voxelated/Xpress.git'
 }
 
 # Build docs for each of the libraries:
@@ -34,6 +35,7 @@ for libname, liburl in libraries.items():
   os.chdir('build')
   subprocess.call(['ls','-l'])
   subprocess.call(['cmake',
+                   '-DCMAKE_INSTALL_PREFIX=/opt/Voxel',
                    '-DCMAKE_BUILD_TYPE=Release',
                    '..'])
   subprocess.call(['make', '-j2', 'Docs'])

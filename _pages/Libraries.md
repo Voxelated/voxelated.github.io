@@ -29,6 +29,7 @@ All libraries should have the following structure:
    |-- CMakeLists.txt
    |-- benchmark source files
 |--| cmake (optional)/
+   |-- LibraryNameConfig.cmake
    |-- Custom cmake files
 |--| docs/
    |-- CMakeLists.txt
@@ -36,7 +37,8 @@ All libraries should have the following structure:
    |-- FetchFiles.py
 |--| include/
    |--| Voxel/
-      |-- header files
+      |--| LibraryName/
+         |-- header files
 |--| src/
    |-- CMakeLists.txt
    |-- source files
@@ -85,8 +87,6 @@ section in the Doxyfile:
 | DoxyFormat/stylesheet.css | HTML_EXTRA_STYLESHEET |
 | DoxyFormat/DoxyFormat.js  | HTML_EXTRA_FILES      |
 
-Using the 
-
 Running ```doxygen``` from the ```docs/``` directory will then allow you to
 test the documentation generation for the library.
 
@@ -103,11 +103,13 @@ __Note:__ The ```docs``` directory in the [Voxel](https://github.com/Voxelated/V
    to ```@CmakeLibraryName_SOURCE_DIR@```.
 
 This configuration creates a ```Docs``` target for cmake, so (from the root):
+
 ~~~bash
 mkdir build && cd build
 cmake -D{CMAKE_PARAMS} ..
 make Docs
 ~~~~
+
 will make a ```html/``` directory with ```index.html``` at  ```LibRoot/build/docs/```,
 which can then be opened with a browser to view the generated documentation.
 
@@ -138,8 +140,43 @@ For example, to generate a dynamic contents list with only the main headers, use
 
 ## List of Libraries
 
+The libraries are structued such that [Voxel](libraries/voxel/index.html) is the base repository which essentially contains general purpose functionality.
+The whole repository must be installed, but individual components can be linked
+against if desired, rather than linking against all the components (although
+that option is also possible).
+
+For example (the base library):
+
+~~~
+|<prefix>
+|--| include/
+   |--| Voxel/
+      |--| ComponentA/
+      |--| ComponentB/
+~~~
+
+There are also other libraries which have their own repositories, generally
+addressing a more specific use case. They do, however, often use the base
+library and it's components, or the other individual libraries. The
+'standalone' repositories install to as part of the base library on the system
+and can be found as components of the base library when using CMake.
+
+For example, when they are installed, the above tree looks like:
+
+~~~
+|<prefix>
+|--| include/
+   |--| Voxel/
+      |--| ComponentA/
+      |--| ComponentB/
+      |--| StandaloneA/
+      |--| StandaloneB/
+~~~
+
 The following is a list of Voxel's libraries:
 
 | Library Name | Brief Description |
 |:-------------|:------------------|
 | [Voxel](libraries/voxel/index.html) | Main library for Voxel, containing common functionality used by other libraries. |
+| [Xpress](libraries/xpress/index.html) | Expression template array library allowing
+ Numpy like arrys in C++ |

@@ -6,11 +6,11 @@ var indexSectionsWithContent =
   3: "abcdgipst",
   4: "abcdefghilmoprstw",
   5: "abcdeilmnpstvw",
-  6: "bcst",
+  6: "bcstw",
   7: "efgmt",
   8: "abcdfhilmnprstu",
   9: "v",
-  10: "v"
+  10: "tv"
 };
 
 var indexSectionNames =
