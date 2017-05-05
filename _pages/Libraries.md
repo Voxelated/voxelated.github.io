@@ -178,5 +178,4 @@ The following is a list of Voxel's libraries:
 | Library Name | Brief Description |
 |:-------------|:------------------|
 | [Voxel](libraries/voxel/index.html) | Main library for Voxel, containing common functionality used by other libraries. |
-| [Xpress](libraries/xpress/index.html) | Expression template array library allowing
- Numpy like arrys in C++ |
+| [Xpress](libraries/xpress/index.html) | Expression template array library allowing Numpy like arrys in C++ |
