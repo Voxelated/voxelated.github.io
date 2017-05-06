@@ -93,6 +93,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Voxx::Detail Namespace Reference</div>  </div>
@@ -102,6 +103,21 @@ $(function() {
 <p>This namespace implements algorithmic functionality.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1Detail_1_1BasicTuple.html">BasicTuple</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a basic tuple class, which essentially is just a cleaner interface for <a class="el" href="structVoxx_1_1Detail_1_1TupleStorage.html" title="Defines the implementation of the storage for Tuple types. ">TupleStorage</a>.  <a href="structVoxx_1_1Detail_1_1BasicTuple.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1Detail_1_1Element.html">Element</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a struct to hold an element at a specific index in a container.  <a href="structVoxx_1_1Detail_1_1Element.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1Detail_1_1TupleStorage.html">TupleStorage</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the implementation of the storage for <a class="el" href="structVoxx_1_1Tuple.html" title="Defines a struct to hold a fixed-size number of heterogenous types. ">Tuple</a> types.  <a href="structVoxx_1_1Detail_1_1TupleStorage.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1Detail_1_1TupleStorage_3_01std_1_1index__sequence_3_01Indices_8_8_8_01_4_00_01Types_8_8_8_01_4.html">TupleStorage&lt; std::index_sequence&lt; Indices... &gt;, Types... &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization for the implementation of the <a class="el" href="structVoxx_1_1Detail_1_1TupleStorage.html" title="Defines the implementation of the storage for Tuple types. ">TupleStorage</a>.  <a href="structVoxx_1_1Detail_1_1TupleStorage_3_01std_1_1index__sequence_3_01Indices_8_8_8_01_4_00_01Types_8_8_8_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a9c649d85e5bf558675509d9362a8a864"><td class="memTemplParams" colspan="2">template&lt;typename Callable , typename... Ts, size_t... I&gt; </td></tr>
@@ -112,6 +128,30 @@ Functions</h2></td></tr>
 <tr class="memitem:afac905a09c036e19ed0f852543e3ce00"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx_1_1Detail.html#afac905a09c036e19ed0f852543e3ce00">forEachImpl</a> (std::tuple&lt; Ts... &gt; &amp;&amp;tuple, Callable &amp;&amp;callable, std::index_sequence&lt; I... &gt;)</td></tr>
 <tr class="memdesc:afac905a09c036e19ed0f852543e3ce00"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a helper implementation for the forEach function to apply a callable object on each element in a tuple.  <a href="#afac905a09c036e19ed0f852543e3ce00">More...</a><br /></td></tr>
 <tr class="separator:afac905a09c036e19ed0f852543e3ce00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04953331168bf8e82474fd2a1c774471"><td class="memTemplParams" colspan="2">template&lt;size_t Index, typename Type &gt; </td></tr>
+<tr class="memitem:a04953331168bf8e82474fd2a1c774471"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHost constexpr const Type &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx_1_1Detail.html#a04953331168bf8e82474fd2a1c774471">getImpl</a> (const <a class="el" href="structVoxx_1_1Detail_1_1Element.html">Element</a>&lt; Index, Type &gt; &amp;element) noexcept</td></tr>
+<tr class="memdesc:a04953331168bf8e82474fd2a1c774471"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a constant lvalue-reference to an <a class="el" href="structVoxx_1_1Detail_1_1Element.html" title="Defines a struct to hold an element at a specific index in a container. ">Element</a>.  <a href="#a04953331168bf8e82474fd2a1c774471">More...</a><br /></td></tr>
+<tr class="separator:a04953331168bf8e82474fd2a1c774471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5443ae32b0c9606128789bf2bd0841"><td class="memTemplParams" colspan="2">template&lt;size_t Index, typename Type &gt; </td></tr>
+<tr class="memitem:aab5443ae32b0c9606128789bf2bd0841"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHost constexpr Type &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx_1_1Detail.html#aab5443ae32b0c9606128789bf2bd0841">getImpl</a> (<a class="el" href="structVoxx_1_1Detail_1_1Element.html">Element</a>&lt; Index, Type &gt; &amp;element) noexcept</td></tr>
+<tr class="memdesc:aab5443ae32b0c9606128789bf2bd0841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an lvalue-reference to an <a class="el" href="structVoxx_1_1Detail_1_1Element.html" title="Defines a struct to hold an element at a specific index in a container. ">Element</a>.  <a href="#aab5443ae32b0c9606128789bf2bd0841">More...</a><br /></td></tr>
+<tr class="separator:aab5443ae32b0c9606128789bf2bd0841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca90367c6c639f26ddd231c06e85908b"><td class="memTemplParams" colspan="2">template&lt;size_t Index, typename Type &gt; </td></tr>
+<tr class="memitem:aca90367c6c639f26ddd231c06e85908b"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHost constexpr Type &amp;&amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx_1_1Detail.html#aca90367c6c639f26ddd231c06e85908b">getImpl</a> (<a class="el" href="structVoxx_1_1Detail_1_1Element.html">Element</a>&lt; Index, Type &gt; &amp;&amp;element) noexcept</td></tr>
+<tr class="memdesc:aca90367c6c639f26ddd231c06e85908b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an rvalue-reference to an <a class="el" href="structVoxx_1_1Detail_1_1Element.html" title="Defines a struct to hold an element at a specific index in a container. ">Element</a>.  <a href="#aca90367c6c639f26ddd231c06e85908b">More...</a><br /></td></tr>
+<tr class="separator:aca90367c6c639f26ddd231c06e85908b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4ba1bc732f2bb3c17a0dd67f5eb342e"><td class="memTemplParams" colspan="2">template&lt;size_t Index, typename Type &gt; </td></tr>
+<tr class="memitem:ae4ba1bc732f2bb3c17a0dd67f5eb342e"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHost constexpr const volatile Type &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx_1_1Detail.html#ae4ba1bc732f2bb3c17a0dd67f5eb342e">getImpl</a> (const volatile <a class="el" href="structVoxx_1_1Detail_1_1Element.html">Element</a>&lt; Index, Type &gt; &amp;element) noexcept</td></tr>
+<tr class="memdesc:ae4ba1bc732f2bb3c17a0dd67f5eb342e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a constant lvalue-reference to an <a class="el" href="structVoxx_1_1Detail_1_1Element.html" title="Defines a struct to hold an element at a specific index in a container. ">Element</a>.  <a href="#ae4ba1bc732f2bb3c17a0dd67f5eb342e">More...</a><br /></td></tr>
+<tr class="separator:ae4ba1bc732f2bb3c17a0dd67f5eb342e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6249cf2d393b141981d14e0d4a58c66a"><td class="memTemplParams" colspan="2">template&lt;size_t Index, typename Type &gt; </td></tr>
+<tr class="memitem:a6249cf2d393b141981d14e0d4a58c66a"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHost constexpr volatile Type &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx_1_1Detail.html#a6249cf2d393b141981d14e0d4a58c66a">getImpl</a> (volatile <a class="el" href="structVoxx_1_1Detail_1_1Element.html">Element</a>&lt; Index, Type &gt; &amp;element) noexcept</td></tr>
+<tr class="memdesc:a6249cf2d393b141981d14e0d4a58c66a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an lvalue-reference to an <a class="el" href="structVoxx_1_1Detail_1_1Element.html" title="Defines a struct to hold an element at a specific index in a container. ">Element</a>.  <a href="#a6249cf2d393b141981d14e0d4a58c66a">More...</a><br /></td></tr>
+<tr class="separator:a6249cf2d393b141981d14e0d4a58c66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa275007ced467c3b0b43512906938030"><td class="memTemplParams" colspan="2">template&lt;size_t Index, typename Type &gt; </td></tr>
+<tr class="memitem:aa275007ced467c3b0b43512906938030"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHost constexpr volatile Type &amp;&amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx_1_1Detail.html#aa275007ced467c3b0b43512906938030">getImpl</a> (volatile <a class="el" href="structVoxx_1_1Detail_1_1Element.html">Element</a>&lt; Index, Type &gt; &amp;&amp;element) noexcept</td></tr>
+<tr class="memdesc:aa275007ced467c3b0b43512906938030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an rvalue-reference to an <a class="el" href="structVoxx_1_1Detail_1_1Element.html" title="Defines a struct to hold an element at a specific index in a container. ">Element</a>.  <a href="#aa275007ced467c3b0b43512906938030">More...</a><br /></td></tr>
+<tr class="separator:aa275007ced467c3b0b43512906938030"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This namespace implements algorithmic functionality. </p>
@@ -232,6 +272,264 @@ template&lt;typename Callable , typename... Ts, size_t... I&gt; </div>
     <tr><td class="paramname">Callable</td><td>The type of the callable object. </td></tr>
     <tr><td class="paramname">Ts</td><td>The types of the tuple elements. </td></tr>
     <tr><td class="paramname">I</td><td>The indices to get the tuple elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a04953331168bf8e82474fd2a1c774471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04953331168bf8e82474fd2a1c774471">&sect;&nbsp;</a></span>getImpl() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t Index, typename Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VoxxDeviceHost constexpr const Type&amp; Voxx::Detail::getImpl </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structVoxx_1_1Detail_1_1Element.html">Element</a>&lt; Index, Type &gt; &amp;&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a constant lvalue-reference to an <a class="el" href="structVoxx_1_1Detail_1_1Element.html" title="Defines a struct to hold an element at a specific index in a container. ">Element</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>The element to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Index</td><td>The index of the element to get. </td></tr>
+    <tr><td class="paramname">Type</td><td>The type of the element to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aab5443ae32b0c9606128789bf2bd0841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab5443ae32b0c9606128789bf2bd0841">&sect;&nbsp;</a></span>getImpl() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t Index, typename Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VoxxDeviceHost constexpr Type&amp; Voxx::Detail::getImpl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVoxx_1_1Detail_1_1Element.html">Element</a>&lt; Index, Type &gt; &amp;&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets an lvalue-reference to an <a class="el" href="structVoxx_1_1Detail_1_1Element.html" title="Defines a struct to hold an element at a specific index in a container. ">Element</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>The element to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Index</td><td>The index of the element to get. </td></tr>
+    <tr><td class="paramname">Type</td><td>The type of the element to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aca90367c6c639f26ddd231c06e85908b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca90367c6c639f26ddd231c06e85908b">&sect;&nbsp;</a></span>getImpl() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t Index, typename Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VoxxDeviceHost constexpr Type&amp;&amp; Voxx::Detail::getImpl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVoxx_1_1Detail_1_1Element.html">Element</a>&lt; Index, Type &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets an rvalue-reference to an <a class="el" href="structVoxx_1_1Detail_1_1Element.html" title="Defines a struct to hold an element at a specific index in a container. ">Element</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>The element to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Index</td><td>The index of the element to get. </td></tr>
+    <tr><td class="paramname">Type</td><td>The type of the element to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae4ba1bc732f2bb3c17a0dd67f5eb342e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4ba1bc732f2bb3c17a0dd67f5eb342e">&sect;&nbsp;</a></span>getImpl() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t Index, typename Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VoxxDeviceHost constexpr const volatile Type&amp; Voxx::Detail::getImpl </td>
+          <td>(</td>
+          <td class="paramtype">const volatile <a class="el" href="structVoxx_1_1Detail_1_1Element.html">Element</a>&lt; Index, Type &gt; &amp;&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a constant lvalue-reference to an <a class="el" href="structVoxx_1_1Detail_1_1Element.html" title="Defines a struct to hold an element at a specific index in a container. ">Element</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>The element to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Index</td><td>The index of the element to get. </td></tr>
+    <tr><td class="paramname">Type</td><td>The type of the element to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6249cf2d393b141981d14e0d4a58c66a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6249cf2d393b141981d14e0d4a58c66a">&sect;&nbsp;</a></span>getImpl() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t Index, typename Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VoxxDeviceHost constexpr volatile Type&amp; Voxx::Detail::getImpl </td>
+          <td>(</td>
+          <td class="paramtype">volatile <a class="el" href="structVoxx_1_1Detail_1_1Element.html">Element</a>&lt; Index, Type &gt; &amp;&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets an lvalue-reference to an <a class="el" href="structVoxx_1_1Detail_1_1Element.html" title="Defines a struct to hold an element at a specific index in a container. ">Element</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>The element to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Index</td><td>The index of the element to get. </td></tr>
+    <tr><td class="paramname">Type</td><td>The type of the element to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa275007ced467c3b0b43512906938030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa275007ced467c3b0b43512906938030">&sect;&nbsp;</a></span>getImpl() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t Index, typename Type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VoxxDeviceHost constexpr volatile Type&amp;&amp; Voxx::Detail::getImpl </td>
+          <td>(</td>
+          <td class="paramtype">volatile <a class="el" href="structVoxx_1_1Detail_1_1Element.html">Element</a>&lt; Index, Type &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets an rvalue-reference to an <a class="el" href="structVoxx_1_1Detail_1_1Element.html" title="Defines a struct to hold an element at a specific index in a container. ">Element</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>The element to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Index</td><td>The index of the element to get. </td></tr>
+    <tr><td class="paramname">Type</td><td>The type of the element to get. </td></tr>
   </table>
   </dd>
 </dl>

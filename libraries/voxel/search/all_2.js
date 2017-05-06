@@ -1,7 +1,7 @@
 var searchData=
 [
   ['cachecapabilities',['CacheCapabilities',['../namespaceVoxx_1_1System_1_1CpuId.html#a38c55e57c5699e5b6dd27590d57f1ba0a766d0aa8f0078dad3648f1766456dee7',1,'Voxx::System::CpuId']]],
-  ['cacheinfo',['CacheInfo',['../structVoxx_1_1System_1_1CacheInfo.html#a459db83b878f9a3be76db259bdee1079',1,'Voxx::System::CacheInfo::CacheInfo() noexcept'],['../structVoxx_1_1System_1_1CacheInfo.html#ae3fd00f0197d3b0bf1752da506e57000',1,'Voxx::System::CacheInfo::CacheInfo(CpuIdRegisters regs) noexcept'],['../structVoxx_1_1System_1_1CpuInfo.html#a54ae6ce3298a9c023177e57dbbda4307',1,'Voxx::System::CpuInfo::cacheInfo()']]],
+  ['cacheinfo',['cacheInfo',['../structVoxx_1_1System_1_1CpuInfo.html#a54ae6ce3298a9c023177e57dbbda4307',1,'Voxx::System::CpuInfo::cacheInfo()'],['../structVoxx_1_1System_1_1CacheInfo.html#a459db83b878f9a3be76db259bdee1079',1,'Voxx::System::CacheInfo::CacheInfo() noexcept'],['../structVoxx_1_1System_1_1CacheInfo.html#ae3fd00f0197d3b0bf1752da506e57000',1,'Voxx::System::CacheInfo::CacheInfo(CpuIdRegisters regs) noexcept']]],
   ['cacheinfo',['CacheInfo',['../structVoxx_1_1System_1_1CacheInfo.html',1,'Voxx::System']]],
   ['cacheinfocontainer',['CacheInfoContainer',['../structVoxx_1_1System_1_1CpuInfo.html#a62cb3c87568ab1787cc50f8cb2e467a3',1,'Voxx::System::CpuInfo']]],
   ['cachelinesize',['cacheLineSize',['../structVoxx_1_1System_1_1CpuInfo.html#a5e3545bf7934d938b93425051b8396ee',1,'Voxx::System::CpuInfo']]],
@@ -9,7 +9,7 @@ var searchData=
   ['callableobj',['CallableObj',['../structVoxx_1_1CallableWrapper.html#aa23e77a866856efa697af0cebcea3743',1,'Voxx::CallableWrapper']]],
   ['callabletype',['CallableType',['../structVoxx_1_1CallableWrapper.html#ac683f801209c4c49b17b1c2780e5d1a5',1,'Voxx::CallableWrapper']]],
   ['callablewrapper',['CallableWrapper',['../structVoxx_1_1CallableWrapper.html',1,'Voxx']]],
-  ['callablewrapper',['CallableWrapper',['../structVoxx_1_1CallableWrapper.html#ad7eecb46c6a39105c22e1ff6372e1bc7',1,'Voxx::CallableWrapper::CallableWrapper(CallableType &amp;&amp;callable, WrappedArgsType &amp;&amp;args)'],['../structVoxx_1_1CallableWrapper.html#ac6a6b0e08fe79d5fbb18265bfd627068',1,'Voxx::CallableWrapper::CallableWrapper(const CallableWrapper &amp;other)'],['../structVoxx_1_1CallableWrapper.html#a036bf65c1554fba5ced86651546ea75e',1,'Voxx::CallableWrapper::CallableWrapper(CallableWrapper &amp;&amp;other) noexcept']]],
+  ['callablewrapper',['CallableWrapper',['../structVoxx_1_1CallableWrapper.html#ace02a6c2771570945fcbf86b7b021537',1,'Voxx::CallableWrapper::CallableWrapper(CallableType &amp;&amp;callable, WrappedArgsType &amp;&amp;args)'],['../structVoxx_1_1CallableWrapper.html#a312f86e6959df14fe031bf536f07beec',1,'Voxx::CallableWrapper::CallableWrapper(const CallableWrapper &amp;other)'],['../structVoxx_1_1CallableWrapper.html#af1fe2934d01c7b8e2d89f9c9fb0175dc',1,'Voxx::CallableWrapper::CallableWrapper(CallableWrapper &amp;&amp;other) noexcept']]],
   ['callablewrapper_2ehpp',['CallableWrapper.hpp',['../CallableWrapper_8hpp.html',1,'']]],
   ['capacity',['capacity',['../classVoxx_1_1BitMask.html#ac79fef412a26e1d1b0263814d8f1fe85',1,'Voxx::BitMask']]],
   ['catcher',['catcher',['../Debug_8hpp.html#a42b8edc089fbe401cd2cbd5ec12e5250',1,'Voxx::Debug']]],

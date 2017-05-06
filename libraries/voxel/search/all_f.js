@@ -1,6 +1,7 @@
 var searchData=
 [
   ['selfsnoop',['SelfSnoop',['../structVoxx_1_1System_1_1CpuInfo.html#ace094a077e3d533f90c6da614474c85ca58d3bd13d97b8280b2623c322e7365d8',1,'Voxx::System::CpuInfo']]],
+  ['selftype',['SelfType',['../structVoxx_1_1Tuple.html#a472e7d95db0a63f482d808af97b6448d',1,'Voxx::Tuple']]],
   ['setaffinity',['setAffinity',['../Thread_8hpp.html#a7199a9c6a1f24a36af396e425255b54c',1,'Voxx::Thread']]],
   ['setarchitecture',['setArchitecture',['../classVoxx_1_1GpuInfo.html#a930be12c2d8a3eadcc0b3347f5d4ce24',1,'Voxx::GpuInfo']]],
   ['setbit',['setBit',['../namespaceVoxx.html#a54aed20f5bb60c5598246d48285ae9bc',1,'Voxx']]],
@@ -13,11 +14,13 @@ var searchData=
   ['sharingsizes',['SharingSizes',['../structVoxx_1_1System_1_1CpuInfo.html#a95239cdb2c25d7d402364fbbf01ec382',1,'Voxx::System::CpuInfo']]],
   ['size',['size',['../classVoxx_1_1BitMask.html#ad60ea9fbc6a46f6c40bd7f5f530f5c11',1,'Voxx::BitMask::size()'],['../structVoxx_1_1System_1_1CacheInfo.html#a4720d731dffe37af6ce052aeea72e8c9',1,'Voxx::System::CacheInfo::size()']]],
   ['sse',['Sse',['../structVoxx_1_1System_1_1CpuInfo.html#ace094a077e3d533f90c6da614474c85ca3864bab077c9d12e83009a2cb8d20a34',1,'Voxx::System::CpuInfo::Sse()'],['../structVoxx_1_1System_1_1CpuInfo.html#aadc71b253d46fc38e72248e18dc975f7',1,'Voxx::System::CpuInfo::sse() noexcept']]],
-  ['sse2',['sse2',['../structVoxx_1_1System_1_1CpuInfo.html#afe2b1744db842f82c6c6f4009e8a284d',1,'Voxx::System::CpuInfo::sse2() noexcept'],['../structVoxx_1_1System_1_1CpuInfo.html#ace094a077e3d533f90c6da614474c85ca3a3004841facbd1a44a37d8f44ecf3c2',1,'Voxx::System::CpuInfo::Sse2()']]],
-  ['sse3',['Sse3',['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13bab0446f6b569253d760e4c55e2b8212b9',1,'Voxx::System::CpuInfo::Sse3()'],['../structVoxx_1_1System_1_1CpuInfo.html#a88ff10dfc51c46b63d9e622d25332a00',1,'Voxx::System::CpuInfo::sse3() noexcept']]],
+  ['sse2',['Sse2',['../structVoxx_1_1System_1_1CpuInfo.html#ace094a077e3d533f90c6da614474c85ca3a3004841facbd1a44a37d8f44ecf3c2',1,'Voxx::System::CpuInfo::Sse2()'],['../structVoxx_1_1System_1_1CpuInfo.html#afe2b1744db842f82c6c6f4009e8a284d',1,'Voxx::System::CpuInfo::sse2() noexcept']]],
+  ['sse3',['sse3',['../structVoxx_1_1System_1_1CpuInfo.html#a88ff10dfc51c46b63d9e622d25332a00',1,'Voxx::System::CpuInfo::sse3() noexcept'],['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13bab0446f6b569253d760e4c55e2b8212b9',1,'Voxx::System::CpuInfo::Sse3()']]],
   ['sse41',['sse41',['../structVoxx_1_1System_1_1CpuInfo.html#a771b47c26441e2270df4405d65e8def1',1,'Voxx::System::CpuInfo::sse41() noexcept'],['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13bace28f183035cfe9b2e9df0c0f10698f6',1,'Voxx::System::CpuInfo::Sse41()']]],
-  ['sse42',['sse42',['../structVoxx_1_1System_1_1CpuInfo.html#a10a1791e48342c8911cf6da60b5aeaa4',1,'Voxx::System::CpuInfo::sse42() noexcept'],['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13ba1ef29e75e4373dec1a2600ccd4245423',1,'Voxx::System::CpuInfo::Sse42()']]],
-  ['ssse3',['ssse3',['../structVoxx_1_1System_1_1CpuInfo.html#ad518449bb0eaf6d4d575c1669617440a',1,'Voxx::System::CpuInfo::ssse3() noexcept'],['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13ba685ff0945d916f149111681d0171f32d',1,'Voxx::System::CpuInfo::Ssse3()']]],
+  ['sse42',['Sse42',['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13ba1ef29e75e4373dec1a2600ccd4245423',1,'Voxx::System::CpuInfo::Sse42()'],['../structVoxx_1_1System_1_1CpuInfo.html#a10a1791e48342c8911cf6da60b5aeaa4',1,'Voxx::System::CpuInfo::sse42() noexcept']]],
+  ['ssse3',['Ssse3',['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13ba685ff0945d916f149111681d0171f32d',1,'Voxx::System::CpuInfo::Ssse3()'],['../structVoxx_1_1System_1_1CpuInfo.html#ad518449bb0eaf6d4d575c1669617440a',1,'Voxx::System::CpuInfo::ssse3() noexcept']]],
+  ['storage',['Storage',['../structVoxx_1_1Tuple.html#ae3e4cebce1326d830d0806c7f8ccb235',1,'Voxx::Tuple']]],
+  ['storagetype',['StorageType',['../structVoxx_1_1Tuple_3_4.html#adb2158078f945ac4a82cae218eee847b',1,'Voxx::Tuple&lt;&gt;::StorageType()'],['../structVoxx_1_1Tuple.html#a3cab312ae362d4649846045879065a50',1,'Voxx::Tuple::StorageType()']]],
   ['supportsleafb',['supportsLeafB',['../namespaceVoxx_1_1System_1_1CpuId.html#aac2195a72a2b25079ff3655b3a253ca8',1,'Voxx::System::CpuId']]],
   ['systeminfo_2ehpp',['SystemInfo.hpp',['../SystemInfo_8hpp.html',1,'']]]
 ];

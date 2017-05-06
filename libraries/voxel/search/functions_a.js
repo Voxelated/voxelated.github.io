@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['make_5ftuple',['make_tuple',['../namespaceVoxx.html#a44ad4d0693c5ebbceda71397012cdfc0',1,'Voxx']]],
   ['manipulator',['Manipulator',['../structVoxx_1_1BitMask_1_1Manipulator.html#a8f177d17fa32b3d6d93242e6d7d1972f',1,'Voxx::BitMask::Manipulator']]],
   ['maxleaf',['maxleaf',['../namespaceVoxx_1_1System_1_1CpuId.html#ae59f31cb97e2638df05fe312a49e9082',1,'Voxx::System::CpuId']]],
   ['maxsharing',['maxSharing',['../structVoxx_1_1System_1_1CacheInfo.html#aac0e44e7ba845b08dd823ad9ee3e8912',1,'Voxx::System::CacheInfo']]],

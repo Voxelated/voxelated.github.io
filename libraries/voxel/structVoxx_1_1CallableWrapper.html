@@ -114,33 +114,33 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="str
 <tr class="memdesc:ac683f801209c4c49b17b1c2780e5d1a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the type of the callable. <br /></td></tr>
 <tr class="separator:ac683f801209c4c49b17b1c2780e5d1a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9cf2b0d50129034d8c2c4cf2ab132c5"><td class="memItemLeft" align="right" valign="top"><a id="ae9cf2b0d50129034d8c2c4cf2ab132c5"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#ae9cf2b0d50129034d8c2c4cf2ab132c5">WrappedArgsType</a> = Tuple&lt; std::decay_t&lt; ArgTypes &gt;... &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#ae9cf2b0d50129034d8c2c4cf2ab132c5">WrappedArgsType</a> = <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; std::decay_t&lt; ArgTypes &gt;... &gt;</td></tr>
 <tr class="memdesc:ae9cf2b0d50129034d8c2c4cf2ab132c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the type of the wrapped arguments. <br /></td></tr>
 <tr class="separator:ae9cf2b0d50129034d8c2c4cf2ab132c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad7eecb46c6a39105c22e1ff6372e1bc7"><td class="memItemLeft" align="right" valign="top">DeviceHost&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#ad7eecb46c6a39105c22e1ff6372e1bc7">CallableWrapper</a> (<a class="el" href="structVoxx_1_1CallableWrapper.html#ac683f801209c4c49b17b1c2780e5d1a5">CallableType</a> &amp;&amp;callable, <a class="el" href="structVoxx_1_1CallableWrapper.html#ae9cf2b0d50129034d8c2c4cf2ab132c5">WrappedArgsType</a> &amp;&amp;args)</td></tr>
-<tr class="memdesc:ad7eecb46c6a39105c22e1ff6372e1bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor &ndash; Takes a callable and an arg container and stores them.  <a href="#ad7eecb46c6a39105c22e1ff6372e1bc7">More...</a><br /></td></tr>
-<tr class="separator:ad7eecb46c6a39105c22e1ff6372e1bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6a6b0e08fe79d5fbb18265bfd627068"><td class="memItemLeft" align="right" valign="top">DeviceHost&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#ac6a6b0e08fe79d5fbb18265bfd627068">CallableWrapper</a> (const <a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> &amp;other)</td></tr>
-<tr class="memdesc:ac6a6b0e08fe79d5fbb18265bfd627068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor &ndash; the callable and arguments are copied.  <a href="#ac6a6b0e08fe79d5fbb18265bfd627068">More...</a><br /></td></tr>
-<tr class="separator:ac6a6b0e08fe79d5fbb18265bfd627068"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a036bf65c1554fba5ced86651546ea75e"><td class="memItemLeft" align="right" valign="top">DeviceHost&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#a036bf65c1554fba5ced86651546ea75e">CallableWrapper</a> (<a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> &amp;&amp;other) noexcept</td></tr>
-<tr class="memdesc:a036bf65c1554fba5ced86651546ea75e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor &ndash; moves the <code>other's</code> callable and arguments.  <a href="#a036bf65c1554fba5ced86651546ea75e">More...</a><br /></td></tr>
-<tr class="separator:a036bf65c1554fba5ced86651546ea75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec6956fbb2296e64b81492007d8302c5"><td class="memItemLeft" align="right" valign="top"><a id="aec6956fbb2296e64b81492007d8302c5"></a>
-DeviceHost <a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#aec6956fbb2296e64b81492007d8302c5">operator=</a> (const <a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> &amp;)=delete</td></tr>
-<tr class="memdesc:aec6956fbb2296e64b81492007d8302c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment &ndash; deleted. <br /></td></tr>
-<tr class="separator:aec6956fbb2296e64b81492007d8302c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb5f44cb92c198ba270a9734c725529c"><td class="memItemLeft" align="right" valign="top"><a id="adb5f44cb92c198ba270a9734c725529c"></a>
-DeviceHost <a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#adb5f44cb92c198ba270a9734c725529c">operator=</a> (<a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> &amp;&amp;)=delete</td></tr>
-<tr class="memdesc:adb5f44cb92c198ba270a9734c725529c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment &ndash; deleted. <br /></td></tr>
-<tr class="separator:adb5f44cb92c198ba270a9734c725529c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa811c8dc0b39a2fec0c1af89714fa3d6"><td class="memItemLeft" align="right" valign="top"><a id="aa811c8dc0b39a2fec0c1af89714fa3d6"></a>
-DeviceHost void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#aa811c8dc0b39a2fec0c1af89714fa3d6">operator()</a> ()</td></tr>
-<tr class="memdesc:aa811c8dc0b39a2fec0c1af89714fa3d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the call operator to invoke the callable. <br /></td></tr>
-<tr class="separator:aa811c8dc0b39a2fec0c1af89714fa3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace02a6c2771570945fcbf86b7b021537"><td class="memItemLeft" align="right" valign="top">VoxxDeviceHost&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#ace02a6c2771570945fcbf86b7b021537">CallableWrapper</a> (<a class="el" href="structVoxx_1_1CallableWrapper.html#ac683f801209c4c49b17b1c2780e5d1a5">CallableType</a> &amp;&amp;callable, <a class="el" href="structVoxx_1_1CallableWrapper.html#ae9cf2b0d50129034d8c2c4cf2ab132c5">WrappedArgsType</a> &amp;&amp;args)</td></tr>
+<tr class="memdesc:ace02a6c2771570945fcbf86b7b021537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor &ndash; Takes a callable and an arg container and stores them.  <a href="#ace02a6c2771570945fcbf86b7b021537">More...</a><br /></td></tr>
+<tr class="separator:ace02a6c2771570945fcbf86b7b021537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a312f86e6959df14fe031bf536f07beec"><td class="memItemLeft" align="right" valign="top">VoxxDeviceHost&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#a312f86e6959df14fe031bf536f07beec">CallableWrapper</a> (const <a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> &amp;other)</td></tr>
+<tr class="memdesc:a312f86e6959df14fe031bf536f07beec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor &ndash; the callable and arguments are copied.  <a href="#a312f86e6959df14fe031bf536f07beec">More...</a><br /></td></tr>
+<tr class="separator:a312f86e6959df14fe031bf536f07beec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1fe2934d01c7b8e2d89f9c9fb0175dc"><td class="memItemLeft" align="right" valign="top">VoxxDeviceHost&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#af1fe2934d01c7b8e2d89f9c9fb0175dc">CallableWrapper</a> (<a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:af1fe2934d01c7b8e2d89f9c9fb0175dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor &ndash; moves the <code>other's</code> callable and arguments.  <a href="#af1fe2934d01c7b8e2d89f9c9fb0175dc">More...</a><br /></td></tr>
+<tr class="separator:af1fe2934d01c7b8e2d89f9c9fb0175dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade3bdd3bd6ad081d914b002bb1fe3d08"><td class="memItemLeft" align="right" valign="top"><a id="ade3bdd3bd6ad081d914b002bb1fe3d08"></a>
+VoxxDeviceHost <a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#ade3bdd3bd6ad081d914b002bb1fe3d08">operator=</a> (const <a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> &amp;)=delete</td></tr>
+<tr class="memdesc:ade3bdd3bd6ad081d914b002bb1fe3d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment &ndash; deleted. <br /></td></tr>
+<tr class="separator:ade3bdd3bd6ad081d914b002bb1fe3d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b2f86ed89307ec2622771bf895cd8e1"><td class="memItemLeft" align="right" valign="top"><a id="a1b2f86ed89307ec2622771bf895cd8e1"></a>
+VoxxDeviceHost <a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#a1b2f86ed89307ec2622771bf895cd8e1">operator=</a> (<a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a1b2f86ed89307ec2622771bf895cd8e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment &ndash; deleted. <br /></td></tr>
+<tr class="separator:a1b2f86ed89307ec2622771bf895cd8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a321a8a50bce98c8f188fe7be206d6fab"><td class="memItemLeft" align="right" valign="top"><a id="a321a8a50bce98c8f188fe7be206d6fab"></a>
+VoxxDeviceHost void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1CallableWrapper.html#a321a8a50bce98c8f188fe7be206d6fab">operator()</a> ()</td></tr>
+<tr class="memdesc:a321a8a50bce98c8f188fe7be206d6fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the call operator to invoke the callable. <br /></td></tr>
+<tr class="separator:a321a8a50bce98c8f188fe7be206d6fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -169,8 +169,8 @@ struct Voxx::CallableWrapper&lt; Callable, ArgTypes &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad7eecb46c6a39105c22e1ff6372e1bc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7eecb46c6a39105c22e1ff6372e1bc7">&sect;&nbsp;</a></span>CallableWrapper() <span class="overload">[1/3]</span></h2>
+<a id="ace02a6c2771570945fcbf86b7b021537"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace02a6c2771570945fcbf86b7b021537">&sect;&nbsp;</a></span>CallableWrapper() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,7 +181,7 @@ template&lt;typename Callable , typename... ArgTypes&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">DeviceHost <a class="el" href="structVoxx_1_1CallableWrapper.html">Voxx::CallableWrapper</a>&lt; Callable, ArgTypes &gt;::<a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> </td>
+          <td class="memname">VoxxDeviceHost <a class="el" href="structVoxx_1_1CallableWrapper.html">Voxx::CallableWrapper</a>&lt; Callable, ArgTypes &gt;::<a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structVoxx_1_1CallableWrapper.html#ac683f801209c4c49b17b1c2780e5d1a5">CallableType</a> &amp;&amp;&#160;</td>
           <td class="paramname"><em>callable</em>, </td>
@@ -216,8 +216,8 @@ template&lt;typename Callable , typename... ArgTypes&gt; </div>
 
 </div>
 </div>
-<a id="ac6a6b0e08fe79d5fbb18265bfd627068"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6a6b0e08fe79d5fbb18265bfd627068">&sect;&nbsp;</a></span>CallableWrapper() <span class="overload">[2/3]</span></h2>
+<a id="a312f86e6959df14fe031bf536f07beec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a312f86e6959df14fe031bf536f07beec">&sect;&nbsp;</a></span>CallableWrapper() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -228,7 +228,7 @@ template&lt;typename Callable , typename... ArgTypes&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">DeviceHost <a class="el" href="structVoxx_1_1CallableWrapper.html">Voxx::CallableWrapper</a>&lt; Callable, ArgTypes &gt;::<a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> </td>
+          <td class="memname">VoxxDeviceHost <a class="el" href="structVoxx_1_1CallableWrapper.html">Voxx::CallableWrapper</a>&lt; Callable, ArgTypes &gt;::<a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a>&lt; Callable, ArgTypes &gt; &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
@@ -252,8 +252,8 @@ template&lt;typename Callable , typename... ArgTypes&gt; </div>
 
 </div>
 </div>
-<a id="a036bf65c1554fba5ced86651546ea75e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a036bf65c1554fba5ced86651546ea75e">&sect;&nbsp;</a></span>CallableWrapper() <span class="overload">[3/3]</span></h2>
+<a id="af1fe2934d01c7b8e2d89f9c9fb0175dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1fe2934d01c7b8e2d89f9c9fb0175dc">&sect;&nbsp;</a></span>CallableWrapper() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -264,7 +264,7 @@ template&lt;typename Callable , typename... ArgTypes&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">DeviceHost <a class="el" href="structVoxx_1_1CallableWrapper.html">Voxx::CallableWrapper</a>&lt; Callable, ArgTypes &gt;::<a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> </td>
+          <td class="memname">VoxxDeviceHost <a class="el" href="structVoxx_1_1CallableWrapper.html">Voxx::CallableWrapper</a>&lt; Callable, ArgTypes &gt;::<a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structVoxx_1_1CallableWrapper.html">CallableWrapper</a>&lt; Callable, ArgTypes &gt; &amp;&amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>

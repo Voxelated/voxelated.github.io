@@ -142,7 +142,12 @@ $(function() {
 <td align="left">-std=c++1z </td><td align="left">Support for C++17 </td><td align="left">No </td></tr>
 <tr>
 <td align="left">-O3 </td><td align="left">Aggressive optimization </td><td align="left">No </td></tr>
+<tr>
+<td align="left">&ndash;cuda-path={PATH} </td><td align="left">Path to cuda in system, if installed </td><td align="left">No </td></tr>
+<tr>
+<td align="left">&ndash;cude-gpu-arch={arch} </td><td align="left">GPU architecture version </td><td align="left">No </td></tr>
 </table>
+<p><b>Note</b>: Voxel will search for cuda and add the apropriate flags, include and link directories, and libraries for cuda. Thus, when using Voxel via <code>find_package(Voxel)</code>, if the system supports cuda, then anything which uses voxel will be compiled with cuda support.</p>
 <h3>Linking</h3>
 <p>Assuming that <code>find_packge(Voxel ...)</code> has been run, to link against a single library from cmake, simple do (see list of components below):</p>
 <div class="fragment"><div class="line">target_link_libraries(Target Voxx::ComponentName)</div></div><!-- fragment --><p>where <code>ComponentName</code> is the component to link against. Alternatively, to link against numerous components, list the components when using <code>find_package</code>:</p>

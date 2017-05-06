@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['formattag',['FormatTag',['../structVoxx_1_1Io_1_1Output_3_01Mode_1_1Console_01_4_1_1FormatTag.html',1,'Voxx::Io::Output&lt; Mode::Console &gt;']]]
+  ['element',['Element',['../structVoxx_1_1Detail_1_1Element.html',1,'Voxx::Detail']]],
+  ['element_3c_20indices_2c_20types_20_3e',['Element&lt; Indices, Types &gt;',['../structVoxx_1_1Detail_1_1Element.html',1,'Voxx::Detail']]]
 ];
