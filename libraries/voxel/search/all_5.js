@@ -2,7 +2,7 @@ var searchData=
 [
   ['featurebitsecx',['FeatureBitsEcx',['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13b',1,'Voxx::System::CpuInfo']]],
   ['featurebitsedx',['FeatureBitsEdx',['../structVoxx_1_1System_1_1CpuInfo.html#ace094a077e3d533f90c6da614474c85c',1,'Voxx::System::CpuInfo']]],
-  ['features',['features',['../namespaceVoxx_1_1System_1_1CpuId.html#a42308fc57043e3d473f8f2981f117a9b',1,'Voxx::System::CpuId::features() noexcept'],['../namespaceVoxx_1_1System_1_1CpuId.html#a38c55e57c5699e5b6dd27590d57f1ba0a88a5d531c6b827ed11755c189abd74c2',1,'Voxx::System::CpuId::Features()']]],
+  ['features',['Features',['../namespaceVoxx_1_1System_1_1CpuId.html#a38c55e57c5699e5b6dd27590d57f1ba0a88a5d531c6b827ed11755c189abd74c2',1,'Voxx::System::CpuId::Features()'],['../namespaceVoxx_1_1System_1_1CpuId.html#a42308fc57043e3d473f8f2981f117a9b',1,'Voxx::System::CpuId::features() noexcept']]],
   ['file',['File',['../namespaceVoxx_1_1Io.html#a48abf91849897235a1e3b28047677c8fa0b27918290ff5323bea1e3b78a9cf04e',1,'Voxx::Io']]],
   ['fillgpuinfo',['fillGpuInfo',['../classVoxx_1_1GpuInfo.html#a817544622bc830d5a6f5c6783432582b',1,'Voxx::GpuInfo']]],
   ['firstsetbitindex',['firstSetBitIndex',['../namespaceVoxx.html#a3ffb4a0f85fdb95a1742cf258e1adba5',1,'Voxx']]],

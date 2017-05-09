@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['wrappedargstype',['WrappedArgsType',['../classVoxx_1_1Function_1_1Callable.html#a8e9ef1cfbb91ad921d9245bc59f83b47',1,'Voxx::Function::Callable::WrappedArgsType()'],['../classVoxx_1_1Function_1_1DynamicDeviceCallable.html#a20ed485721a1af9ae88872c065c59ddc',1,'Voxx::Function::DynamicDeviceCallable::WrappedArgsType()'],['../structVoxx_1_1Hetero_1_1Detail_1_1LaunchHelper_3_01WrappedCallable_00_01LaunchType_1_1Static_01_4.html#ae13ed164442c7d73a5cac536ffdbb734',1,'Voxx::Hetero::Detail::LaunchHelper&lt; WrappedCallable, LaunchType::Static &gt;::WrappedArgsType()'],['../structVoxx_1_1Hetero_1_1Detail_1_1LaunchHelper_3_01WrappedCallable_00_01LaunchType_1_1Dynamic_01_4.html#a4c373c89f795360c9b74d910d9cc84f1',1,'Voxx::Hetero::Detail::LaunchHelper&lt; WrappedCallable, LaunchType::Dynamic &gt;::WrappedArgsType()']]]
+];

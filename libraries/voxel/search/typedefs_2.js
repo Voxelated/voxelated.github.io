@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['indexsequence',['IndexSequence',['../structVoxx_1_1Detail_1_1BasicTuple.html#a442e89161da10c692dcc3bc99db89b72',1,'Voxx::Detail::BasicTuple']]]
+  ['devicelauncher',['DeviceLauncher',['../LaunchImpl_8hpp.html#a715773b1c49e0c9c5b1b2ca5b3483908',1,'Voxx::Hetero::Detail']]],
+  ['dynamiclauncher',['DynamicLauncher',['../LaunchImpl_8hpp.html#a69c127dce979a142c59c45f5f7b83000',1,'Voxx::Hetero::Detail']]]
 ];

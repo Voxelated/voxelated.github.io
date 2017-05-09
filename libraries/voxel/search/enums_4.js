@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['type',['Type',['../structVoxx_1_1System_1_1CacheInfo.html#add07387b2ccef7e2a625afd413187bd4',1,'Voxx::System::CacheInfo::Type()'],['../classVoxx_1_1Thread_1_1ThreadException.html#a48b6824f54191d3f5c7c54a6fc0e9745',1,'Voxx::Thread::ThreadException::Type()']]]
+  ['mask',['Mask',['../classVoxx_1_1GpuInfo.html#a055ff5ff1c412f64ffdca97e042ea373',1,'Voxx::GpuInfo']]],
+  ['mode',['Mode',['../namespaceVoxx_1_1Io.html#a48abf91849897235a1e3b28047677c8f',1,'Voxx::Io']]]
 ];

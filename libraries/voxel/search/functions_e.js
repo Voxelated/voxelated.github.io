@@ -5,6 +5,8 @@ var searchData=
   ['setbit',['setBit',['../namespaceVoxx.html#a54aed20f5bb60c5598246d48285ae9bc',1,'Voxx']]],
   ['setcorespermultiprocessor',['setCoresPerMultiprocessor',['../classVoxx_1_1GpuInfo.html#a0ec1c029f5bccf62a40093f9ca27a68e',1,'Voxx::GpuInfo']]],
   ['setmultiprocessors',['setMultiprocessors',['../classVoxx_1_1GpuInfo.html#a0d5e990e03c3922ddefb84c21b315a1a',1,'Voxx::GpuInfo']]],
+  ['setotherargs',['setOtherArgs',['../classVoxx_1_1Function_1_1DynamicDeviceCallable.html#ae7a00622195c74d34b53704174354c0f',1,'Voxx::Function::DynamicDeviceCallable']]],
+  ['setotherargsimpl',['setOtherArgsImpl',['../classVoxx_1_1Function_1_1DynamicDeviceCallable.html#a931c92e39c0eb2dc67726e125ed88a73',1,'Voxx::Function::DynamicDeviceCallable']]],
   ['setproperty',['setProperty',['../classVoxx_1_1GpuInfo.html#a6de9db757f2347c58921eb998d181aad',1,'Voxx::GpuInfo']]],
   ['sets',['sets',['../structVoxx_1_1System_1_1CacheInfo.html#a94c6d70d618585166a37e47ae41d8c6d',1,'Voxx::System::CacheInfo']]],
   ['sharedcores',['sharedCores',['../structVoxx_1_1System_1_1CpuInfo.html#a22fdc230e7d263cbc8ede3dc2694b6b6',1,'Voxx::System::CpuInfo']]],
