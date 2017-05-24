@@ -6,6 +6,7 @@ var searchData=
   ['manipulator',['Manipulator',['../structVoxx_1_1BitMask_1_1Manipulator.html',1,'Voxx::BitMask::Manipulator'],['../structVoxx_1_1BitMask_1_1Manipulator.html#a8f177d17fa32b3d6d93242e6d7d1972f',1,'Voxx::BitMask::Manipulator::Manipulator()']]],
   ['mask',['Mask',['../classVoxx_1_1GpuInfo.html#a055ff5ff1c412f64ffdca97e042ea373',1,'Voxx::GpuInfo']]],
   ['masks',['Masks',['../structVoxx_1_1System_1_1CpuInfo.html#a49d162f47a837ad20b4493f17713641f',1,'Voxx::System::CpuInfo']]],
+  ['math_2ehpp',['Math.hpp',['../Math_8hpp.html',1,'']]],
   ['maxleaf',['MaxLeaf',['../namespaceVoxx_1_1System_1_1CpuId.html#a38c55e57c5699e5b6dd27590d57f1ba0a4152c18f45e7dd1df1977de5b165c484',1,'Voxx::System::CpuId::MaxLeaf()'],['../namespaceVoxx_1_1System_1_1CpuId.html#ae59f31cb97e2638df05fe312a49e9082',1,'Voxx::System::CpuId::maxleaf() noexcept']]],
   ['maxsharing',['maxSharing',['../structVoxx_1_1System_1_1CacheInfo.html#aac0e44e7ba845b08dd823ad9ee3e8912',1,'Voxx::System::CacheInfo']]],
   ['maybemodify',['maybeModify',['../classVoxx_1_1Function_1_1DynamicDeviceCallable.html#a1ec2ee8f50a0412cec14c99802cc85ee',1,'Voxx::Function::DynamicDeviceCallable']]],

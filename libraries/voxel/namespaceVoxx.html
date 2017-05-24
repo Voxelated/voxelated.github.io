@@ -135,6 +135,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="structVoxx_1_1tuple__element.html" title="The tuple_element class get the type of the element at index Idx in a tuple. ">tuple_element</a> class get the type of the element at index Idx in a tuple.  <a href="structVoxx_1_1tuple__element.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1tuple__element_3_01Idx_00_01Tuple_3_4_01_4.html">tuple_element&lt; Idx, Tuple&lt;&gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of a tuple element for a tuple with no elements,.  <a href="structVoxx_1_1tuple__element_3_01Idx_00_01Tuple_3_4_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1TupleCatType.html">TupleCatType</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a struct to concatenate two (maybe more) Tuples types into a single <a class="el" href="structVoxx_1_1Tuple.html" title="Defines a struct to hold a fixed-size number of heterogenous types. ">Tuple</a> type.  <a href="structVoxx_1_1TupleCatType.html#details">More...</a><br /></td></tr>
@@ -230,18 +231,18 @@ template&lt;typename Callable , typename T &gt; </td></tr>
 <tr class="memitem:a17e9e433a8ddafffce1a569805178f8b"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHostdecltype(auto) constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx.html#a17e9e433a8ddafffce1a569805178f8b">get</a> (<a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; Types... &gt; &amp;&amp;tuple) noexcept</td></tr>
 <tr class="memdesc:a17e9e433a8ddafffce1a569805178f8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a function to get a element from a <a class="el" href="structVoxx_1_1Tuple.html" title="Defines a struct to hold a fixed-size number of heterogenous types. ">Tuple</a>.  <a href="#a17e9e433a8ddafffce1a569805178f8b">More...</a><br /></td></tr>
 <tr class="separator:a17e9e433a8ddafffce1a569805178f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab156eda5e966a9d938afbb5d9568c9e4"><td class="memTemplParams" colspan="2">template&lt;size_t Idx, typename... Types&gt; </td></tr>
-<tr class="memitem:ab156eda5e966a9d938afbb5d9568c9e4"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHost constexpr const <a class="el" href="namespaceVoxx.html#adeacf902302d6ed4908e34481b282a05">tuple_element_t</a>&lt; Idx, <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; Types... &gt; &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx.html#ab156eda5e966a9d938afbb5d9568c9e4">get</a> (const volatile <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; Types... &gt; &amp;tuple) noexcept</td></tr>
-<tr class="memdesc:ab156eda5e966a9d938afbb5d9568c9e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a function to get a element from a <a class="el" href="structVoxx_1_1Tuple.html" title="Defines a struct to hold a fixed-size number of heterogenous types. ">Tuple</a>.  <a href="#ab156eda5e966a9d938afbb5d9568c9e4">More...</a><br /></td></tr>
-<tr class="separator:ab156eda5e966a9d938afbb5d9568c9e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c5021c0eafe78d789a925bd0b2424c6"><td class="memTemplParams" colspan="2">template&lt;size_t Idx, typename... Types&gt; </td></tr>
-<tr class="memitem:a6c5021c0eafe78d789a925bd0b2424c6"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHost constexpr <a class="el" href="namespaceVoxx.html#adeacf902302d6ed4908e34481b282a05">tuple_element_t</a>&lt; Idx, <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; Types... &gt; &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx.html#a6c5021c0eafe78d789a925bd0b2424c6">get</a> (volatile <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; Types... &gt; &amp;tuple) noexcept</td></tr>
-<tr class="memdesc:a6c5021c0eafe78d789a925bd0b2424c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a function to get a element from a <a class="el" href="structVoxx_1_1Tuple.html" title="Defines a struct to hold a fixed-size number of heterogenous types. ">Tuple</a>.  <a href="#a6c5021c0eafe78d789a925bd0b2424c6">More...</a><br /></td></tr>
-<tr class="separator:a6c5021c0eafe78d789a925bd0b2424c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf8464ebaea4b8e9e714c28ef3ec8b9a"><td class="memTemplParams" colspan="2">template&lt;size_t Idx, typename... Types&gt; </td></tr>
-<tr class="memitem:acf8464ebaea4b8e9e714c28ef3ec8b9a"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHost constexpr <a class="el" href="namespaceVoxx.html#adeacf902302d6ed4908e34481b282a05">tuple_element_t</a>&lt; Idx, <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; Types... &gt; &gt; &amp;&amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx.html#acf8464ebaea4b8e9e714c28ef3ec8b9a">get</a> (volatile <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; Types... &gt; &amp;&amp;tuple) noexcept</td></tr>
-<tr class="memdesc:acf8464ebaea4b8e9e714c28ef3ec8b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a function to get a element from a <a class="el" href="structVoxx_1_1Tuple.html" title="Defines a struct to hold a fixed-size number of heterogenous types. ">Tuple</a>.  <a href="#acf8464ebaea4b8e9e714c28ef3ec8b9a">More...</a><br /></td></tr>
-<tr class="separator:acf8464ebaea4b8e9e714c28ef3ec8b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a0510ffaf63f77769daadaeb95b51c"><td class="memTemplParams" colspan="2">template&lt;size_t Idx, typename... Types&gt; </td></tr>
+<tr class="memitem:a39a0510ffaf63f77769daadaeb95b51c"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHostdecltype(auto) constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx.html#a39a0510ffaf63f77769daadaeb95b51c">get</a> (const volatile <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; Types... &gt; &amp;tuple) noexcept</td></tr>
+<tr class="memdesc:a39a0510ffaf63f77769daadaeb95b51c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a function to get a element from a <a class="el" href="structVoxx_1_1Tuple.html" title="Defines a struct to hold a fixed-size number of heterogenous types. ">Tuple</a>.  <a href="#a39a0510ffaf63f77769daadaeb95b51c">More...</a><br /></td></tr>
+<tr class="separator:a39a0510ffaf63f77769daadaeb95b51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77dd44d1161161f60b7330e3dfd03e9e"><td class="memTemplParams" colspan="2">template&lt;size_t Idx, typename... Types&gt; </td></tr>
+<tr class="memitem:a77dd44d1161161f60b7330e3dfd03e9e"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHostdecltype(auto) constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx.html#a77dd44d1161161f60b7330e3dfd03e9e">get</a> (volatile <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; Types... &gt; &amp;tuple) noexcept</td></tr>
+<tr class="memdesc:a77dd44d1161161f60b7330e3dfd03e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a function to get a element from a <a class="el" href="structVoxx_1_1Tuple.html" title="Defines a struct to hold a fixed-size number of heterogenous types. ">Tuple</a>.  <a href="#a77dd44d1161161f60b7330e3dfd03e9e">More...</a><br /></td></tr>
+<tr class="separator:a77dd44d1161161f60b7330e3dfd03e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae213735d90e78b95703270137da26d53"><td class="memTemplParams" colspan="2">template&lt;size_t Idx, typename... Types&gt; </td></tr>
+<tr class="memitem:ae213735d90e78b95703270137da26d53"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHostdecltype(auto) constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx.html#ae213735d90e78b95703270137da26d53">get</a> (volatile <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; Types... &gt; &amp;&amp;tuple) noexcept</td></tr>
+<tr class="memdesc:ae213735d90e78b95703270137da26d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a function to get a element from a <a class="el" href="structVoxx_1_1Tuple.html" title="Defines a struct to hold a fixed-size number of heterogenous types. ">Tuple</a>.  <a href="#ae213735d90e78b95703270137da26d53">More...</a><br /></td></tr>
+<tr class="separator:ae213735d90e78b95703270137da26d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44ad4d0693c5ebbceda71397012cdfc0"><td class="memTemplParams" colspan="2">template&lt;typename... Types&gt; </td></tr>
 <tr class="memitem:a44ad4d0693c5ebbceda71397012cdfc0"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHostdecltype(auto) constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceVoxx.html#a44ad4d0693c5ebbceda71397012cdfc0">make_tuple</a> (Types &amp;&amp;... params) noexcept</td></tr>
 <tr class="memdesc:a44ad4d0693c5ebbceda71397012cdfc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This makes a tuple, and is the interface through which tuples should be created in almost all cases.  <a href="#a44ad4d0693c5ebbceda71397012cdfc0">More...</a><br /></td></tr>
@@ -580,8 +581,8 @@ template&lt;size_t Idx, typename... Types&gt; </div>
 
 </div>
 </div>
-<a id="ab156eda5e966a9d938afbb5d9568c9e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab156eda5e966a9d938afbb5d9568c9e4">&#9670;&nbsp;</a></span>get() <span class="overload">[4/6]</span></h2>
+<a id="a39a0510ffaf63f77769daadaeb95b51c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39a0510ffaf63f77769daadaeb95b51c">&#9670;&nbsp;</a></span>get() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -592,7 +593,7 @@ template&lt;size_t Idx, typename... Types&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">VoxxDeviceHost constexpr const <a class="el" href="namespaceVoxx.html#adeacf902302d6ed4908e34481b282a05">tuple_element_t</a>&lt;Idx, <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt;Types...&gt; &gt;&amp; Voxx::get </td>
+          <td class="memname">VoxxDeviceHostdecltype(auto) constexpr Voxx::get </td>
           <td>(</td>
           <td class="paramtype">const volatile <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; Types... &gt; &amp;&#160;</td>
           <td class="paramname"><em>tuple</em></td><td>)</td>
@@ -623,8 +624,8 @@ template&lt;size_t Idx, typename... Types&gt; </div>
 
 </div>
 </div>
-<a id="a6c5021c0eafe78d789a925bd0b2424c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c5021c0eafe78d789a925bd0b2424c6">&#9670;&nbsp;</a></span>get() <span class="overload">[5/6]</span></h2>
+<a id="a77dd44d1161161f60b7330e3dfd03e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77dd44d1161161f60b7330e3dfd03e9e">&#9670;&nbsp;</a></span>get() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -635,7 +636,7 @@ template&lt;size_t Idx, typename... Types&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">VoxxDeviceHost constexpr <a class="el" href="namespaceVoxx.html#adeacf902302d6ed4908e34481b282a05">tuple_element_t</a>&lt;Idx, <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt;Types...&gt; &gt;&amp; Voxx::get </td>
+          <td class="memname">VoxxDeviceHostdecltype(auto) constexpr Voxx::get </td>
           <td>(</td>
           <td class="paramtype">volatile <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; Types... &gt; &amp;&#160;</td>
           <td class="paramname"><em>tuple</em></td><td>)</td>
@@ -666,8 +667,8 @@ template&lt;size_t Idx, typename... Types&gt; </div>
 
 </div>
 </div>
-<a id="acf8464ebaea4b8e9e714c28ef3ec8b9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf8464ebaea4b8e9e714c28ef3ec8b9a">&#9670;&nbsp;</a></span>get() <span class="overload">[6/6]</span></h2>
+<a id="ae213735d90e78b95703270137da26d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae213735d90e78b95703270137da26d53">&#9670;&nbsp;</a></span>get() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -678,7 +679,7 @@ template&lt;size_t Idx, typename... Types&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">VoxxDeviceHost constexpr <a class="el" href="namespaceVoxx.html#adeacf902302d6ed4908e34481b282a05">tuple_element_t</a>&lt;Idx, <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt;Types...&gt; &gt;&amp;&amp; Voxx::get </td>
+          <td class="memname">VoxxDeviceHostdecltype(auto) constexpr Voxx::get </td>
           <td>(</td>
           <td class="paramtype">volatile <a class="el" href="structVoxx_1_1Tuple.html">Tuple</a>&lt; Types... &gt; &amp;&amp;&#160;</td>
           <td class="paramname"><em>tuple</em></td><td>)</td>

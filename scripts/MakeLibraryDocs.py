@@ -18,7 +18,8 @@ libDir   = startDir + '/../libraries/'
 
 libraries = {
   'Voxel'  : 'https://github.com/Voxelated/Voxel.git',
-  'Xpress' : 'https://github.com/Voxelated/Xpress.git'
+  'Xpress' : 'https://github.com/Voxelated/Xpress.git',
+  'Conky'  : 'https://github.com/Voxelated/Conky.git'
 }
 
 # Build docs for each of the libraries:

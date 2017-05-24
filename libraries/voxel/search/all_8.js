@@ -16,5 +16,6 @@ var searchData=
   ['is_5fnon_5fconst_5flvalue_5freference_5fv',['is_non_const_lvalue_reference_v',['../TypeTraits_8hpp.html#a0497fb6753ab2eecab23ba9990fa563c',1,'Voxx::Traits']]],
   ['is_5fsame_5fv',['is_same_v',['../structVoxx_1_1Tuple.html#ac3a1748dde492b59a05f37e2f732e691',1,'Voxx::Tuple']]],
   ['isdatacache',['isDataCache',['../structVoxx_1_1System_1_1CacheInfo.html#ab6855a91a690a955435ba65da84c5628',1,'Voxx::System::CacheInfo']]],
+  ['ispoweroftwo',['isPowerOfTwo',['../Math_8hpp.html#a8d1b020f508d8709ede024550315475f',1,'Voxx::Math']]],
   ['istuple',['isTuple',['../structVoxx_1_1Tuple.html#a8a66fe00485e6818de9f7ae08925c4e0',1,'Voxx::Tuple']]]
 ];
