@@ -2,6 +2,8 @@ var searchData=
 [
   ['additionalfeatures',['AdditionalFeatures',['../namespaceVoxx_1_1System_1_1CpuId.html#a38c55e57c5699e5b6dd27590d57f1ba0abc44c863a7a52a5f894977ea1531bb44',1,'Voxx::System::CpuId']]],
   ['aes',['Aes',['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13babeee9aa52ad62ad7e93a0db1207f9fd7',1,'Voxx::System::CpuInfo::Aes()'],['../structVoxx_1_1System_1_1CpuInfo.html#a24a38782ca483485412fb9413a642d31',1,'Voxx::System::CpuInfo::aes() noexcept']]],
+  ['affinitygetfailure',['AffinityGetFailure',['../classVoxx_1_1Thread_1_1ThreadException.html#a48b6824f54191d3f5c7c54a6fc0e9745a6f2b0df90f41819dd48ae2ba15217cd2',1,'Voxx::Thread::ThreadException']]],
+  ['affinitysetfailure',['AffinitySetFailure',['../classVoxx_1_1Thread_1_1ThreadException.html#a48b6824f54191d3f5c7c54a6fc0e9745a96282ea78d532ab2ba875bc6a03131c7',1,'Voxx::Thread::ThreadException']]],
   ['algorithm_2ehpp',['Algorithm.hpp',['../Algorithm_8hpp.html',1,'']]],
   ['algorithmfwd_2ehpp',['AlgorithmFwd.hpp',['../AlgorithmFwd_8hpp.html',1,'']]],
   ['algorithmimpl_2ehpp',['AlgorithmImpl.hpp',['../AlgorithmImpl_8hpp.html',1,'']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['atomictype',['AtomicType',['../classVoxx_1_1Conky_1_1CircularDequeue.html#aaf4c9873b37194275bb64a74561cf9ba',1,'Voxx::Conky::CircularDequeue']]]
+  ['atomictype',['AtomicType',['../classVoxx_1_1Conky_1_1StaticStealableQueue.html#a44a440304fc234bc8b23eb3b8c189c51',1,'Voxx::Conky::StaticStealableQueue']]]
 ];

@@ -4,6 +4,7 @@ var searchData=
   ['debug_2ehpp',['Debug.hpp',['../Debug_8hpp.html',1,'']]],
   ['debugexception',['DebugException',['../classVoxx_1_1DebugException.html',1,'Voxx::DebugException'],['../classVoxx_1_1DebugException.html#a0b81d369af8129f456ffac73ef2c0ac0',1,'Voxx::DebugException::DebugException()']]],
   ['decorator',['decorator',['../structVoxx_1_1Io_1_1Output_3_01Mode_1_1Console_01_4.html#aa9af56e844afefe9835874af6f10cb59',1,'Voxx::Io::Output&lt; Mode::Console &gt;']]],
+  ['destructiveinterfacesize',['destructiveInterfaceSize',['../CpuInfo_8hpp.html#a34cd0f4ca73de4ff610526410f3b300b',1,'Voxx::System']]],
   ['devicelaunch',['deviceLaunch',['../LaunchImpl_8hpp.html#a59355a4a5f5e699583c0edceef519d54',1,'Voxx::Hetero::Detail']]],
   ['devicelauncher',['DeviceLauncher',['../LaunchImpl_8hpp.html#a715773b1c49e0c9c5b1b2ca5b3483908',1,'Voxx::Hetero::Detail']]],
   ['dynamic',['Dynamic',['../LaunchImpl_8hpp.html#ae4cf089d839e07ffab4b67dbc1a5c8a5a9fd512b90b081a71e81e8bac6f8a9620',1,'Voxx::Hetero::Detail']]],

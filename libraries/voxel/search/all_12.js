@@ -9,5 +9,6 @@ var searchData=
   ['values',['values',['../structVoxx_1_1System_1_1CpuIdRegisters.html#ac64a441225b8832079b5be4c3c60036b',1,'Voxx::System::CpuIdRegisters']]],
   ['voxx',['Voxx',['../namespaceVoxx.html',1,'']]],
   ['voxxassert',['VoxxAssert',['../Debug_8hpp.html#a8e8abb5d77eb5edd9ea507af29c5fa03',1,'Debug.hpp']]],
+  ['voxxcudacompiler',['VoxxCudaCompiler',['../Portability_8hpp.html#a80aad9cf3718c027ca3879c1bbc040c6',1,'Portability.hpp']]],
   ['voxxcudaerrorcheck',['VoxxCudaErrorCheck',['../Debug_8hpp.html#a7b359d5c7e202fe75fbc39212a4b372b',1,'Debug.hpp']]]
 ];

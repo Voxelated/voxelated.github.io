@@ -2,6 +2,8 @@ var searchData=
 [
   ['additionalfeatures',['AdditionalFeatures',['../namespaceVoxx_1_1System_1_1CpuId.html#a38c55e57c5699e5b6dd27590d57f1ba0abc44c863a7a52a5f894977ea1531bb44',1,'Voxx::System::CpuId']]],
   ['aes',['Aes',['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13babeee9aa52ad62ad7e93a0db1207f9fd7',1,'Voxx::System::CpuInfo']]],
+  ['affinitygetfailure',['AffinityGetFailure',['../classVoxx_1_1Thread_1_1ThreadException.html#a48b6824f54191d3f5c7c54a6fc0e9745a6f2b0df90f41819dd48ae2ba15217cd2',1,'Voxx::Thread::ThreadException']]],
+  ['affinitysetfailure',['AffinitySetFailure',['../classVoxx_1_1Thread_1_1ThreadException.html#a48b6824f54191d3f5c7c54a6fc0e9745a96282ea78d532ab2ba875bc6a03131c7',1,'Voxx::Thread::ThreadException']]],
   ['arch',['Arch',['../classVoxx_1_1GpuInfo.html#a055ff5ff1c412f64ffdca97e042ea373adab6a24f57eab96202090fd92609a0e9',1,'Voxx::GpuInfo']]],
   ['avx',['Avx',['../structVoxx_1_1System_1_1CpuInfo.html#ab8562ae6226d24acd0775ccb35adb13ba9bf7f25546a76a34d79ac696c63d3f84',1,'Voxx::System::CpuInfo']]],
   ['avx2',['Avx2',['../structVoxx_1_1System_1_1CpuInfo.html#aa6b39aedf6367efaf62683a7b813933ca94153abea17c74bfd6c497c57cc3d235',1,'Voxx::System::CpuInfo']]],

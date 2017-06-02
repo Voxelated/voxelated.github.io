@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pop',['pop',['../classVoxx_1_1Conky_1_1CircularDequeue.html#aeb4496ff13cb6d263969543402884379',1,'Voxx::Conky::CircularDequeue']]],
-  ['push',['push',['../classVoxx_1_1Conky_1_1CircularDequeue.html#ab119a6dcf52799878a26be320592af19',1,'Voxx::Conky::CircularDequeue::push(ObjectType &amp;&amp;object)'],['../classVoxx_1_1Conky_1_1CircularDequeue.html#a0a6d97bcc290f94431dc804b6025573e',1,'Voxx::Conky::CircularDequeue::push(const ObjectType &amp;object)']]]
+  ['clone',['clone',['../structVoxx_1_1Conky_1_1TaskExecutor.html#afb523e078261bac1f14532717a4748fd',1,'Voxx::Conky::TaskExecutor::clone()'],['../structVoxx_1_1Conky_1_1Executor.html#a39d99c5ea0401caf9cfbca17a1e6df52',1,'Voxx::Conky::Executor::clone()']]],
+  ['createworkers',['createWorkers',['../classVoxx_1_1Conky_1_1ThreadPool.html#a5293f196b6d53fb76105ff11141bf739',1,'Voxx::Conky::ThreadPool']]]
 ];

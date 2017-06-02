@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['task',['Task',['../structVoxx_1_1Conky_1_1Task.html#a2bd60a31d6e2161135979441ec38b222',1,'Voxx::Conky::Task::Task() noexcept'],['../structVoxx_1_1Conky_1_1Task.html#a156d186b563c82f8510541e58578b22c',1,'Voxx::Conky::Task::Task(const Task &amp;other) noexcept'],['../structVoxx_1_1Conky_1_1Task.html#aa1ab0e9d7040002e34b2fad5481dc3d1',1,'Voxx::Conky::Task::Task(Task &amp;&amp;other) noexcept'],['../structVoxx_1_1Conky_1_1Task.html#a6068d40b035be36decc32627eb97d44f',1,'Voxx::Conky::Task::Task(CallableType &amp;&amp;callable, Args &amp;&amp;... args) noexcept']]],
+  ['taskqueue',['TaskQueue',['../structVoxx_1_1Conky_1_1ThreadPool_1_1TaskQueue.html#ada47911e655dfd5c0f767f2ae6ca74db',1,'Voxx::Conky::ThreadPool::TaskQueue::TaskQueue() noexcept=default'],['../structVoxx_1_1Conky_1_1ThreadPool_1_1TaskQueue.html#a6c1e7bd08da417749bc4056cf8a6f86b',1,'Voxx::Conky::ThreadPool::TaskQueue::TaskQueue(TaskQueue &amp;&amp;)=delete'],['../structVoxx_1_1Conky_1_1ThreadPool_1_1TaskQueue.html#a84691486ff90a4a8333ccc4a2485e02c',1,'Voxx::Conky::ThreadPool::TaskQueue::TaskQueue(const TaskQueue &amp;)=delete']]],
+  ['threadpool',['ThreadPool',['../classVoxx_1_1Conky_1_1ThreadPool.html#a727edbad33f2f019ef1ea0d6931ec262',1,'Voxx::Conky::ThreadPool']]],
+  ['threadpoolexception',['ThreadPoolException',['../classVoxx_1_1Conky_1_1ThreadPoolException.html#a7d4d3d167359cbd4bce1720dd2114780',1,'Voxx::Conky::ThreadPoolException']]],
+  ['trypush',['tryPush',['../classVoxx_1_1Conky_1_1StaticStealableQueue.html#af6d525af6106e269d446bb8c50216666',1,'Voxx::Conky::StaticStealableQueue::tryPush()'],['../classVoxx_1_1Conky_1_1ThreadPool.html#abc541275693b3cd0b99759ef2802a511',1,'Voxx::Conky::ThreadPool::tryPush()']]]
+];

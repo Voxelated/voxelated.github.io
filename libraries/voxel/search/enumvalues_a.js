@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['processortopology',['ProcessorTopology',['../namespaceVoxx_1_1System_1_1CpuId.html#a38c55e57c5699e5b6dd27590d57f1ba0a8cc81dd6f044b5ded3a0cc688f335566',1,'Voxx::System::CpuId']]],
-  ['procid',['ProcId',['../structVoxx_1_1System_1_1CpuInfo.html#a3af94db53b526b199f8f4a8e6cc54686acfdde5070533174d4ffddb9b3be1944c',1,'Voxx::System::CpuInfo']]]
+  ['oversubscription',['Oversubscription',['../classVoxx_1_1Thread_1_1ThreadException.html#a48b6824f54191d3f5c7c54a6fc0e9745a7b457d5bd516de9bd23b261f3e38cda6',1,'Voxx::Thread::ThreadException']]]
 ];

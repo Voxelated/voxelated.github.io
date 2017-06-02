@@ -118,9 +118,10 @@ Inheritance diagram for Voxx::Thread::ThreadException:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a48b6824f54191d3f5c7c54a6fc0e9745"><td class="memItemLeft" align="right" valign="top"><a id="a48b6824f54191d3f5c7c54a6fc0e9745"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoxx_1_1Thread_1_1ThreadException.html#a48b6824f54191d3f5c7c54a6fc0e9745">Type</a> : uint8_t { <b>AffinitySetFailure</b> = 0x00, 
-<b>AffinityGetFailure</b> = 0x01
- }<tr class="memdesc:a48b6824f54191d3f5c7c54a6fc0e9745"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Type enum defines the types of thread realted exceptions. <br /></td></tr>
+<tr class="memitem:a48b6824f54191d3f5c7c54a6fc0e9745"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoxx_1_1Thread_1_1ThreadException.html#a48b6824f54191d3f5c7c54a6fc0e9745">Type</a> : uint8_t { <a class="el" href="classVoxx_1_1Thread_1_1ThreadException.html#a48b6824f54191d3f5c7c54a6fc0e9745a96282ea78d532ab2ba875bc6a03131c7">Type::AffinitySetFailure</a> = 0x00, 
+<a class="el" href="classVoxx_1_1Thread_1_1ThreadException.html#a48b6824f54191d3f5c7c54a6fc0e9745a6f2b0df90f41819dd48ae2ba15217cd2">Type::AffinityGetFailure</a> = 0x01, 
+<a class="el" href="classVoxx_1_1Thread_1_1ThreadException.html#a48b6824f54191d3f5c7c54a6fc0e9745a7b457d5bd516de9bd23b261f3e38cda6">Type::Oversubscription</a> = 0x02
+ }<tr class="memdesc:a48b6824f54191d3f5c7c54a6fc0e9745"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Type enum defines the types of thread realted exceptions.  <a href="classVoxx_1_1Thread_1_1ThreadException.html#a48b6824f54191d3f5c7c54a6fc0e9745">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a48b6824f54191d3f5c7c54a6fc0e9745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -153,7 +154,40 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classVoxx_1_1Thread_1_1ThreadException.html" title="The ThreadException class overrides the standard exception class to define thread related exceptions...">ThreadException</a> class overrides the standard exception class to define thread related exceptions. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a48b6824f54191d3f5c7c54a6fc0e9745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b6824f54191d3f5c7c54a6fc0e9745">&#9670;&nbsp;</a></span>Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classVoxx_1_1Thread_1_1ThreadException.html#a48b6824f54191d3f5c7c54a6fc0e9745">Voxx::Thread::ThreadException::Type</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The Type enum defines the types of thread realted exceptions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a48b6824f54191d3f5c7c54a6fc0e9745a96282ea78d532ab2ba875bc6a03131c7"></a>AffinitySetFailure&#160;</td><td class="fielddoc"><p>Failure when setting the affinity. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a48b6824f54191d3f5c7c54a6fc0e9745a6f2b0df90f41819dd48ae2ba15217cd2"></a>AffinityGetFailure&#160;</td><td class="fielddoc"><p>Failure when getting the affinity. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a48b6824f54191d3f5c7c54a6fc0e9745a7b457d5bd516de9bd23b261f3e38cda6"></a>Oversubscription&#160;</td><td class="fielddoc"><p>More threads than cores. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0d03eace228e79f8c4ac34984f2e965b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d03eace228e79f8c4ac34984f2e965b">&#9670;&nbsp;</a></span>ThreadException()</h2>
 

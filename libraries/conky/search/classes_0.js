@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['circulardequeue',['CircularDequeue',['../classVoxx_1_1Conky_1_1CircularDequeue.html',1,'Voxx::Conky']]]
+  ['executor',['Executor',['../structVoxx_1_1Conky_1_1Executor.html',1,'Voxx::Conky']]]
 ];

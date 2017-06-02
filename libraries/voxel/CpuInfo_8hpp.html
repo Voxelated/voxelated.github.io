@@ -125,7 +125,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines information related to the cache.  <a href="structVoxx_1_1System_1_1CacheInfo.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1System_1_1CpuInfo.html">Voxx::System::CpuInfo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The HardwareInfo struct defines the number of packages (or sockets), cores (the number of hardware cores), and logical cores (the number of threads) in the system.  <a href="structVoxx_1_1System_1_1CpuInfo.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TheCpuInfo struct defines the number of packages (or sockets), cores (the number of hardware cores), and logical cores (the number of threads) in the system.  <a href="structVoxx_1_1System_1_1CpuInfo.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -154,6 +154,8 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a34cd0f4ca73de4ff610526410f3b300b"><td class="memItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CpuInfo_8hpp.html#a34cd0f4ca73de4ff610526410f3b300b">Voxx::System::destructiveInterfaceSize</a> () noexcept</td></tr>
+<tr class="separator:a34cd0f4ca73de4ff610526410f3b300b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7f661c95ec6c9c6b9e230911952258b"><td class="memItemLeft" align="right" valign="top">CpuIdRegisters&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CpuInfo_8hpp.html#aa7f661c95ec6c9c6b9e230911952258b">Voxx::System::cpuid</a> (unsigned invocationId, unsigned subfunction=0) noexcept</td></tr>
 <tr class="memdesc:aa7f661c95ec6c9c6b9e230911952258b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper around the cpudid function which is cross-platform, and which returns the filled registers.  <a href="CpuInfo_8hpp.html#aa7f661c95ec6c9c6b9e230911952258b">More...</a><br /></td></tr>
 <tr class="separator:aa7f661c95ec6c9c6b9e230911952258b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -225,6 +227,32 @@ static CpuIdRegisters&#160;</td><td class="memItemRight" valign="bottom"><a clas
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="file_a34cd0f4ca73de4ff610526410f3b300b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a34cd0f4ca73de4ff610526410f3b300b">&#9670;&nbsp;</a></span>destructiveInterfaceSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr std::size_t Voxx::System::destructiveInterfaceSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>change this to use the correct values by feeding in the value at compile time.</dd></dl>
 
 </div>
 </div>

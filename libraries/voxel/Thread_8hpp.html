@@ -103,7 +103,9 @@ $(function() {
 
 <p>This file defines thread related functionality.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;exception&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="ThreadImpl_8hpp_source.html">Detail/ThreadImpl.hpp</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="BitMask_8hpp_source.html">Voxel/Bit/BitMask.hpp</a>&gt;</code><br />
+<code>#include &lt;exception&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 </div>
 <p><a href="Thread_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -128,6 +130,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1b5a58e6a026f35372fe33a10a474349"><td class="memItemLeft" align="right" valign="top">BitMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Thread_8hpp.html#a1b5a58e6a026f35372fe33a10a474349">Voxx::Thread::getAffinity</a> () noexcept</td></tr>
 <tr class="memdesc:a1b5a58e6a026f35372fe33a10a474349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the affinity for the currently executing thread.  <a href="Thread_8hpp.html#a1b5a58e6a026f35372fe33a10a474349">More...</a><br /></td></tr>
 <tr class="separator:a1b5a58e6a026f35372fe33a10a474349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af047a9a796092f2179d8d69fb247ff4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Thread_8hpp.html#af047a9a796092f2179d8d69fb247ff4d">Voxx::Thread::memoryBarrier</a> () noexcept</td></tr>
+<tr class="memdesc:af047a9a796092f2179d8d69fb247ff4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits a memeory barrier to prevent reordering of instructions.  <a href="Thread_8hpp.html#af047a9a796092f2179d8d69fb247ff4d">More...</a><br /></td></tr>
+<tr class="separator:af047a9a796092f2179d8d69fb247ff4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file defines thread related functionality. </p>
@@ -157,6 +162,34 @@ Functions</h2></td></tr>
 
 <p>Gets the affinity for the currently executing thread. </p>
 <p>If <code>setAffinity(threadIndex)</code> has been called, this will return a mask with <b>only</b> <code>threadIndex</code> set. Returns a bitmask representing which logical threads the currently executing thread may run on. </p>
+
+</div>
+</div>
+<a id="file_af047a9a796092f2179d8d69fb247ff4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_af047a9a796092f2179d8d69fb247ff4d">&#9670;&nbsp;</a></span>memoryBarrier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voxx::Thread::memoryBarrier </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Emits a memeory barrier to prevent reordering of instructions. </p>
+<p>On systems with a strongly ordered memory model this is simply a compiler barrier, hoever, on systems with a weakly ordered memory model this will emit the appropriate instruction to ensure memory orderring. </p>
 
 </div>
 </div>

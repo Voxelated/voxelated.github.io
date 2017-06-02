@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7edynamicdevicecallable',['~DynamicDeviceCallable',['../classVoxx_1_1Function_1_1DynamicDeviceCallable.html#a50dfec8fca99601b91eb85ce0918966d',1,'Voxx::Function::DynamicDeviceCallable']]]
+  ['xorshift32',['xorshift32',['../Math_8hpp.html#a633cab1a719fd93ba6c4e974ea56f427',1,'Voxx::Math::Detail']]]
 ];

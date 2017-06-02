@@ -105,7 +105,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>The HardwareInfo struct defines the number of packages (or sockets), cores (the number of hardware cores), and logical cores (the number of threads) in the system.  
+<p>TheCpuInfo struct defines the number of packages (or sockets), cores (the number of hardware cores), and logical cores (the number of threads) in the system.  
  <a href="structVoxx_1_1System_1_1CpuInfo.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="CpuInfo_8hpp_source.html">CpuInfo.hpp</a>&gt;</code></p>
@@ -200,8 +200,9 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a22fdc230e7d263cbc8ede3dc2694b6b6"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1System_1_1CpuInfo.html#a22fdc230e7d263cbc8ede3dc2694b6b6">sharedCores</a> (uint32_t level=0)</td></tr>
 <tr class="memdesc:a22fdc230e7d263cbc8ede3dc2694b6b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of <b>cores</b> (not threads) shared by the <code>level</code> th level of cache which is shared by <b>cores</b>.  <a href="#a22fdc230e7d263cbc8ede3dc2694b6b6">More...</a><br /></td></tr>
 <tr class="separator:a22fdc230e7d263cbc8ede3dc2694b6b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2d47f0e08fffbebd84498aee7fc4785"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1System_1_1CpuInfo.html#af2d47f0e08fffbebd84498aee7fc4785">print</a> ()</td></tr>
-<tr class="memdesc:af2d47f0e08fffbebd84498aee7fc4785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of.  <a href="#af2d47f0e08fffbebd84498aee7fc4785">More...</a><br /></td></tr>
+<tr class="memitem:af2d47f0e08fffbebd84498aee7fc4785"><td class="memItemLeft" align="right" valign="top"><a id="af2d47f0e08fffbebd84498aee7fc4785"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1System_1_1CpuInfo.html#af2d47f0e08fffbebd84498aee7fc4785">print</a> ()</td></tr>
+<tr class="memdesc:af2d47f0e08fffbebd84498aee7fc4785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all the cpu information. <br /></td></tr>
 <tr class="separator:af2d47f0e08fffbebd84498aee7fc4785"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
@@ -266,7 +267,7 @@ Private Types</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a7959795e70311875c1df964f13684be8"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
 <tr class="memitem:a7959795e70311875c1df964f13684be8"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structVoxx_1_1System_1_1CpuInfo.html#a7959795e70311875c1df964f13684be8">CpuInfo</a> (Ts &amp;&amp;...)</td></tr>
-<tr class="memdesc:a7959795e70311875c1df964f13684be8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a random index of a core which shares a cache level.  <a href="#a7959795e70311875c1df964f13684be8">More...</a><br /></td></tr>
+<tr class="memdesc:a7959795e70311875c1df964f13684be8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwarding reference constructor &ndash; deleted by making it private to disable the construction of the class.  <a href="#a7959795e70311875c1df964f13684be8">More...</a><br /></td></tr>
 <tr class="separator:a7959795e70311875c1df964f13684be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
@@ -327,7 +328,7 @@ static thread_local std::size_t&#160;</td><td class="memItemRight" valign="botto
 <tr class="separator:a65e0333a96b0c19db45e00be9be87690"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The HardwareInfo struct defines the number of packages (or sockets), cores (the number of hardware cores), and logical cores (the number of threads) in the system. </p>
+<div class="textblock"><p>TheCpuInfo struct defines the number of packages (or sockets), cores (the number of hardware cores), and logical cores (the number of threads) in the system. </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="aa6b39aedf6367efaf62683a7b813933c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa6b39aedf6367efaf62683a7b813933c">&#9670;&nbsp;</a></span>ExtendedFeatureBitsEbx</h2>
@@ -544,8 +545,8 @@ template&lt;typename... Ts&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get a random index of a core which shares a cache level. </p>
-<p>Forwarding reference constructor &ndash; deleted by making it private to disable the construction of the class. <b>Note</b> here that the modern, </p><blockquote class="doxtable">
+<p>Forwarding reference constructor &ndash; deleted by making it private to disable the construction of the class. </p>
+<p><b>Note</b> here that the modern, </p><blockquote class="doxtable">
 <p>c++11 <code>delete</code> does no work here, as the class is an aggregate class, </p>
 </blockquote>
 <p>hence we use deletion by private. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -617,34 +618,6 @@ template&lt;typename... Ts&gt; </div>
 
 <p>Gets the number of physical cores. </p>
 <p>This must only be called one the number of threads is known. </p>
-
-</div>
-</div>
-<a id="af2d47f0e08fffbebd84498aee7fc4785"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2d47f0e08fffbebd84498aee7fc4785">&#9670;&nbsp;</a></span>print()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Voxx::System::CpuInfo::print </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the number of. </p>
-<p>Prints all the cpu information. </p>
 
 </div>
 </div>

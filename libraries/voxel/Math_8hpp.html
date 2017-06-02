@@ -94,7 +94,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Math.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -102,7 +103,8 @@ $(function() {
 
 <p>This file defines math related functionality.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="Portability_8hpp_source.html">Voxel/Utility/Portability.hpp</a>&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
 </div>
 <p><a href="Math_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -114,16 +116,32 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8d1b020f508d8709ede024550315475f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a8d1b020f508d8709ede024550315475f"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Math_8hpp.html#a8d1b020f508d8709ede024550315475f">Voxx::Math::isPowerOfTwo</a> (T &amp;&amp;value) noexcept</td></tr>
-<tr class="memdesc:a8d1b020f508d8709ede024550315475f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the parameter is a power of 2, for any integral type.  <a href="Math_8hpp.html#a8d1b020f508d8709ede024550315475f">More...</a><br /></td></tr>
-<tr class="separator:a8d1b020f508d8709ede024550315475f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a633cab1a719fd93ba6c4e974ea56f427"><td class="memItemLeft" align="right" valign="top">VoxxDeviceHost uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Math_8hpp.html#a633cab1a719fd93ba6c4e974ea56f427">Voxx::Math::Detail::xorshift32</a> () noexcept</td></tr>
+<tr class="memdesc:a633cab1a719fd93ba6c4e974ea56f427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of a random number generator using the xor32 method, as described here:  <a href="Math_8hpp.html#a633cab1a719fd93ba6c4e974ea56f427">More...</a><br /></td></tr>
+<tr class="separator:a633cab1a719fd93ba6c4e974ea56f427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd5584901f4cc5f3c3718e977ce52bdb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:abd5584901f4cc5f3c3718e977ce52bdb"><td class="memTemplItemLeft" align="right" valign="top">VoxxDeviceHost constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Math_8hpp.html#abd5584901f4cc5f3c3718e977ce52bdb">Voxx::Math::isPowerOfTwo</a> (T &amp;&amp;value) noexcept</td></tr>
+<tr class="memdesc:abd5584901f4cc5f3c3718e977ce52bdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the parameter is a power of 2, for any integral type.  <a href="Math_8hpp.html#abd5584901f4cc5f3c3718e977ce52bdb">More...</a><br /></td></tr>
+<tr class="separator:abd5584901f4cc5f3c3718e977ce52bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada225042e01ceaa7671665e7e516ac45"><td class="memItemLeft" align="right" valign="top">VoxxDeviceHost constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Math_8hpp.html#ada225042e01ceaa7671665e7e516ac45">Voxx::Math::log2</a> (uint32_t value) noexcept</td></tr>
+<tr class="memdesc:ada225042e01ceaa7671665e7e516ac45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the log_2 of a 32 bit integer.  <a href="Math_8hpp.html#ada225042e01ceaa7671665e7e516ac45">More...</a><br /></td></tr>
+<tr class="separator:ada225042e01ceaa7671665e7e516ac45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb0a011cc619bd2c940e2dd9ca47a4a8"><td class="memItemLeft" align="right" valign="top">VoxxDeviceHost uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Math_8hpp.html#adb0a011cc619bd2c940e2dd9ca47a4a8">Voxx::Math::randint</a> (uint32_t start, uint32_t end) noexcept</td></tr>
+<tr class="memdesc:adb0a011cc619bd2c940e2dd9ca47a4a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a random 32 bit integer in the range [<code>start</code>.  <a href="Math_8hpp.html#adb0a011cc619bd2c940e2dd9ca47a4a8">More...</a><br /></td></tr>
+<tr class="separator:adb0a011cc619bd2c940e2dd9ca47a4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:afd5cad1ee0bb3277772707ce337b3882"><td class="memItemLeft" align="right" valign="top"><a id="afd5cad1ee0bb3277772707ce337b3882"></a>
+static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Math_8hpp.html#afd5cad1ee0bb3277772707ce337b3882">Voxx::Math::Detail::randSeed</a> = 123456789</td></tr>
+<tr class="memdesc:afd5cad1ee0bb3277772707ce337b3882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seed for the random number generator. <br /></td></tr>
+<tr class="separator:afd5cad1ee0bb3277772707ce337b3882"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file defines math related functionality. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="file_a8d1b020f508d8709ede024550315475f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a8d1b020f508d8709ede024550315475f">&#9670;&nbsp;</a></span>isPowerOfTwo()</h2>
+<a id="file_abd5584901f4cc5f3c3718e977ce52bdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_abd5584901f4cc5f3c3718e977ce52bdb">&#9670;&nbsp;</a></span>isPowerOfTwo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,7 +152,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr bool Voxx::Math::isPowerOfTwo </td>
+          <td class="memname">VoxxDeviceHost constexpr bool Voxx::Math::isPowerOfTwo </td>
           <td>(</td>
           <td class="paramtype">T &amp;&amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -143,7 +161,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -161,6 +179,116 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="file_ada225042e01ceaa7671665e7e516ac45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_ada225042e01ceaa7671665e7e516ac45">&#9670;&nbsp;</a></span>log2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VoxxDeviceHost constexpr uint32_t Voxx::Math::log2 </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the log_2 of a 32 bit integer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The value to find the log_2 of. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="file_adb0a011cc619bd2c940e2dd9ca47a4a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_adb0a011cc619bd2c940e2dd9ca47a4a8">&#9670;&nbsp;</a></span>randint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VoxxDeviceHost uint32_t Voxx::Math::randint </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a random 32 bit integer in the range [<code>start</code>. </p>
+<p><code>end</code>]. It's extremely fast (benchmarks show approx ~1-2ns, in comparison std::experimental::randint is around 16ns), however, the implementation is known to fail some of the random number generation tests, and also only provides a uniform distribution. It should be used only when performance is critical and the quality of the generated random number is not hugely important.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>The starting value of the range. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>The end value of the range. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">seed</td><td>The seed to use for the generator. Returns a uniformly distributed random number between </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="file_a633cab1a719fd93ba6c4e974ea56f427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a633cab1a719fd93ba6c4e974ea56f427">&#9670;&nbsp;</a></span>xorshift32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VoxxDeviceHost uint32_t Voxx::Math::Detail::xorshift32 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementation of a random number generator using the xor32 method, as described here: </p>
+<p><a href="https://en.wikipedia.org/wiki/Xorshift">xorshift32</a></p>
+<p>Returns a random 32 bit integer in the range [0, 2^32 - 1]. </p>
 
 </div>
 </div>

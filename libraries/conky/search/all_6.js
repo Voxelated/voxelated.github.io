@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['size',['size',['../classVoxx_1_1Conky_1_1CircularDequeue.html#a328a483f0eed1ba321942ea7881271e0',1,'Voxx::Conky::CircularDequeue']]],
-  ['sizeselector',['SizeSelector',['../structVoxx_1_1Conky_1_1CircularDequeue_1_1SizeSelector.html',1,'Voxx::Conky::CircularDequeue']]],
-  ['sizetype',['SizeType',['../classVoxx_1_1Conky_1_1CircularDequeue.html#a23bd959d34d6000d0d85d04c8299c4a5',1,'Voxx::Conky::CircularDequeue']]],
-  ['slowselector',['SlowSelector',['../classVoxx_1_1Conky_1_1CircularDequeue.html#a631293318aa72784861e781952de61b5',1,'Voxx::Conky::CircularDequeue']]],
-  ['steal',['steal',['../classVoxx_1_1Conky_1_1CircularDequeue.html#a58dbaa045710bd29edb74f067e0e0d92',1,'Voxx::Conky::CircularDequeue']]]
+  ['invokable',['Invokable',['../structVoxx_1_1Conky_1_1Executor.html#a681cc84c245f73a54a92bcb1e1281045',1,'Voxx::Conky::Executor']]],
+  ['invoker',['Invoker',['../structVoxx_1_1Conky_1_1Executor.html#aee4953a813a0b8bf6564099e286c75b0',1,'Voxx::Conky::Executor']]],
+  ['isempty',['isEmpty',['../classVoxx_1_1Conky_1_1ThreadPool.html#a6e711954f70e25be86d01b32562d12e3',1,'Voxx::Conky::ThreadPool']]],
+  ['isnottask',['isNotTask',['../structVoxx_1_1Conky_1_1Executor.html#a6f83ba6a7e24c42e1ff0c976525f45c3',1,'Voxx::Conky::Executor::isNotTask()'],['../structVoxx_1_1Conky_1_1Task.html#a2dd2b8ec6a5737d2ead6aac5c41593d4',1,'Voxx::Conky::Task::isNotTask()']]]
 ];

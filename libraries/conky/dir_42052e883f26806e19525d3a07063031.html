@@ -6,8 +6,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Let the browser know that the website is optimized for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Conky : /home/joker/Voxel/Software/voxelated.github.io/scripts/Conky/include/Voxel/Conky/Concurrent/CircularDequeue.hpp File Reference</title>
-    <title>/home/joker/Voxel/Software/voxelated.github.io/scripts/Conky/include/Voxel/Conky/Concurrent/CircularDequeue.hpp File Reference</title>
+    <title>Conky : /home/joker/Voxel/Software/voxelated.github.io/scripts/Conky/src/Container Directory Reference</title>
+    <title>/home/joker/Voxel/Software/voxelated.github.io/scripts/Conky/src/Container Directory Reference</title>
     <link rel="shortcut icon" href="VoxelLogoSmall.png">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
@@ -88,72 +88,21 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_cfd7c35dcb1e9e7661ee231c78a28430.html">Voxel</a></li><li class="navelem"><a class="el" href="dir_ba210dc94deb9ea192b6f4b8d46cad72.html">Conky</a></li><li class="navelem"><a class="el" href="dir_4de60bec8de5f98d6185f4769351891f.html">Concurrent</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_42052e883f26806e19525d3a07063031.html">Container</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">CircularDequeue.hpp File Reference</div>  </div>
+<div class="title">Container Directory Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This file provides the definition of a lock-free circular dequeue.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;Voxel/Math/Math.hpp&gt;</code><br />
-<code>#include &lt;array&gt;</code><br />
-<code>#include &lt;atomic&gt;</code><br />
-<code>#include &lt;experimental/optional&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-</div>
-<p><a href="CircularDequeue_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVoxx_1_1Conky_1_1CircularDequeue.html">Voxx::Conky::CircularDequeue&lt; Object, MaxObjects &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classVoxx_1_1Conky_1_1CircularDequeue.html" title="The CircularDequeue is a concurrent lock-free dequeue which allows a single thread to push and pop on...">CircularDequeue</a> is a concurrent lock-free dequeue which allows a single thread to push and pop onto the bottom of the dequeue, and any number of threads to steal from the top of the dequeue.  <a href="classVoxx_1_1Conky_1_1CircularDequeue.html#details">More...</a><br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
+Files</h2></td></tr>
+<tr class="memitem:ThreadPool_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ThreadPool_8cpp.html">ThreadPool.cpp</a></td></tr>
+<tr class="memdesc:ThreadPool_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file implements thread pool functionality. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVoxx_1_1Conky_1_1CircularDequeue_1_1SizeSelector.html">Voxx::Conky::CircularDequeue&lt; Object, MaxObjects &gt;::SizeSelector&lt; IsPowerOfTwo &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct is used to dispatch based on whether the max number of objects in the queue is a power of 2 size.  <a href="structVoxx_1_1Conky_1_1CircularDequeue_1_1SizeSelector.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a28223da8cea458e7bbdaad36c8e3d563"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a28223da8cea458e7bbdaad36c8e3d563"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="CircularDequeue_8hpp.html#a28223da8cea458e7bbdaad36c8e3d563">std::optional</a> = experimental::optional&lt; T &gt;</td></tr>
-<tr class="memdesc:a28223da8cea458e7bbdaad36c8e3d563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines an alias for std::optional.  <a href="CircularDequeue_8hpp.html#a28223da8cea458e7bbdaad36c8e3d563">More...</a><br /></td></tr>
-<tr class="separator:a28223da8cea458e7bbdaad36c8e3d563"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file provides the definition of a lock-free circular dequeue. </p>
-<p>Only a single thread can push and pop from the bottom of the dequeue, while any number of elements can steal from the top of the dequeue. </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="file_a28223da8cea458e7bbdaad36c8e3d563"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a28223da8cea458e7bbdaad36c8e3d563">&#9670;&nbsp;</a></span>optional</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="CircularDequeue_8hpp.html#a28223da8cea458e7bbdaad36c8e3d563">std::optional</a> = typedef experimental::optional&lt;T&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Defines an alias for std::optional. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the optional element. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 </div><!-- contents -->
 <footer class="page-footer">
   <!--div class="container"-->

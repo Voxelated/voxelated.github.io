@@ -4,5 +4,5 @@ var searchData=
   ['invoke',['invoke',['../namespaceVoxx.html#afb7ea17b1ba27003cb4ead8f14df44c0',1,'Voxx::invoke(Callable &amp;&amp;callable, T &amp;&amp;element, Ts &amp;&amp;... elements)'],['../namespaceVoxx.html#a8f298ff9ad3e259c12dec4bd3c4ec980',1,'Voxx::invoke(Callable &amp;&amp;callable, const T &amp;element, const Ts &amp;... elements)'],['../namespaceVoxx.html#ab8d70eddbe023b305f1406bd8f1fe5f3',1,'Voxx::invoke(CallableType &amp;&amp;callable, WrappedArgs &amp;&amp;args) noexcept']]],
   ['invokeimpl',['invokeImpl',['../namespaceVoxx_1_1Detail.html#a353d84c660ab0cf5de56f7a65478b495',1,'Voxx::Detail']]],
   ['isdatacache',['isDataCache',['../structVoxx_1_1System_1_1CacheInfo.html#ab6855a91a690a955435ba65da84c5628',1,'Voxx::System::CacheInfo']]],
-  ['ispoweroftwo',['isPowerOfTwo',['../Math_8hpp.html#a8d1b020f508d8709ede024550315475f',1,'Voxx::Math']]]
+  ['ispoweroftwo',['isPowerOfTwo',['../Math_8hpp.html#abd5584901f4cc5f3c3718e977ce52bdb',1,'Voxx::Math']]]
 ];

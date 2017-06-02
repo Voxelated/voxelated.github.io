@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['circulardequeue_2ehpp',['CircularDequeue.hpp',['../CircularDequeue_8hpp.html',1,'']]]
+  ['staticstealablequeue_2ehpp',['StaticStealableQueue.hpp',['../StaticStealableQueue_8hpp.html',1,'']]]
 ];
